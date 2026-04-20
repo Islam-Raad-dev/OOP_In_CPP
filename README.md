@@ -1,4 +1,4 @@
-# OOP as it Should Be – Concepts
+# Object-Oriented Programming In C++
 
 Welcome to my repository for the **10th course** in my programming journey: **OOP as it Should Be**. This stage marks a fundamental shift in my career—from learning how to write code to learning how to **design** it.
 
