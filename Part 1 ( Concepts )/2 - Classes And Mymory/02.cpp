@@ -11,8 +11,9 @@ Objects: An Instance Of A Class That Contains The Data And Functions Defined In 
 #include <iostream>
 using namespace std;
 
-class clcPerson 
+class clsPerson 
 {
+public:
     string FirstName;
     string LastName;
 
@@ -25,7 +26,13 @@ class clcPerson
 
 int main()
 {
-    clcPerson person1;
+    clsPerson Person1;
+
+    Person1.FirstName = "John";
+    Person1.LastName = "Doe";
+
+    cout << Person1.FullName();
+
 
     return 0;
 }
