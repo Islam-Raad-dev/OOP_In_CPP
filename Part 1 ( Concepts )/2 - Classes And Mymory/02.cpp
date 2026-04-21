@@ -13,6 +13,10 @@ using namespace std;
 
 class clsPerson 
 {
+
+private:
+    int Age;
+
 public:
     string FirstName;
     string LastName;
