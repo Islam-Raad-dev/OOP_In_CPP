@@ -11,18 +11,11 @@ class clsPerson
 
 private:
 
-    int _ID = 10;
-
     string _FirstName;
-    string _LastName;
 
 public:
 
 
-    int ID()// Get: This Is Read Only Property Because We Don't Have Set Function For It
-    {
-        return _ID;
-    }
 
     void setFirstName(string FirstName)// Set
     {
@@ -30,26 +23,11 @@ public:
 
     }
 
-    string FirstName()// Get
+    string GetFirstName()// Get
     {
         return _FirstName;
     }
-
-    void setLastName(string LastName)// Set
-    {
-        _LastName = LastName;
-    }
-
-    string LastName()// Get
-    {
-        return _LastName;
-    }
-
     
-    string FullName()
-    {
-        return FirstName() + " " + LastName();
-    }
     
 
 };
@@ -59,12 +37,10 @@ int main()
     clsPerson Person1;
 
     Person1.setFirstName("Islam");
-    Person1.setLastName("Raad");
+    cout << Person1.GetFirstName() << endl;
 
-    cout << "First Name: " << Person1.FirstName() << endl;
-    cout << "Last Name: " << Person1.LastName() << endl;
-    cout << "Full Name: "<< Person1.FullName()<< endl;
-    cout << "ID: " << Person1.ID() << endl;
+    Person1.FirstName = "Raad";
+    cout << Person1.FirstName << endl;
 
 
 
