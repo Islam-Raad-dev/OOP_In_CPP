@@ -16,7 +16,10 @@ class clcPerson
     string FirstName;
     string LastName;
 
-    
+    string FullName()
+    {
+        return FirstName + " " + LastName;
+    }
 
 };
 
