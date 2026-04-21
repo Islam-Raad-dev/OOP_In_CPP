@@ -21,33 +21,31 @@ private:
 
 public:
 
-    void setFirstName(string FirstName)
+    void setFirstName(string FirstName)// Set
     {
         _FirstName = FirstName;
+
     }
 
-    string FirstName()
+    string FirstName()// Get
     {
         return _FirstName;
     }
 
-    void setLastName(string LastName)
+    void setLastName(string LastName)// Set
     {
         _LastName = LastName;
     }
 
-
-    string LastName()
+    string LastName()// Get
     {
         return _LastName;
     }
 
-
-
-
+    
     string FullName()
     {
-        return FirstName + " " + LastName;
+        return FirstName() + " " + LastName();
     }
     
 
