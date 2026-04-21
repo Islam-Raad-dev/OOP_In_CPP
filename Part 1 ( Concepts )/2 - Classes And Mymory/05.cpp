@@ -14,7 +14,7 @@ class clsPerson
 private:
     short Age;
 
-public:
+public: //Members
     string FirstName;
     string LastName;
 
