@@ -24,12 +24,8 @@ private:
 
 public:
 
-    void setID(int ID)// Set
-    {
-        _ID = ID;
-    }
 
-    int ID()// Get
+    int ID()// Get: This Is Read Only Property Because We Don't Have Set Function For It
     {
         return _ID;
     }
@@ -68,7 +64,6 @@ int main()
 {
     clsPerson Person1;
 
-    Person1.setID(20);
     Person1.setFirstName("Islam");
     Person1.setLastName("Raad");
 
