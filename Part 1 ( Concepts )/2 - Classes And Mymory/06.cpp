@@ -17,21 +17,6 @@ class clsPerson
 
 private:
 
-    int Variabl1 = 5;
-
-    int Function1()
-    {
-        return 40;
-    }
-
-protected:
-
-    int Variabl2 = 100;
-
-    int Function2()
-    {
-        return 50;
-    }
 
 public:
 
@@ -42,11 +27,6 @@ public:
     {
         return FirstName + " " + LastName;
     }
-
-    float Function3()
-    {
-        return Function1() * Variabl1 * Variabl2;
-    }
     
 
 };
@@ -55,12 +35,12 @@ int main()
 {
     clsPerson Person1;
 
-    Person1.FirstName = "Islam";
-    Person1.LastName = "Raad";
+    Person1.setFirstName("Islam");
+    Person1.setLastName("Raad");
 
-    cout << "Preson1: "<< Person1.FullName()<< endl;
-
-    cout << Person1.Function3() << endl;
+    cout << "First Name: " << Person1.FirstName() << endl;
+    cout << "Last Name: " << Person1.LastName() << endl;
+    cout << "Full Name: "<< Person1.FullName()<< endl;
 
 
     return 0;
