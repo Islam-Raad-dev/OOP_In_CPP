@@ -18,27 +18,30 @@ class clsPerson
 {
 
 private:
-    short Age;
 
-public: //Members
-    string FirstName;
-    string LastName;
-
-    string FullName()
+    int Variabl1 = 5;
+    int Function1()
     {
-        return FirstName + " " + LastName;
+        return 40;
     }
+
+protected:
+
+    int Variable2 = 100;
+    int Function2()
+    {
+        return 50;
+    }
+
+public:
+
+
 
 };
 
 int main()
 {
     clsPerson Person1;
-
-    Person1.FirstName = "Islam";
-    Person1.LastName = "Raad";
-
-    cout << Person1.FullName() << endl;
 
 
     return 0;
