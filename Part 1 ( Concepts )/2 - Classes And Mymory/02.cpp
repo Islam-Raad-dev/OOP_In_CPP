@@ -28,10 +28,10 @@ int main()
 {
     clsPerson Person1;
 
-    Person1.FirstName = "John";
-    Person1.LastName = "Doe";
+    Person1.FirstName = "Islam";
+    Person1.LastName = "Raad";
 
-    cout << Person1.FullName();
+    cout << Person1.FullName() << endl;
 
 
     return 0;
