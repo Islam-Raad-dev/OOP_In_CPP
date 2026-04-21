@@ -16,10 +16,32 @@ class clsPerson
 {
 
 private:
-    string FirstName;
-    string LastName;
+    string _FirstName;
+    string _LastName;
 
 public:
+
+    void setFirstName(string FirstName)
+    {
+        _FirstName = FirstName;
+    }
+
+    string FirstName()
+    {
+        return _FirstName;
+    }
+
+    void setLastName(string LastName)
+    {
+        _LastName = LastName;
+    }
+
+
+    string LastName()
+    {
+        return _LastName;
+    }
+
 
 
 
