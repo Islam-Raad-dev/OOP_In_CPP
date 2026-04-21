@@ -16,12 +16,12 @@ class clsPerson
 {
 
 private:
-
+    string FirstName;
+    string LastName;
 
 public:
 
-    string FirstName;
-    string LastName;
+
 
     string FullName()
     {
