@@ -29,7 +29,7 @@ private:
 protected:
 
     int Variabl2 = 100;
-    
+
     int Function2()
     {
         return 50;
