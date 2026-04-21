@@ -16,6 +16,8 @@ class clsPerson
 {
 
 private:
+
+    int _ID;
     string _FirstName;
     string _LastName;
 
