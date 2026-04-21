@@ -17,7 +17,7 @@ class clsPerson
 
 private:
 
-    int _ID;
+    int _ID = 10;
     string _FirstName;
     string _LastName;
 
