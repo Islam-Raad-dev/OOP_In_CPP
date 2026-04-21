@@ -11,8 +11,18 @@ Objects: An Instance Of A Class That Contains The Data And Functions Defined In 
 #include <iostream>
 using namespace std;
 
+class clcPerson 
+{
+    string FirstName;
+    string LastName;
+
+    
+
+};
+
 int main()
 {
+    clcPerson person1;
 
     return 0;
 }
