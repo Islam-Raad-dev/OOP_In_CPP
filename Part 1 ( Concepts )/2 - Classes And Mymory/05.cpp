@@ -3,8 +3,8 @@
 Access Specifiers (Modifiers):
 
 1 - Public.
-2 - Private
-3 - Protected
+2 - Private.
+3 - Protected.
 
 In C++, access specifiers (also known as access modifiers) are keywords that
 define the accessibility of class members (variables and functions). The three
