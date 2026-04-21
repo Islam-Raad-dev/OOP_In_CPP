@@ -18,11 +18,21 @@ class clsPerson
 private:
 
     int _ID = 10;
-    
+
     string _FirstName;
     string _LastName;
 
 public:
+
+    void setID(int ID)// Set
+    {
+        _ID = ID;
+    }
+
+    int ID()// Get
+    {
+        return _ID;
+    }
 
     void setFirstName(string FirstName)// Set
     {
@@ -58,12 +68,15 @@ int main()
 {
     clsPerson Person1;
 
+    Person1.setID(20);
     Person1.setFirstName("Islam");
     Person1.setLastName("Raad");
 
     cout << "First Name: " << Person1.FirstName() << endl;
     cout << "Last Name: " << Person1.LastName() << endl;
     cout << "Full Name: "<< Person1.FullName()<< endl;
+    cout << "ID: " << Person1.ID() << endl;
+
 
 
     return 0;
