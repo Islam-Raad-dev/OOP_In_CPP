@@ -27,8 +27,8 @@ public:
     {
         return _FirstName;
     }
-    
-    
+
+    __declspec(property(get = GetFirstName, put = setFirstName)) string FirstName;
 
 };
 
