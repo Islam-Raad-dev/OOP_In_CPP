@@ -60,6 +60,11 @@ public:
         _Result /= Number;
     }
 
+    void Clear()
+    {
+
+    }
+    
     void CancelLastOpertion()
     {
         _LastNumber = 0;
@@ -80,6 +85,9 @@ int main()
 {
 
     clsCalculator Calculator1;
+
+    Calculator1.
+    Calculator1.Add(10);
 
     return 0;
 }
