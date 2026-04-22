@@ -14,7 +14,7 @@ using namespace std;
 class clsAddress
 {
 private:
-    string _AddresLine1;
+    string _AddressLine1;
     string _AddressLine2;
     string _POBox;
     string _ZipCode;
@@ -23,7 +23,7 @@ public:
 
     clsAddress(string AddressLine1, string AddressLine2, string POBox, string ZipCode)
     {
-        _AddresLine1 = AddressLine1;
+        _AddressLine1 = AddressLine1;
         _AddressLine2 = AddressLine2;
         _POBox = POBox;
         _ZipCode = ZipCode;
@@ -32,7 +32,7 @@ public:
     // Copy Constructor.
     clsAddress(clsAddress &Old_Obj)
     {
-        _AddresLine1 = Old_Obj.AddressLine1();
+        _AddressLine1 = Old_Obj.AddressLine1();
         _AddressLine2 = Old_Obj.AddressLine2();
         _POBox = Old_Obj.POBox();
         _ZipCode = Old_Obj.ZipCode();
@@ -40,12 +40,12 @@ public:
 
     void SetAddressLine1(string AddressLine1)
     {
-        _AddresLine1 = AddressLine1;
+        _AddressLine1 = AddressLine1;
     }
 
     string AddressLine1()
     {
-        return _AddresLine1;
+        return _AddressLine1;
     }
 
     void SetAddressLine2(string AddressLine2)
@@ -82,7 +82,7 @@ public:
     {
         cout << "Address Details: " << endl;
         cout << "----------------" << endl;
-        cout << "Address Line 1 : " << _AddresLine1 << endl;
+        cout << "Address Line 1 : " << _AddressLine1 << endl;
         cout << "Address Line 2 : " << _AddressLine2 << endl;
         cout << "PO Box         : " << _POBox << endl;
         cout << "Zip Code       : " << _ZipCode << endl;
