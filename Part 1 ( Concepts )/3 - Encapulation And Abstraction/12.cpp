@@ -2,6 +2,11 @@
 
 Copy Constructor:
 
+A copy constructor is a special constructor in C++ that is used to create a
+new object as a copy of an existing object. It is called when an object is
+initialized with another object of the same class, passed by value, or
+returned from a function by value.
+
 */
 #include <iostream>
 using namespace std;
