@@ -77,6 +77,7 @@ public:
         cout << "Address Line 2 : " << _AddressLine2 << endl;
         cout << "PO Box         : " << _POBox << endl;
         cout << "Zip Code       : " << _ZipCode << endl;
+        cout << "----------------" << endl;
     }
 };
 
@@ -85,6 +86,9 @@ int main()
     clsAddress Address("14 Main St", "Apt 4B", "PO Box 123", "41001");
 
     Address.Print();
+
+    clsAddress AddressCopy = Address;
+    AddressCopy.Print();
 
     return 0;
 }
