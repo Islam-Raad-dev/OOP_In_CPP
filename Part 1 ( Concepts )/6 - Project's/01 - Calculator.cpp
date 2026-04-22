@@ -8,14 +8,15 @@ Simple Calculator Project:
 
 using namespace std;
 
-class clcCalculator
+class clsCalculator
 {
 
 };
 
-int main(){
+int main()
+{
 
-    clcCalculator Calculator1;
+    clsCalculator Calculator1;
 
     return 0;
 }
