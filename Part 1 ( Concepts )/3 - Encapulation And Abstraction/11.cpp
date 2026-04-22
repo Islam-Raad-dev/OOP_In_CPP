@@ -15,6 +15,15 @@ private:
     string _ZipCode;
 
 public:
+
+    clsAddress()
+    {
+        _AddresLine1 = "N/A";
+        _AddressLine2 = "N/A";
+        _POBox = "N/A";
+        _ZipCode = "N/A";
+    }
+    
     void SetAddressLine1(string AddressLine1)
     {
         _AddresLine1 = AddressLine1;
