@@ -12,10 +12,24 @@ class clsCalculator
 {
 private:
 
-    float Number;
-    enum enOperations {Add = 1, Subtract, Multiply, Divide};
+    float _Result = 0;
+    float _LastNumber = 0;
+    string _LastOperation = "Clear";
+    float _PrevoiusResult = 0;
+
+    bool _IsZero(float Number){
+        return (Number == 0);
+    }
+
+
 public:
 
+    void Add(float Number)
+    {
+        _LastNumber = Number;
+        _PrevoiusResult = _Result;
+        _LastOperation = "Adding";
+    }
 
 };
 
