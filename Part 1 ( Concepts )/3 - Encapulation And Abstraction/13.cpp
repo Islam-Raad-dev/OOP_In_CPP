@@ -39,5 +39,7 @@ int main()
 {
     Function();
 
+    clsPerson *Person2 = new clsPerson();
+
     return 0;
 };
