@@ -41,5 +41,8 @@ int main()
 
     clsPerson *Person2 = new clsPerson();
 
+    delete Person2;
+
+
     return 0;
 };
