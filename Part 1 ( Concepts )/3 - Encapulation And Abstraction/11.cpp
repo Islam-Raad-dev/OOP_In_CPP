@@ -29,12 +29,12 @@ private:
 
 public:
 
-    clsAddress()
+    clsAddress(string AddressLine1, string AddressLine2, string POBox, string ZipCode)
     {
-        _AddresLine1 = "N/A";
-        _AddressLine2 = "N/A";
-        _POBox = "N/A";
-        _ZipCode = "N/A";
+        _AddresLine1 = AddressLine1;
+        _AddressLine2 = AddressLine2;
+        _POBox = POBox;
+        _ZipCode = ZipCode;
     }
 
     void SetAddressLine1(string AddressLine1)
@@ -90,7 +90,7 @@ public:
 
 int main()
 {
-    clsAddress Address;
+    clsAddress Address("123 Main St", "Apt 4B", "PO Box 123", "12345");
 
     Address.Print();
 
