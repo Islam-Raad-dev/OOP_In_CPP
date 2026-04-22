@@ -29,6 +29,15 @@ public:
         _ZipCode = ZipCode;
     }
 
+    clsAddress(clsAddress & Old_Obj)
+    {
+        _AddresLine1 = Old_Obj.AddressLine1();
+        _AddressLine2 = Old_Obj.AddressLine2();
+        _POBox = Old_Obj.POBox();
+        _ZipCode = Old_Obj.ZipCode();
+
+    }
+
     void SetAddressLine1(string AddressLine1)
     {
         _AddresLine1 = AddressLine1;
