@@ -29,6 +29,7 @@ public:
         _ZipCode = ZipCode;
     }
 
+    //Copy Constructor.
     clsAddress(clsAddress & Old_Obj)
     {
         _AddresLine1 = Old_Obj.AddressLine1();
