@@ -1,0 +1,5 @@
+/*
+
+Static Functions (Static Methods)
+
+*/
