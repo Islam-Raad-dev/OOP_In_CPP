@@ -1,7 +1,7 @@
 /*
 
 Static Functions (Static Methods)
-
+ 
 */
 #include <iostream>
 using namespace std;
