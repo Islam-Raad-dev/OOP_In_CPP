@@ -7,7 +7,15 @@ Constructors:
 using namespace std;
 
 class clsAddress
-{};
+{
+private:
+    string _Country;
+    string _City;
+    string _Street;
+
+public:
+
+};
 
 int main()
 {
