@@ -29,14 +29,13 @@ public:
         _ZipCode = ZipCode;
     }
 
-    //Copy Constructor.
-    clsAddress(clsAddress & Old_Obj)
+    // Copy Constructor.
+    clsAddress(clsAddress &Old_Obj)
     {
         _AddresLine1 = Old_Obj.AddressLine1();
         _AddressLine2 = Old_Obj.AddressLine2();
         _POBox = Old_Obj.POBox();
         _ZipCode = Old_Obj.ZipCode();
-
     }
 
     void SetAddressLine1(string AddressLine1)
@@ -81,13 +80,14 @@ public:
 
     void Print()
     {
-        cout <<"Address Details: "<< endl;
+        cout << "Address Details: " << endl;
         cout << "----------------" << endl;
         cout << "Address Line 1 : " << _AddresLine1 << endl;
         cout << "Address Line 2 : " << _AddressLine2 << endl;
         cout << "PO Box         : " << _POBox << endl;
         cout << "Zip Code       : " << _ZipCode << endl;
-        cout << "----------------\n" << endl;
+        cout << "----------------\n"
+             << endl;
     }
 };
 
