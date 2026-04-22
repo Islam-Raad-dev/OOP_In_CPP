@@ -21,26 +21,20 @@ public:
     }
 
     void Print(){
-        cout << "\nvar: " << var ;
-        cout << "\n counter: " << counter << endl;
+        cout << "var: " << var ;
+        cout << "\ncounter: " << counter << endl;
     }
 
 
 };
 
+int clsA::counter = 0;
+
 int main()
 {
-    clsA a1;
-    a1.var = 10;
-    a1.Print();
+    clsA A1;
 
-    clsA a2;
-    a2.var = 20;
-    a2.Print();
-
-    clsA a3;
-    a3.var = 30;
-    a3.Print();
+    A1.Print();
 
     return 0;
 };
