@@ -16,7 +16,7 @@ public:
         return 10;
     }
 
-    static int Function2()
+    int Function2()
     {
         return 20;
     }
@@ -24,8 +24,10 @@ public:
 
 int main()
 {
+    clsA A;
+
     cout << clsA::Function() << endl;
-    cout << clsA::Function2() << endl;
+    cout << A.Function2() << endl;
 
     return 0;
 
