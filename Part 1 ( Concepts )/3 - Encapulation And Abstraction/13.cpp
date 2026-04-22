@@ -1,6 +1,6 @@
 /*
 
-Destrutors:
+Destructors:
 
 A destructor is a special member function of a class that is executed when an
 object of that class goes out of scope or is explicitly deleted. The purpose
