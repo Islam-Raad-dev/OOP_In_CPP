@@ -59,6 +59,21 @@ public:
         _LastOperation = "Dividing";
         _Result /= Number;
     }
+
+    void CancelLastOpertion()
+    {
+        _LastNumber = 0;
+        _LastOperation = "Cancelling Last Operation";
+        _Result = _PrevoiusResult;
+
+    }
+
+    void PrintResult()
+    {
+        cout << "Result ";
+        cout << "After " << _LastOperation << " " << _LastNumber << "is: " << _Result;
+
+    }
 };
 
 int main()
