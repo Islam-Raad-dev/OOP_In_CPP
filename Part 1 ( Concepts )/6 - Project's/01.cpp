@@ -11,10 +11,10 @@ using namespace std;
 class clsCalculator
 {
 private:
-    float Result = 0;
-    float LastNumber = 0;
-    string LastOperation = "Clear";
-    float PrevoiusResult = 0;
+    float _Result = 0;
+    float _LastNumber = 0;
+    string _LastOperation = "Clear";
+    float _PrevoiusResult = 0;
 
     bool _IsZero(float Number)
     {
@@ -24,66 +24,66 @@ private:
 public:
     void Add(float Number)
     {
-        LastNumber = Number;
-        PrevoiusResult = Result;
-        LastOperation = "Adding";
-        Result += Number;
+        _LastNumber = Number;
+        _PrevoiusResult = _Result;
+        _LastOperation = "Adding";
+        _Result += Number;
     }
 
     void Subtract(float Number)
     {
-        LastNumber = Number;
-        PrevoiusResult = Result;
-        LastOperation = "Subtracting";
-        Result -= Number;
+        _LastNumber = Number;
+        _PrevoiusResult = _Result;
+        _LastOperation = "Subtracting";
+        _Result -= Number;
     }
 
     void Multiply(float Number)
     {
-        LastNumber = Number;
-        PrevoiusResult = Result;
-        LastOperation = "Multiplying";
-        Result *= Number;
+        _LastNumber = Number;
+        _PrevoiusResult = _Result;
+        _LastOperation = "Multiplying";
+        _Result *= Number;
     }
 
     void Divide(float Number)
     {
 
-        LastNumber = Number;
+        _LastNumber = Number;
 
         if (_IsZero(Number))
         {
             Number = 1;
         }
 
-        PrevoiusResult = Result;
-        LastOperation = "Dividing";
-        Result /= Number;
+        _PrevoiusResult = _Result;
+        _LastOperation = "Dividing";
+        _Result /= Number;
     }
 
     void Clear()
     {
-        LastNumber = 0;
-        PrevoiusResult = 0;
-        LastOperation = "Clear";
-        Result = 0;
+        _LastNumber = 0;
+        _PrevoiusResult = 0;
+        _LastOperation = "Clear";
+        _Result = 0;
     }
 
     float GetFinalResult()
     {
-        return Result;
+        return _Result;
     }
     void CancelLastOpertion()
     {
-        LastNumber = 0;
-        LastOperation = "Cancelling Last Operation";
-        Result = PrevoiusResult;
+        _LastNumber = 0;
+        _LastOperation = "Cancelling Last Operation";
+        _Result = _PrevoiusResult;
     }
 
     void PrintResult()
     {
         cout << "Result ";
-        cout << "After " << LastOperation << " " << LastNumber << "is: " << Result;
+        cout << "After " << _LastOperation << " " << _LastNumber << "is: " << _Result;
     }
 };
 
