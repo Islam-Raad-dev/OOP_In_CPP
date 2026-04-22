@@ -29,8 +29,36 @@ public:
         _LastNumber = Number;
         _PrevoiusResult = _Result;
         _LastOperation = "Adding";
+        _Result += Number;
     }
 
+    void Subtract(float Number)
+    {
+        _LastNumber = Number;
+        _PrevoiusResult = _Result;
+        _LastOperation = "Subtracting";
+        _Result -= Number;
+    }
+
+    void Multiply(float Number)
+    {
+        _LastNumber = Number;
+        _PrevoiusResult = _Result;
+        _LastOperation = "Multiplying";
+        _Result *= Number;
+    }
+
+    void Divide(float Number)
+    {
+        if (_IsZero(Number))
+        {
+            return;
+        }
+        _LastNumber = Number;
+        _PrevoiusResult = _Result;
+        _LastOperation = "Dividing";
+        _Result /= Number;
+    }
 };
 
 int main()
