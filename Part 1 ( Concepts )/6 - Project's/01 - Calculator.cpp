@@ -10,6 +10,12 @@ using namespace std;
 
 class clsCalculator
 {
+private:
+
+    float Number;
+    enum enOperations {Add = 1, Subtract, Multiply, Divide};
+public:
+
 
 };
 
