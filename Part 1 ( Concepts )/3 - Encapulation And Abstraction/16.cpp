@@ -8,6 +8,16 @@ using namespace std;
 
 class clsPerson
 {
+    clsPerson()
+    {
+        _ID = 10;
+        _FirstName = "Islam";
+        _LastName = "Raad";
+        _Phone = "123456789";
+        _Email = "IslamRaad@gmail.com";
+        
+    }
+    
 private:
     string _FirstName;
     string _LastName;
@@ -101,7 +111,7 @@ public:
 
 int main(){
 
-    clsPerson Person1;
+    clsPerson Person1(10, "Islam", "Raad", "123456789", "IslamRaad@gmail.com");
 
     Person1.PrintInfo();
 
