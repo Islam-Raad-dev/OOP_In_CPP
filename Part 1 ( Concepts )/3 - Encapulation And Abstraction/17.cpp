@@ -44,6 +44,15 @@ public:
         return _ID;
     }
 
+    void SetFirstName(string FirstName)
+    {
+        _FirstName = FirstName;
+    }
+
+    string GetFirstName()
+    {
+        return _FirstName;
+    }
     
 
 
