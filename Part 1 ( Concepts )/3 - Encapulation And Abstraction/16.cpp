@@ -101,6 +101,7 @@ public:
 
     void SendSMS(string TextMessage)
     {
+        cout << "\nThe Folloing Message Sent Seccesfully To Phone: " << _Phone << "\n" << endl;
         cout << TextMessage << endl;
     }
 
