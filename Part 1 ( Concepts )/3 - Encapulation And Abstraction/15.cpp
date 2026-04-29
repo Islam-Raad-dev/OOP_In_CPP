@@ -1,6 +1,6 @@
 /*
 
-Static Functions (Static Methods)
+Static Functions (Static Methods) 
  
 */
 #include <iostream>
