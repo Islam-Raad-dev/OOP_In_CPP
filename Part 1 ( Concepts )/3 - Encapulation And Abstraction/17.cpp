@@ -53,8 +53,21 @@ public:
     {
         return _FirstName;
     }
-    
 
+    void SetLastName(string LastName)
+    {
+        _LastName = LastName;
+    }
+
+    string GetLastName()
+    {
+        return _LastName;
+    }
+
+    string FullName()
+    {
+        return _FirstName + " " + _LastName;
+    }
 
 
 
