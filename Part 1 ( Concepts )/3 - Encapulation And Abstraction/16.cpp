@@ -129,7 +129,7 @@ int main(){
     Person1.PrintInfo();
 
     Person1.SendEmail("Hi", "How Are You?");
-    Person1.SendSMS("Hi, How Are You Man"); 
+    Person1.SendSMS("Hi, How Are You Man");  
 
     return 0;
 
