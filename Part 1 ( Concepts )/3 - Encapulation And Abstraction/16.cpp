@@ -91,7 +91,7 @@ public:
     }
 
 
-    void SendEmail(string Message)
+    void SendEmail(string Subject, string Body)
     {
         cout << "The Folloing Message "<< Message << " Sent Seccesfully To Email:" << _Email << endl;
     }
