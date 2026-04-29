@@ -43,7 +43,7 @@ public:
         _LastName = LastName;
     }
 
-    string GetLastName() 
+    string GetLastName()  
     {
         cout << _LastName << endl;
         return _LastName;
