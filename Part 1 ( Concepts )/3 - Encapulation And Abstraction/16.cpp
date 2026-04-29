@@ -89,9 +89,9 @@ public:
         cout << "The Folloing Message "<< Message << " Sent Seccesfully To Email:" << _Email << endl;
     }
 
-    void SendSMS()
+    void SendSMS(string Message)
     {
-        cout << "Sending SMS..." << endl;
+        cout << Message << endl;
     }
 
 
