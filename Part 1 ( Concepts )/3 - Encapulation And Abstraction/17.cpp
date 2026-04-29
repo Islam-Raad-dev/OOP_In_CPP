@@ -118,6 +118,21 @@ public:
         return _Email;
     }
 
+    void PrintInfo()
+    {
+        cout << "\nInfo:" << endl;
+        cout << "______________________________" << endl;
+        cout << "First Name: " << _FirstName;
+        cout << "\nLast Name: " << _LastName;
+        cout << "\nFull Name: " << FullName();
+        cout << "\nTitle: " << _Title;
+        cout << "\nSalary: " << _Salary;
+        cout << "\nDepartment: " << _Department;
+        cout << "\nPhone: " << _Phone;
+        cout << "\nEmail: " << _Email;
+        cout << "\nID: " << _ID;
+        cout << "\n______________________________" << endl;
+    }
 
 
 
