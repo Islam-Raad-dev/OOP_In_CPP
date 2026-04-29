@@ -89,6 +89,15 @@ public:
         return _Salary;
     }
 
+    void SetDepartment(string Department)
+    {
+        _Department = Department;
+    }
+
+    string GetDepartment()
+    {
+        return _Department;
+    }   
 
 
 
