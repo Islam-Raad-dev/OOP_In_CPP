@@ -14,7 +14,7 @@ private:
     int _ID;
     string _FirstName;
     string _LastName;
-    string Title;
+    string _Title;
     double _Salary;
     string _Department;
 
