@@ -152,7 +152,13 @@ public:
 
 int main()
 {
-    clsEmployee Employee (10, );
+    clsEmployee Employee (10, "Islam", "Raad", "AI Student", 10000, "AI", "123456789", "IslamRaad@gmail.com");
 
+    Employee.PrintInfo();
+
+    Employee.SendEmail("Hi", "How Are You?");
+    Employee.SendSMS("Hi, How Are You Man");
+
+    return 0;
 
 }
