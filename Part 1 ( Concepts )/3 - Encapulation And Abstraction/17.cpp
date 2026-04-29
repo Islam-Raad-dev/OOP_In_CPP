@@ -97,7 +97,29 @@ public:
     string GetDepartment()
     {
         return _Department;
-    }   
+    }
+
+    void SetPhone(string Phone)
+    {
+        _Phone = Phone;
+    }
+    string GetPhone()
+    {
+        return _Phone;
+    }
+
+    void SetEmail(string Email)
+    {
+        _Email = Email;
+    }
+
+    string GetEmail()
+    {
+        return _Email;
+    }
+
+
+
 
 
 
