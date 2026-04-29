@@ -108,6 +108,7 @@ public:
         cout << "______________________________" << endl;
         cout << "First Name: " << _FirstName ;
         cout << "\nLast Name: " << _LastName ;
+        cout << "\nFull Name: " << FullName();
         cout << "\nPhone: " << _Phone;
         cout << "\nEmail: " << _Email;
         cout << "\nID: " << _ID ;
