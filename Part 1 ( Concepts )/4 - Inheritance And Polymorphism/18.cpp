@@ -1,0 +1,5 @@
+/*
+
+Third Principle : Inheritance.
+
+*/
