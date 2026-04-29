@@ -152,5 +152,7 @@ public:
 
 int main()
 {
-    clsEmployee Employee (string);
+    clsEmployee Employee (10, );
+
+
 }
