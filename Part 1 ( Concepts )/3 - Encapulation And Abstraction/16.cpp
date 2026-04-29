@@ -49,6 +49,12 @@ public:
         return _LastName;
     }
 
+    string FullName()
+    {
+        return _FirstName + " " + _LastName;
+    }
+
+
     void SetPhone(string Phone)
     {
         _Phone = Phone;
@@ -83,6 +89,7 @@ public:
         return _ID;
     
     }
+
 
     void SendEmail(string Message)
     {
