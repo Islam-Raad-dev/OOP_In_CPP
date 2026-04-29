@@ -134,16 +134,18 @@ public:
         cout << "\n______________________________" << endl;
     }
 
+    void SendEmail(string Subject, string Body)
+    {
+        cout << "\n\nThe Folloing Message Sent Seccesfully To Email:" << _Email << endl;
+        cout << "Subject: " << Subject << endl;
+        cout << "Body: " << Body << endl;
+    }
 
-
-
-
-
-
-
-
-    
-
+    void SendSMS(string TextMessage)
+    {
+        cout << "\n\nThe Folloing Message Sent Seccesfully To Phone: " << _Phone << "\n" << endl;
+        cout << TextMessage << endl;
+    }
 
 
 };
