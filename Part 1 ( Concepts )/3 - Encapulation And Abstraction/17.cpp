@@ -69,6 +69,28 @@ public:
         return _FirstName + " " + _LastName;
     }
 
+    void SetTitle(string Title)
+    {
+        _Title = Title;
+    }
+
+    string GetTitle()
+    {
+        return _Title;
+    }
+
+    void SetSalary(double Salary)
+    {
+        _Salary = Salary;
+    }
+
+    double GetSalary()
+    {
+        return _Salary;
+    }
+
+
+
 
 
 
