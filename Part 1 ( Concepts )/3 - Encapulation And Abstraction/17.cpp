@@ -22,6 +22,30 @@ private:
 
 public:
 
+    clsEmployee(int ID, string FirstName, string LastName, string Title, double Salary, string Department, string Phone, string Email)
+    {
+        _ID = ID;
+        _FirstName = FirstName;
+        _LastName = LastName;
+        _Title = Title;
+        _Salary = Salary;
+        _Department = Department;
+        _Phone = Phone;
+        _Email = Email;
+    }
+
+    void SetID(int ID)
+    {
+        _ID = ID;
+    }
+
+    int GetID()
+    {
+        return _ID;
+    }
+
+
+
 
 
 
