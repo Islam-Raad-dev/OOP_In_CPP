@@ -152,5 +152,5 @@ public:
 
 int main()
 {
-    
+    clsEmployee Employee ();
 }
