@@ -11,7 +11,10 @@ class clsEmployee
 
 private:
 
-    int
+    int _ID;
+    string _FirstName;
+    string _LastName;
+    
 
 
 
