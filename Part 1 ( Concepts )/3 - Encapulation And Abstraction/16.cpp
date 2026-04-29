@@ -99,9 +99,9 @@ public:
     
     }
 
-    void SendSMS(string Message)
+    void SendSMS(string TextMessage)
     {
-        cout << Message << endl;
+        cout << TextMessage << endl;
     }
 
 
