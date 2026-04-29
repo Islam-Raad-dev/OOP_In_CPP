@@ -122,11 +122,11 @@ public:
 
 };
 
-int main(){         
+int main(){
 
     clsPerson Person1(10, "Islam", "Raad", "123456789", "IslamRaad@gmail.com");
 
-    Person1.PrintInfo(); 
+    Person1.PrintInfo();
 
     Person1.SendEmail("Hi", "How Are You?"); 
     Person1.SendSMS("Hi, How Are You Man");  
