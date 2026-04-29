@@ -16,6 +16,9 @@ private:
     string _LastName;
     string Title;
     double _Salary;
+    string _Department;
+
+
 
 
     
