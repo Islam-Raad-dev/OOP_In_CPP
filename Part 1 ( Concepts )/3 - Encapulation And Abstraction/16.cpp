@@ -8,15 +8,6 @@ using namespace std;
 
 class clsPerson
 {
-    clsPerson()
-    {
-        _ID = 10;
-        _FirstName = "Islam";
-        _LastName = "Raad";
-        _Phone = "123456789";
-        _Email = "IslamRaad@gmail.com";
-        
-    }
     
 private:
     string _FirstName;
@@ -25,7 +16,17 @@ private:
     string _Email;
     int _ID;
 
+
 public:
+
+    clsPerson(int ID, string FirstName, string LastName, string Phone, string Email)
+    {
+        _ID = ID;
+        _FirstName = FirstName;
+        _LastName = LastName;
+        _Phone = Phone;
+        _Email = Email;
+    }
 
     void SetFirstName(string FirstName)
     {
