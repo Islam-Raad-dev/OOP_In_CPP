@@ -93,7 +93,7 @@ public:
 
     void SendEmail(string Subject, string Body)
     {
-        cout << "The Folloing Message Sent Seccesfully To Email:" << _Email << endl;
+        cout << "\n\nThe Folloing Message Sent Seccesfully To Email:" << _Email << endl;
         cout << "Subject: " << Subject << endl;
         cout << "Body: " << Body << endl;
     
@@ -101,7 +101,7 @@ public:
 
     void SendSMS(string TextMessage)
     {
-        cout << "\nThe Folloing Message Sent Seccesfully To Phone: " << _Phone << "\n" << endl;
+        cout << "\n\nThe Folloing Message Sent Seccesfully To Phone: " << _Phone << "\n" << endl;
         cout << TextMessage << endl;
     }
 
@@ -128,8 +128,8 @@ int main(){
 
     Person1.PrintInfo();
 
-    Person1.SendEmail("Hi, How Are You?");
-    Person1.SendSMS("Hi, How Are You Nigga");
+    Person1.SendEmail("Hi", "How Are You?");
+    Person1.SendSMS("Hi, How Are You Man");
 
     return 0;
 
