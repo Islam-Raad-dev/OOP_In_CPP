@@ -93,7 +93,10 @@ public:
 
     void SendEmail(string Subject, string Body)
     {
-        cout << "The Folloing Message "<< Message << " Sent Seccesfully To Email:" << _Email << endl;
+        cout << "The Folloing Message Sent Seccesfully To Email:" << _Email << endl;
+        cout << "Subject: " << Subject << endl;
+        cout << "Body: " << Body << endl;
+    
     }
 
     void SendSMS(string Message)
