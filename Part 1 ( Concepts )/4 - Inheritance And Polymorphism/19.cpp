@@ -181,14 +181,6 @@ int main()
 { 
     clsEmployee Employee1(10, "Islam", "Raad", "07718277643", "islamraad43");
 
-    Employee1.SetFirstName("Islam");
-    Employee1.SetLastName("Raad");
-
-    Employee1.PrintInfo();
-
-    Employee1.SetSalary(3200);
-    cout << Employee1.GetSalary() << endl;
-
     return 0;  
 
 }
