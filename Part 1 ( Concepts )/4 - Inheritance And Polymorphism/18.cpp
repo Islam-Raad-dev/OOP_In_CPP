@@ -134,7 +134,18 @@ class clsEmployee : public clsPerson
 
 private:
 
-    string _;
+    string _Title;
+    string Department;
+    double Salary;
+
+public:
+
+    clsEmployee()
+    {
+
+    }
+
+    
 
 }; 
 
