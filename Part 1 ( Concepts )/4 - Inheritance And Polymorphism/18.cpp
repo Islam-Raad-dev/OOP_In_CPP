@@ -135,8 +135,8 @@ class clsEmployee : public clsPerson
 private:
 
     string _Title;
-    string Department;
-    double Salary;
+    string _Department;
+    double _Salary;
 
 public:
 
