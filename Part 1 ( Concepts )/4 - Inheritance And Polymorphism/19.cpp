@@ -177,7 +177,7 @@ public:
 
 int main()
 { 
-    clsEmployee Employee1(10, "Islam", "Raad", "07718277643", "islamraad43");
+    clsEmployee Employee1(10, "Islam", "Raad", "07718277643", "islamraad43", "ML Ops", "Artificial Intelligence", 4000);
 
     Employee1.PrintInfo();
 
