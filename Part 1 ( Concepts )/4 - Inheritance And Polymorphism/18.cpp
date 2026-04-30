@@ -147,7 +147,7 @@ public:
 
     string GetTitle()
     {
-        cout << _Title << endl;
+    
         return _Title;
     }
 
@@ -158,7 +158,7 @@ public:
 
     string GetDepartment()
     {
-        cout << _Department << endl;
+    
         return _Department;
     }
 
@@ -169,7 +169,7 @@ public:
 
     double GetSalary()
     {
-        cout << _Salary << endl;
+    
         return _Salary;
     }
 
