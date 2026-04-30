@@ -5,7 +5,7 @@ Third Principle : Inheritance.
 
 */
 #include<iostream>
-using namespace std;
+using namespace std; 
 
 class clsPerson
 {
@@ -132,5 +132,5 @@ int main()
 {
 
     return 0;
-    
+
 }
