@@ -126,6 +126,8 @@ public:
 class clsEmployee : public clsPerson
 {
 
+private:
+
     
 
 }; 
