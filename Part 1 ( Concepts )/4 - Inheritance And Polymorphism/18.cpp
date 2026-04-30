@@ -128,7 +128,7 @@ class clsEmployee : public clsPerson
 
 private:
 
-    
+    string _
 
 }; 
 
