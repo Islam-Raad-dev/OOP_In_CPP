@@ -6,7 +6,7 @@ Developer Exerise
 #include<iostream>  
 using namespace std; 
 
-class clsPerson
+class clsDeveloper
 {
     
 private:
@@ -18,12 +18,13 @@ private:
     string _Title;
     string _Department;
     double _Salary;
+    string MainProgrammingLanguage;
 
 
 public:
 
 
-    clsPerson(int ID, string FirstName, string LastName, string Phone, string Email, string Title, string Department, double Salary)
+    clsDeveloper(int ID, string FirstName, string LastName, string Phone, string Email, string Title, string Department, double Salary)
     {
         _ID = ID;
         _FirstName = FirstName;
@@ -151,51 +152,14 @@ public:
         cout << "\nPhone: " << _Phone;
         cout << "\nEmail: " << _Email;
         cout << "\nID: " << _ID ;  
+        cout << "\nTitle: " << _Title;
+        cout << "\nDepartment: " << _Department;
+        cout << "\nSalary: " << _Salary;
         cout << "\n______________________________\n" << endl;
 
     }
 
 };
-
-class clsDeveloper : public clsPerson
-{
-
-private:
-
-    string _Title;
-    string _Department;
-    double _Salary;
-
-public:
-
-    clsDeveloper(int ID, string FirstName, string LastName, string Phone, string Email, string Title, string Department, double Salary) 
-        : clsPerson(ID, FirstName, LastName, Phone, Email)
-    {
-        _Title = Title;
-        _Department = Department;
-        _Salary = Salary;
-
-    }
-
-    
-
-    void PrintInfo()
-    {
-        cout << "Info :" << endl;
-        cout << "______________________________" << endl;
-        cout << "\nFirst Name: " << FirstName() ;
-        cout << "\nLast Name: " << LastName() ;
-        cout << "\nFull Name: " << FullName();
-        cout << "\nPhone: " << Phone();
-        cout << "\nEmail: " << Email();
-        cout << "\nID: " << ID();
-        cout << "\nTitle: " << _Title;
-        cout << "\nDepartment: " << _Department;
-        cout << "\nSalary: " << _Salary;
-        cout << "\n______________________________\n" << endl;
-    }
-
-}; 
 
 int main()
 { 
