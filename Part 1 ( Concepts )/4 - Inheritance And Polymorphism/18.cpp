@@ -20,6 +20,12 @@ private:
 
 public:
 
+    clsPerson()
+    {
+
+        
+    }
+
     clsPerson(int ID, string FirstName, string LastName, string Phone, string Email)
     {
         _ID = ID;
