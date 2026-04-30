@@ -165,6 +165,7 @@ public:
         cout << "\nTitle: " << _Title;
         cout << "\nDepartment: " << _Department;
         cout << "\nSalary: " << _Salary;
+        cout << "\nMain Programming Language: " << _MainProgrammingLanguage;
         cout << "\n______________________________\n" << endl;
 
     }
