@@ -134,6 +134,7 @@ private:
 
 int main()
 { 
+    clsEmployee Employee1;
 
     return 0;
 
