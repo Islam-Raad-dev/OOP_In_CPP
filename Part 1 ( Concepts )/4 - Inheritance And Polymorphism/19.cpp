@@ -134,7 +134,7 @@ private:
 
 public:
 
-    clsEmployee(int ID, string FirstName, string LastName, string Phone, string Email, string Title, string _Title) : clsPerson(ID, FirstName, LastName, Phone, Email)
+    clsEmployee(int ID, string FirstName, string LastName, string Phone, string Email, string Title, string Department, double Salary) : clsPerson(ID, FirstName, LastName, Phone, Email)
     {
 
     }
