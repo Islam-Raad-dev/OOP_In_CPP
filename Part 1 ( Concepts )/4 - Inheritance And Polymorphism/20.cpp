@@ -186,9 +186,9 @@ public:
         cout << "\nPhone: " << Phone();
         cout << "\nEmail: " << Email();
         cout << "\nID: " << ID();
-        cout << "\nTitle: " << Title();
-        cout << "\nDepartment: " << Department();
-        cout << "\nSalary: " << Salary();
+        cout << "\nTitle: " << _Title;
+        cout << "\nDepartment: " << _Department;
+        cout << "\nSalary: " << _Salary;
         cout << "\n______________________________\n" << endl;
     }
 
