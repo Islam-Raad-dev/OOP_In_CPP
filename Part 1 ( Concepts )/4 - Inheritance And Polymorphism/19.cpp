@@ -109,15 +109,15 @@ public:
 
     void PrintInfo()
     {
-        cout << "INFO :" << endl;
+        cout << "Info :" << endl;
         cout << "______________________________" << endl;
-        cout << "First Name: " << _FirstName ;
+        cout << "\nFirst Name: " << _FirstName ;
         cout << "\nLast Name: " << _LastName ;
         cout << "\nFull Name: " << FullName();
         cout << "\nPhone: " << _Phone;
         cout << "\nEmail: " << _Email;
         cout << "\nID: " << _ID ;  
-        cout << "\n______________________________" << endl;
+        cout << "\n______________________________\n" << endl;
 
     }
 
@@ -177,6 +177,9 @@ public:
 int main()
 { 
     clsEmployee Employee1(10, "Islam", "Raad", "07718277643", "islamraad43");
+
+    Employee1.PrintInfo();
+
 
     return 0;  
 
