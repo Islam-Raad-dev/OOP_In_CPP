@@ -23,7 +23,7 @@ public:
     clsPerson()
     {
 
-        
+
     }
 
     clsPerson(int ID, string FirstName, string LastName, string Phone, string Email)
@@ -141,6 +141,8 @@ private:
 int main()
 { 
     clsEmployee Employee1;
+
+    Employee1
 
     return 0;
 
