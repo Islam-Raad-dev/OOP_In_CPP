@@ -145,6 +145,24 @@ public:
         _Title = Title;
     }
 
+    string GetTitle()
+    {
+        cout << _Title << endl;
+        return _Title;
+    }
+
+    void SetDepartment(string Department)
+    {
+        _Department = Department;
+    }
+
+    string GetDepartment()
+    {
+        cout << _Department << endl;
+        return _Department;
+    }
+
+
     
 
 }; 
