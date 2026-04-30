@@ -179,7 +179,18 @@ public:
 
     void PrintInfo()
     {
-        clsPerson::PrintInfo();
+        cout << "Info :" << endl;
+        cout << "______________________________" << endl;
+        cout << "\nFirst Name: " << FirstName() ;
+        cout << "\nLast Name: " << LastName() ;
+        cout << "\nFull Name: " << FullName();
+        cout << "\nPhone: " << Phone();
+        cout << "\nEmail: " << Email();
+        cout << "\nID: " << ID();
+        cout << "\nTitle: " << Title();
+        cout << "\nDepartment: " << Department();
+        cout << "\nSalary: " << Salary();
+        cout << "\n______________________________\n" << endl;
     }
 
 }; 
