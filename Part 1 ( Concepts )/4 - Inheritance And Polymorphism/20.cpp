@@ -37,7 +37,6 @@ public:
 
     string FirstName()
     {
-        cout << _FirstName << endl;
         return _FirstName;
     }
     void SetLastName(string LastName)
@@ -47,7 +46,7 @@ public:
 
     string LastName()  
     {
-        cout << _LastName << endl;
+
         return _LastName;
     }
 
@@ -64,7 +63,7 @@ public:
 
     string Phone()
     {
-        cout << _Phone << endl;
+
         return _Phone;
     }
 
@@ -76,7 +75,7 @@ public:
 
     string Email()
     {
-        cout << _Email << endl;
+
         return _Email;
     }
 
@@ -87,7 +86,7 @@ public:
 
     int ID()
     {
-        cout << _ID << endl;
+
         return _ID;
     
     }
@@ -200,7 +199,6 @@ int main()
     clsEmployee Employee1(10, "Islam", "Raad", "07718277643", "islamraad43", "ML Ops", "Artificial Intelligence", 4000);
 
     Employee1.PrintInfo();
-    cout << Employee1.Salary() << endl;
  
 
     return 0;  
