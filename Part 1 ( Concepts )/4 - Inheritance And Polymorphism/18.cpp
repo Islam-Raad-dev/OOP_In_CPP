@@ -140,9 +140,9 @@ private:
 
 public:
 
-    clsEmployee()
+    void SetTitle(string Title)
     {
-
+        _Title = Title;
     }
 
     
