@@ -142,7 +142,7 @@ int main()
 { 
     clsEmployee Employee1;
 
-    Employee1
+    Employee1.FullName();
 
     return 0;
 
