@@ -162,6 +162,17 @@ public:
         return _Department;
     }
 
+    void SetSalary(double Salary)
+    {
+        _Salary = Salary;
+    }
+
+    double GetSalary()
+    {
+        cout << _Salary << endl;
+        return _Salary;
+    }
+
 
     
 
