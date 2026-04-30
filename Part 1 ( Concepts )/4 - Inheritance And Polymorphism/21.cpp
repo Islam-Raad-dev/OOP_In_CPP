@@ -174,7 +174,7 @@ public:
 
 int main()
 { 
-    clsDeveloper Developer1();
+    clsDeveloper Developer1(10, "Islam", "Raad", "07718277643", "islamraad43", "ML Ops", "Artificial Intelligence", 4000, "C++");
 
     Developer1.PrintInfo();
 
