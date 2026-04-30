@@ -127,6 +127,15 @@ public:
         return _Salary;
     }
 
+    void SetMainProgrammingLanguage(string MainProgrammingLanguage)
+    {
+        _MainProgrammingLanguage = MainProgrammingLanguage;
+    }
+
+    string MainProgrammingLanguage()
+    {
+        return _MainProgrammingLanguage;
+    }
 
     void SendEmail(string Subject, string Body)
     {
