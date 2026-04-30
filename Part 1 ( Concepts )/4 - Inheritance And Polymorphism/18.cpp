@@ -123,7 +123,7 @@ public:
 
 };
 
-class clsEmployee   
+class clsEmployee : public clsPerson
 {
 
 }; 
