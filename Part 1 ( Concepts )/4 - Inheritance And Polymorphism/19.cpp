@@ -134,6 +134,11 @@ private:
 
 public:
 
+    clsEmployee(int ID, string FirstName, string LastName, string Phone, string Email) : clsPerson(ID, FirstName, LastName, Phone, Email)
+    {
+
+    }
+
     void SetTitle(string Title)
     {
         _Title = Title;
