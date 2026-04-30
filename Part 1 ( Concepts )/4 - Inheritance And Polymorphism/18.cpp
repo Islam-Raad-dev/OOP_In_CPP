@@ -4,7 +4,7 @@ Third Principle : Inheritance.
 
 
 */
-#include<iostream>
+#include<iostream>  
 using namespace std; 
 
 class clsPerson
