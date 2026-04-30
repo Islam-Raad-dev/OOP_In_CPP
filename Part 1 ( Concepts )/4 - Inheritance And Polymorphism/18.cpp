@@ -190,6 +190,6 @@ int main()
     Employee1.SetSalary(3200);
     cout << Employee1.GetSalary() << endl;
 
-    return 0;
+    return 0; 
 
 }
