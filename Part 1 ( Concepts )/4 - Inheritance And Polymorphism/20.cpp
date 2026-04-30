@@ -177,6 +177,11 @@ public:
         return _Salary;
     }
 
+    void PrintInfo()
+    {
+
+    }
+
 }; 
 
 int main()
