@@ -142,7 +142,10 @@ int main()
 { 
     clsEmployee Employee1;
 
-    Employee1.FullName();
+    Employee1.SetFirstName("Islam");
+    Employee1.SetLastName("Raad");
+
+    Employee1.PrintInfo();
 
     return 0;
 
