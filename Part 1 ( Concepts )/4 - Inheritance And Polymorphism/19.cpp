@@ -179,7 +179,7 @@ public:
 
 int main()
 { 
-    clsEmployee Employee1;
+    clsEmployee Employee1(10, "Islam", "Raad", "07718277643", "islamraad43");
 
     Employee1.SetFirstName("Islam");
     Employee1.SetLastName("Raad");
