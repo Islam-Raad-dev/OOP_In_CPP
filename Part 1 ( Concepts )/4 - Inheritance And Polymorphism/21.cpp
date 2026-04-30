@@ -18,13 +18,13 @@ private:
     string _Title;
     string _Department;
     double _Salary;
-    string MainProgrammingLanguage;
+    string _MainProgrammingLanguage;
 
 
 public:
 
 
-    clsDeveloper(int ID, string FirstName, string LastName, string Phone, string Email, string Title, string Department, double Salary)
+    clsDeveloper(int ID, string FirstName, string LastName, string Phone, string Email, string Title, string Department, double Salary, string MainProgrammingLanguage)
     {
         _ID = ID;
         _FirstName = FirstName;
@@ -34,6 +34,7 @@ public:
         _Title = Title;
         _Department = Department;
         _Salary = Salary;
+        _MainProgrammingLanguage = MainProgrammingLanguage;
     }
 
     void SetFirstName(string FirstName)
