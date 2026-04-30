@@ -187,6 +187,8 @@ int main()
 
     Employee1.PrintInfo();
 
+    Employee1.SetSalary(3200);
+    Employee1.
     return 0;
 
 }
