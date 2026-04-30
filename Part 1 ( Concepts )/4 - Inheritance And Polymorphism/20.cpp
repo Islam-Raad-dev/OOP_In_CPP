@@ -179,7 +179,7 @@ public:
 
     void PrintInfo()
     {
-        
+        clsPerson::PrintInfo();
     }
 
 }; 
