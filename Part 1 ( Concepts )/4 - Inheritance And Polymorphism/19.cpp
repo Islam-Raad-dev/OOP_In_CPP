@@ -34,7 +34,7 @@ public:
         _FirstName = FirstName;
     }
 
-    string GetFirstName()
+    string FirstName()
     {
         cout << _FirstName << endl;
         return _FirstName;
@@ -44,7 +44,7 @@ public:
         _LastName = LastName;
     }
 
-    string GetLastName()  
+    string LastName()  
     {
         cout << _LastName << endl;
         return _LastName;
@@ -61,7 +61,7 @@ public:
         _Phone = Phone;
     }
 
-    string GetPhone()
+    string Phone()
     {
         cout << _Phone << endl;
         return _Phone;
@@ -73,7 +73,7 @@ public:
         
     }
 
-    string GetEmail()
+    string Email()
     {
         cout << _Email << endl;
         return _Email;
@@ -84,7 +84,7 @@ public:
         _ID = ID;
     }
 
-    int GetID()
+    int ID()
     {
         cout << _ID << endl;
         return _ID;
@@ -148,7 +148,7 @@ public:
         _Title = Title;
     }
 
-    string GetTitle()
+    string Title()
     {
     
         return _Title;
@@ -159,7 +159,7 @@ public:
         _Department = Department;
     }
 
-    string GetDepartment()
+    string Department()
     {
     
         return _Department;
@@ -170,7 +170,7 @@ public:
         _Salary = Salary;
     }
 
-    double GetSalary()
+    double Salary()
     {
     
         return _Salary;
