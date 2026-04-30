@@ -1,6 +1,6 @@
 /*
 
-Properties Get / Set:
+Properties Get / Set: 
 
 In C++, properties are not a built-in language feature like in some other
 programming languages (e.g., C#). However, you can achieve similar
