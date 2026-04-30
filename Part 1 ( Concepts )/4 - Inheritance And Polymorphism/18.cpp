@@ -188,7 +188,8 @@ int main()
     Employee1.PrintInfo();
 
     Employee1.SetSalary(3200);
-    Employee1.
+    cout << Employee1.GetSalary() << endl;
+
     return 0;
 
 }
