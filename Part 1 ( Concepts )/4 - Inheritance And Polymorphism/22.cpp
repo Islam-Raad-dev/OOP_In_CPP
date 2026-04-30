@@ -3,11 +3,6 @@
 Mulit Level Inheritance
 
 */
-/*
-
-Function Overriding
- 
-*/
 
 #include<iostream>  
 using namespace std; 
@@ -219,19 +214,32 @@ public:
 
     string MainProgrammingLanguage()  
     {
-
+        return _MainProgrammingLanguage;
     }
 
     void PrintInfo()
     {
-        
+                cout << "Info :" << endl;
+        cout << "______________________________" << endl;
+        cout << "\nFirst Name: " << FirstName() ;
+        cout << "\nLast Name: " << LastName() ;
+        cout << "\nFull Name: " << FullName();
+        cout << "\nPhone: " << Phone();
+        cout << "\nEmail: " << Email();
+        cout << "\nID: " << ID();
+        cout << "\nTitle: " << Title();
+        cout << "\nDepartment: " << Department();
+        cout << "\nSalary: " << Salary();
+        cout << "\nMain Programming Language: " << _MainProgrammingLanguage;
+        cout << "\n______________________________\n" << endl;
+
     };
 
 
 };
 int main()
 { 
-    clsDeveloper Developer1(10, "Islam", "Raad", "07718277643", "islamraad43", "ML Ops", "Artificial Intelligence", 4000, "C++");
+    clsDeveloper Developer1(10, "Islam", "Raad", "07718277643", "islamraad43", "ML Ops", "Artificial Intelligence", 4000, "Python");
 
     Developer1.PrintInfo();
  
