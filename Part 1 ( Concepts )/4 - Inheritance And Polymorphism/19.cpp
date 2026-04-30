@@ -172,9 +172,6 @@ public:
         return _Salary;
     }
 
-
-    
-
 }; 
 
 int main()
