@@ -123,7 +123,7 @@ public:
 
 };
 
-class Employee   
+class clsEmployee   
 {
 
 }; 
