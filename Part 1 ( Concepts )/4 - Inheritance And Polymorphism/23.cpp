@@ -27,18 +27,29 @@ protected:
 
 public:
 
-    
+
 
 };
 
-class clsB
+class clsB : public clsA
 {
 
+public:
+
+    int Var3;
+    void Function3()
+    {
+        cout << "Function 3.";
+    }
 
 };
 
 int main()
 {
+
+    clsA A;
+
+    A.
 
     return 0;
 }
