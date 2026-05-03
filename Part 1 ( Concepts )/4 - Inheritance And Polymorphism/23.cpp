@@ -47,9 +47,5 @@ public:
 int main()
 {
 
-    clsA A;
-
-    A.
-
     return 0;
 }
