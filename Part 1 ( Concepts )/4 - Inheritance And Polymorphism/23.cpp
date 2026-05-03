@@ -6,4 +6,12 @@ Acces Specifiers (Modifiers) In Inheritance
 #include<iostream>  
 using namespace std;
 
-class 
+class clsA
+{
+
+};
+
+class clsB
+{
+
+};
