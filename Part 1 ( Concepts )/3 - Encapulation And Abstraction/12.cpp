@@ -11,7 +11,7 @@ returned from a function by value.
 #include <iostream>
 using namespace std;
 
-class clsAddress
+class clsAddress          
 {
 private:
     string _AddressLine1;
