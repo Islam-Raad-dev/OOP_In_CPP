@@ -99,6 +99,7 @@ int main()
 
     clsAddress AddressCopy = Address1;
     AddressCopy.Print();
+    AddressCopy.Print();
  
     return 0;
 }
