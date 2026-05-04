@@ -27,7 +27,7 @@ public:
     ~clsPerson()
     {
         cout << "Hi, I'm Destructor" << endl;
-    }
+    }         
 };
 
 void Function()
