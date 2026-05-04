@@ -21,11 +21,11 @@ public:
 
     clsPerson(int ID, string FirstName, string LastName, string Phone, string Email)
     {
-        _ID = ID ;
-        _FirstName = FirstName ;
-        _LastName = LastName ;
-        _Phone = Phone ;
-        _Email = Email ;
+        _ID = ID ; 
+        _FirstName = FirstName ; 
+        _LastName = LastName ; 
+        _Phone = Phone ; 
+        _Email = Email ; 
     }
 
     void SetFirstName(string FirstName)
