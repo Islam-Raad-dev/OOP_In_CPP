@@ -10,11 +10,11 @@ class clsPerson
 {
     
 private:
-    string _FirstName ;
-    string _LastName ;
-    string _Phone ;
-    string _Email ;
-    int _ID ;
+    string _FirstName ; 
+    string _LastName ; 
+    string _Phone ; 
+    string _Email ; 
+    int _ID ; 
 
 
 public:
