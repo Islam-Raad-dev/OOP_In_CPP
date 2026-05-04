@@ -13,7 +13,7 @@ using namespace std;
 
 class clsPerson
 {
-private:
+private:   
     string _FullName;
 
 public:
