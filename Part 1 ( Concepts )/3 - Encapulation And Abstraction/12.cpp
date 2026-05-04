@@ -56,7 +56,7 @@ public:
     string AddressLine2()
     {
         return _AddressLine2;
-    }
+    }           
 
     void SetPOBox(string POBox)
     {
