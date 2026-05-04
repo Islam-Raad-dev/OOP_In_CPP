@@ -31,7 +31,7 @@ public:
 };
 
 void Function()
-{
+{          
     clsPerson Person1;
 }
 
