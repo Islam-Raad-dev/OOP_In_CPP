@@ -41,7 +41,7 @@ public:
     void SetAddressLine1(string AddressLine1)
     {
         _AddressLine1 = AddressLine1;
-    }
+    }                                        
 
     string AddressLine1()
     {
