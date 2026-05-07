@@ -30,7 +30,7 @@ public:
     void Display(clsA A1)
     {
         cout << endl << "The Value Of X = " << A1.Var2 << endl;
-        cout << endl << "The Value Of X = " << A1.Var2 << endl;
+        cout << endl << "The Value Of X = " << A1._Var1 << endl;
     }
 };
 
