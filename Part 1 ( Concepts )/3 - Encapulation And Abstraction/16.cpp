@@ -9,7 +9,7 @@ using namespace std;
 class clsPerson
 {
     
-private:
+private:                                            
     string _FirstName ; 
     string _LastName ; 
     string _Phone ; 
