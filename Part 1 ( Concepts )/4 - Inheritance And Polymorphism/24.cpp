@@ -41,7 +41,7 @@ public:
 
     int V4;
     int Fun4(){
-        clsA::
+        return 4;
     }
 
 
