@@ -49,7 +49,6 @@ int main()
     //Dynamic Late Binding
     clsPerson * Person1 = &Employee1;
     clsPerson * Peront2 = &Student1;
-
     Person1->Print();
     Peront2->Print();
 
