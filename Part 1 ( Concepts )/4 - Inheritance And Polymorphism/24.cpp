@@ -51,10 +51,6 @@ public:
 
 int main()
 {
-    clsA A1;
     clsB B1;
-
-    B1.
-
     return 0;
 }
