@@ -24,9 +24,17 @@ public:
     {
         _Var1 = 10;
         Var2 = 20;
+        Var3 = 30;
     }
 
     friend void Display(clsA A1);
 };
 
-void Display(clsA A1)
+int MySum(){
+
+}
+
+int main()
+{
+    return 0;
+}
