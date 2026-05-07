@@ -20,6 +20,9 @@ public:
 class clsEmployee : public clsPerson
 {
 
+public:
+
+    string Title = "CEO";
 };
 
 int main()
