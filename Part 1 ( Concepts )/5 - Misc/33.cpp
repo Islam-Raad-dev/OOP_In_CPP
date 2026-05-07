@@ -49,7 +49,10 @@ int main()
 
     clsPerson Person1;
 
-    Person1.Address.AddressLine2 ;
+    Person1.PrintAddress();
+
+    cout << Person1.Address.City << endl;
+
 
 
     return 0;
