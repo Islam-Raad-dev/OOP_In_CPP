@@ -40,7 +40,9 @@ class clsB : private clsA
 public:
 
     int V4;
-    int Fun4(){
+    int Fun4()
+    {
+        clsA::
         return 4;
     }
 
