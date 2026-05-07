@@ -34,7 +34,7 @@ public:
 
 };
 
-class clsB : private clsA
+class clsB : public clsA
 {
 
 public:
@@ -42,7 +42,6 @@ public:
     int V4;
     int Fun4()
     {
-        clsA::
         return 4;
     }
 
@@ -52,5 +51,8 @@ public:
 int main()
 {
     clsB B1;
+
+    B1.Fun4;
+
     return 0;
 }
