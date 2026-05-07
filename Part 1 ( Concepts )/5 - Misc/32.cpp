@@ -30,7 +30,9 @@ public:
     friend void Display(clsA A1);
 };
 
-int MySum(){
+int MySum(clsA A1){
+
+    return 0;
 
 }
 
