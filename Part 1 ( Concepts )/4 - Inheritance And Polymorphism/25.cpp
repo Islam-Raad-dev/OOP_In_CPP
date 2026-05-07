@@ -1,5 +1,5 @@
 /*
 
-Type Of Inheritance In C++
+Type Of Inheritance In C++ 
 
 */
