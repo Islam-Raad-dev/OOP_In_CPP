@@ -34,7 +34,7 @@ class clsStudent : public clsPerson
 public:
 
     void Print(){
-        cout << "J\Hi, I'm A Student!\n";
+        cout << "Hi, I'm A Student!\n";
     }
 };
 int main()
