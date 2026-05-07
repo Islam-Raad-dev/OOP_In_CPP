@@ -19,10 +19,17 @@ class clsMobile//Abstact Class / Interface
 class clsiPhone : public clsMobile
 {
 
+public:
+
+    void 
+
 };
 
 int main()
 {
+
+    clsiPhone iPhone1;
+
 
     return 0;
 }
