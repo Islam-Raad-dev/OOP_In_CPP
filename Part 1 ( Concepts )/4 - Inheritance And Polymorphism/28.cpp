@@ -4,7 +4,7 @@ Static Early Binding Vs Dynamic Late Binding
 
 */
 
-#include<iostream>
+#include <iostream>
 using namespace std;
 
 class clsPerson
@@ -41,14 +41,13 @@ int main()
     clsEmployee Employee1;
     clsStudent Student1;
 
-    //Early Static Binding
+    // Early Static Binding
     Employee1.Print();
     Student1.Print();
 
-
-    //Dynamic Late Binding
-    clsPerson * Person1 = &Employee1;
-    clsPerson * Peront2 = &Student1;
+    // Dynamic Late Binding
+    clsPerson *Person1 = &Employee1;
+    clsPerson *Peront2 = &Student1;
     Person1->Print();
     Peront2->Print();
 
