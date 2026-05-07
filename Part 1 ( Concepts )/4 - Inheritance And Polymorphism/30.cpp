@@ -19,9 +19,6 @@ class clsMobile//Abstact Class / Interface
 class clsiPhone : public clsMobile
 {
 
-public:
-
-    void 
 
 };
 
