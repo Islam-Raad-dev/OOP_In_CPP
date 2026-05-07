@@ -24,7 +24,7 @@ class clsEmployee : public clsPerson
 public:
     void Print()
     {
-        cout << "Hi I'm A Employee!\n";
+        cout << "Hi, I'm A Employee!\n";
     }
 };
 
@@ -32,8 +32,8 @@ class clsStudent : public clsPerson
 {
 
 public:
-
-    void Print(){
+    void Print()
+    {
         cout << "Hi, I'm A Student!\n";
     }
 };
