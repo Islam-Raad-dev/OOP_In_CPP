@@ -53,7 +53,7 @@ public:
 
     void SendSMS(string PhoneNumber, string Text)
     {
-        cout << "Send SMS " << PhoneNumber << endl;
+        cout << Text << PhoneNumber << endl;
     }
 
     void TakePicture()
@@ -67,7 +67,7 @@ int main()
     clsiPhone iPhone1;
 
     iPhone1.Dial("07718277643");
-    iPhone1.SendSMS("07718277643", "Hello World");
+    iPhone1.SendSMS("Hello World", "07718277643");
     iPhone1.TakePicture();
 
 
