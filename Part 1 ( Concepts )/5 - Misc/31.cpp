@@ -28,3 +28,9 @@ class clsB
 {
 
 };
+
+int main()
+{
+    
+    return 0;
+}
