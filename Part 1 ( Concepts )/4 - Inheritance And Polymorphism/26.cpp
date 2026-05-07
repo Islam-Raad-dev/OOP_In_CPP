@@ -32,6 +32,7 @@ int main()
 
     cout << Employee1.FullName << endl;
 
+    //Up Casting
     clsPerson * Person1 = &Employee1;
 
     cout << Person1->FullName << endl;
