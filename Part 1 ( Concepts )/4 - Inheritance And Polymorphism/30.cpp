@@ -7,7 +7,7 @@ Pure Virtual Functions and Abstract Classes
 #include <iostream>
 using namespace std;
 
-class clsMobile//Abstact Class / Interface
+class clsMobile//Abstact Class / Interface                                   
 {
 
     virtual void Dial(string PhoneNumber) = 0;
