@@ -28,7 +28,7 @@ public:
     }
 };
 
-class clsStudent : public clsEmployee
+class clsStudent : public clsPerson
 {
 
 public:
@@ -39,7 +39,11 @@ public:
 };
 int main()
 {
+    clsEmployee Employee1;
+    clsStudent Student1;
 
+    Employee1.Print();
+    Student1.Print();
 
     return 0;
 }
