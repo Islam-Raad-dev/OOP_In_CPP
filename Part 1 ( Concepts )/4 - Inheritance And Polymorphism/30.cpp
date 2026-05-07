@@ -40,6 +40,27 @@ public:
 
 };
 
+class clsSamsung : public clsMobile
+{
+
+public:
+
+    void Dial(string PhoneNumber)
+    {
+        cout << "Dialing " << PhoneNumber << endl;
+
+    }
+
+    void SendSMS(string PhoneNumber, string Text)
+    {
+        cout << "Send SMS " << PhoneNumber << endl;
+    }
+
+    void TakePicture()
+    {
+        cout << "Taking Picture" << endl;
+    } 
+};
 int main()
 {
 
