@@ -19,6 +19,8 @@ public:
         _Var1 = 10;
         Var2 = 20;
     }
+
+    friend class clsB;
 };
 
 class clsB
@@ -27,6 +29,7 @@ class clsB
 public:
     void Display(clsA A1)
     {
+        cout << endl << "The Value Of X = " << A1.Var2 << endl;
         cout << endl << "The Value Of X = " << A1.Var2 << endl;
     }
 };
