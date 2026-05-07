@@ -41,9 +41,12 @@ int main()
     clsEmployee Employee1;
     clsStudent Student1;
 
+    //Early Static Binding
     Employee1.Print();
     Student1.Print();
 
+
+    //Dynamic Late Binding
     clsPerson * Person1 = &Employee1;
     clsPerson * Peront2 = &Student1;
 
