@@ -10,12 +10,15 @@ class clsA
 {
 
 private:
+
     int _Var1;
 
 protected:
+
     int Var3;
 
 public:
+
     int Var2;
     clsA()
     {
@@ -39,7 +42,6 @@ int main()
     clsA A1;
 
     cout << MySum(A1) << endl;
-
 
     return 0;
 }
