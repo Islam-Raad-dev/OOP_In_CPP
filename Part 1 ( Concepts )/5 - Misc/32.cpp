@@ -38,5 +38,8 @@ int main()
 
     clsA A1;
 
+    cout << MySum(A1) << endl;
+
+
     return 0;
 }
