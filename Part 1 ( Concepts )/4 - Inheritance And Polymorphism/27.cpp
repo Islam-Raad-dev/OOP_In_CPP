@@ -12,7 +12,7 @@ class clsPerson
 {
 
 public:
-    void Print()
+    virtual void Print()
     {
         cout << "Hi, I'm A Perosn\n";
     }
