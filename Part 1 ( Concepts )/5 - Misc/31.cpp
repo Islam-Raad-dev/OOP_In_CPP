@@ -27,10 +27,12 @@ public:
 class clsB 
 {
 
+public:
+
 };
 
 int main()
 {
-    
+
     return 0;
 }
