@@ -7,46 +7,39 @@ Structure Inside Class
 #include <iostream>
 using namespace std;
 
-class clsA
+class clsPerson
 {
 
-private:
-
-    int _Var1;
+    struct stAddress
+    {
+        string AddressLine1;
+        string AddressLine2;
+        string City;
+        string State;
+        string Country;
+    };
 
 public:
 
-    int Var2;
-    clsA()
+    string FullName;
+    stAddress Address;
+
+    clsPerson()
     {
-        _Var1 = 10;
-        Var2 = 20;
+        FullName = "Islam Raad";
+        Address.AddressLine1 = "123 Main St";
+        Address.AddressLine2 = "Apt 4B";
+        Address.City = "Moaul";
+        Address.State = "Ninawa";
+        Address.Country = "Iraq";
     }
-
-    struct clsB
-    {
-
-        int Var3;
-        int Var4;
-
-        clsB()
-        {
-            Var3 = 30;
-            Var4 = 40;
-        }
-    };
-
-    clsB B1;
 };
 
 int main()
 {
 
-    clsA A1;
+    clsPerson Person1;
 
-    cout << A1.Var2 << endl;
-    cout << A1.B1.Var3 << endl;
-    cout << A1.B1.Var4 << endl;
 
     return 0;
 }
