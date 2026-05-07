@@ -10,9 +10,11 @@ class clsA
 {
 
 private:
+
     int _Var1;
 
 public:
+
     int Var2;
     clsA()
     {
@@ -27,6 +29,7 @@ class clsB
 {
 
 public:
+
     void Display(clsA A1)
     {
         cout << endl << "The Value Of X = " << A1.Var2 << endl;
