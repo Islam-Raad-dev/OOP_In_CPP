@@ -16,6 +16,11 @@ class clsMobile
 
 };
 
+class clsiPhone : public clsMobile
+{
+
+
+
 int main()
 {
 
