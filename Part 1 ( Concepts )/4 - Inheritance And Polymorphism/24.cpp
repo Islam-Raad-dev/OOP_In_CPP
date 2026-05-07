@@ -34,7 +34,7 @@ public:
 
 };
 
-class clsB : public clsA
+class clsB : private clsA
 {
 
 public:
