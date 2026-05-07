@@ -45,5 +45,8 @@ int main()
     Employee1.Print();
     Student1.Print();
 
+    clsPerson * Person1 = &Employee1;
+    clsPerson * Peront2 = &Student1;
+
     return 0;
 }
