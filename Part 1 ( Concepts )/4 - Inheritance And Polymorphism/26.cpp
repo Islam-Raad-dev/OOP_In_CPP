@@ -37,6 +37,7 @@ int main()
     cout << Person1->FullName << endl;
 
     //Down Casting
+    clsEmployee *Employee2 = &Person1;
 
     return 0;
 }
