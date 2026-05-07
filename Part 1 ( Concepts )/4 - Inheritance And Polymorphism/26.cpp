@@ -34,8 +34,9 @@ int main()
 
     //Up Casting
     clsPerson * Person1 = &Employee1;
-
     cout << Person1->FullName << endl;
+
+    //Down Casting
 
     return 0;
 }
