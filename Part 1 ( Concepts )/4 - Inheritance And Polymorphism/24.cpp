@@ -50,8 +50,9 @@ public:
 int main()
 {
     clsA A;
+    clsB B;
 
-    A.
+    B.
 
     return 0;
 }
