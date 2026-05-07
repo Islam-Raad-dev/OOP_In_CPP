@@ -14,7 +14,7 @@ class clsPerson
 public:
     void Print()
     {
-        cout << "Hi I'm A Perosn\n";
+        cout << "Hi, I'm A Perosn\n";
     }
 };
 
@@ -47,6 +47,9 @@ int main()
 
     clsPerson * Person1 = &Employee1;
     clsPerson * Peront2 = &Student1;
+
+    Person1->Print();
+    Peront2->Print();
 
     return 0;
 }
