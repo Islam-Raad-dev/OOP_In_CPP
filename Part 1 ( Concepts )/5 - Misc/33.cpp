@@ -33,12 +33,23 @@ public:
         Address.State = "Ninawa";
         Address.Country = "Iraq";
     }
+
+    void PrintAddress()
+    {
+        cout << endl << "Address Line 1 = " << Address.AddressLine1 << endl;
+        cout << endl << "Address Line 2 = " << Address.AddressLine2 << endl;
+        cout << endl << "City = " << Address.City << endl;
+        cout << endl << "State = " << Address.State << endl;
+        cout << endl << "Country = " << Address.Country << endl;
+    }
 };
 
 int main()
 {
 
     clsPerson Person1;
+
+    Person1.Address.AddressLine2 ;
 
 
     return 0;
