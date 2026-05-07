@@ -34,6 +34,10 @@ public:
 
 int main()
 {
+    clsA A1;
+    clsB B1;
+
+    B1.Display(A1);
 
     return 0;
 }
