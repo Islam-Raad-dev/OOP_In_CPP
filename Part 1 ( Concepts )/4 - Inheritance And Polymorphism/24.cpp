@@ -49,8 +49,8 @@ public:
 
 int main()
 {
-    clsA A;
-    clsB B;
+    clsA A1;
+    clsB B1;
 
     B.
 
