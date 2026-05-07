@@ -28,5 +28,9 @@ public:
 int main()
 {
 
+    clsEmployee Employee1;
+
+    cout << Employee1.FullName << endl;
+
     return 0;
 }
