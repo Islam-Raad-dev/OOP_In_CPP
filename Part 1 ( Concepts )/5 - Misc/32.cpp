@@ -10,15 +10,12 @@ class clsA
 {
 
 private:
-
     int _Var1;
 
 protected:
-
     int Var3;
 
 public:
-
     int Var2;
     clsA()
     {
@@ -27,16 +24,19 @@ public:
         Var3 = 30;
     }
 
-    friend void Display(clsA A1);
+    friend int MySum(clsA A1);
 };
 
-int MySum(clsA A1){
-
-    return 0;
-
+int MySum(clsA A1)
+{
+    
+    return A1.Var2 + A1.Var3 + A1._Var1;
 }
 
 int main()
 {
+
+    clsA A1;
+
     return 0;
 }
