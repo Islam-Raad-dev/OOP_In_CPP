@@ -11,7 +11,7 @@ class clsMobile//Abstact Class / Interface
 {
 
     virtual void Dial(string PhoneNumber) = 0;
-    virtual void SendSMS(string Text) = 0;
+    virtual void SendSMS(string PhoneNumber, string Text) = 0;
     virtual void TakePicture() = 0;
 
 };
