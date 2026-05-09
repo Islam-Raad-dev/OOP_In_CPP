@@ -4,7 +4,7 @@
 using namespace std;
 class clsPerson
 {
-    
+       
 private:
     string _FirstName;
     string _LastName;
