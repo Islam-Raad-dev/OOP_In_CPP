@@ -5,7 +5,7 @@
 using namespace std;
 
 class clsEmployee : public clsPerson
-{
+{ 
 
 private:
 
