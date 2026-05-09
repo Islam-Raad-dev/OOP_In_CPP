@@ -22,7 +22,7 @@ public:
     int X;
 
     void Print()
-    {
+    { 
         cout << "The Value Of X = " << X << endl;
     }
 
