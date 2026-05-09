@@ -1,14 +1,10 @@
 /*
 
 Sparate Class In Library:
-
-
-*/
-/*
-
-Parameterized Constructor Of The Base Class
+ 
 
 */
+
 #include<iostream> 
 #include"clsPerson.h"
 #include"clsEmployee.h"
