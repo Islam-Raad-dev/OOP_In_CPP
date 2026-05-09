@@ -13,7 +13,7 @@ public:
 
     clsString()
     {
-        _Value = ""
+        _Value = "";
     }
 
 
