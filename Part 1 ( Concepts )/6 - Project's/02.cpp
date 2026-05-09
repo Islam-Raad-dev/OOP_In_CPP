@@ -13,7 +13,7 @@ int main()
 {
     clsString String1("Islam Raad");
 
-    
+    cout << clsString::CountVowels("Welcome To Iraq") << endl;
 
 
     return 0;
