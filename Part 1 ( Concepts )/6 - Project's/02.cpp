@@ -14,22 +14,22 @@ int main()
     clsString String1;
     
 
-    clsString String2 ("Mohammed");
+    clsString String2 ("Islam");
     
-    String1.SetValue("Islam Raad");
+    String1.SetValue("Raad");
 
     cout << "String1 = " << String1.GetValue() << endl;
     cout << "String2 = " << String2.GetValue() << endl;
    
     cout << "Number of words: " << String1.CountWords() <<endl;
 
-    cout << "Number of words: " << String1.CountWords("Fadi ahmed rateb omer") << endl;
+    cout << "Number of words: " << String1.CountWords("Im Student At University Of Mosul") << endl;
 
     cout << "Number of words: " <<
-        clsString::CountWords("Mohammed Saqer Abu-Hadhoud") << endl;
+        clsString::CountWords("Islam Raad Fahad Ali") << endl;
 
     //----------------
-    clsString String3("hi how are you?");
+    clsString String3("Hi How Are You");
     
     cout << "String 3 = " << String3.GetValue() << endl;
 
@@ -71,7 +71,7 @@ int main()
     //----------------
 
     cout << "Capital Letters count : "
-        << clsString::CountLetters("Mohammed Abu-Hadhoud",clsString::CapitalLetters) 
+        << clsString::CountLetters("Islam Abu-Hadhoud",clsString::CapitalLetters) 
         << endl<<endl;
 
     //----------------
@@ -120,42 +120,42 @@ int main()
     //----------------
 
     //Tirms
-    String3.SetValue("    Mohammed Abu-Hahdoud     ");
+    String3.SetValue("    Islam Raad Fathi     ");
     cout << "\nString     = " << String3.GetValue();
     
-    String3.SetValue("    Mohammed Abu-Hahdoud     ");
+    String3.SetValue("    Islam Raad Fathi     ");
     String3.TrimLeft();
     cout << "\n\nTrim Left  = " << String3.GetValue();
 
     //----------------
 
-    String3.SetValue("    Mohammed Abu-Hahdoud     ");
+    String3.SetValue("    Islam Raad Fathi     ");
     String3.TrimRight();
     cout << "\nTrim Right = " << String3.GetValue();
 
     //----------------
 
-    String3.SetValue("    Mohammed Abu-Hahdoud     ");
+    String3.SetValue("    Islam Raad Fathi     ");
     String3.Trim();
     cout << "\nTrim       = " << String3.GetValue();
 
     //----------------
 
     //Joins
-    vector<string> vString1 = { "Mohammed","Faid","Ali","Maher" };
+    vector<string> vString1 = { "Islam","Faid","Ali","Maher" };
     
     cout << "\n\nJoin String From Vector: \n";
     cout << clsString::JoinString(vString1, " ");
 
 
-    string arrString[] = { "Mohammed","Faid","Ali","Maher" };
+    string arrString[] = { "Islam","Faid","Ali","Maher" };
 
     cout << "\n\nJoin String From array: \n";
     cout << clsString::JoinString(arrString, 4, " ");
 
     //----------------
 
-    String3.SetValue("Mohammed Saqer Abu-Hahdoud");
+    String3.SetValue("Islam Raad Fathi");
     cout << "\n\nString     = " << String3.GetValue();
 
     String3.ReverseWordsInString();
@@ -164,8 +164,8 @@ int main()
     
     //---------------
 
-    String3.SetValue("Mohammed Saqer Abu-Hahdoud");
-    cout << "\nReplace : " << String3.ReplaceWord("Mohammed", "Sari")
+    String3.SetValue("Islam Raad Fathi");
+    cout << "\nReplace : " << String3.ReplaceWord("Islam", "Sari")
         << endl;
     
     //---------------
