@@ -26,12 +26,12 @@ public:
 
     static void Func1(clsEmployee Employee1)
     {
-
+        Employee1.Print();
     }
 
     void Func2()
     {
-
+        Func1(*this);
     }
 
     void Print()
