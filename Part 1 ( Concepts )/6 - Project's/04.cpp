@@ -10,11 +10,7 @@ using namespace std;
 
 int main()
 {
-    clsPeriod Period1;
-    Period1.Print();
-
-    clsPeriod Period2;
-    Period2.Print();
+    clsPeriod Period1();
 
     return 0;
 }
