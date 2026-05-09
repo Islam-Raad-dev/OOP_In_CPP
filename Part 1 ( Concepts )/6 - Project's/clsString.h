@@ -4,4 +4,17 @@
 using namespace std;
 
 class clsString
-{};
+{
+
+private:
+    string _Value;
+
+public:
+
+    clsString()
+    {
+        _Value = ""
+    }
+
+
+};
