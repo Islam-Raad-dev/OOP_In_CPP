@@ -1,7 +1,7 @@
 #pragma once
 
 #include<iostream> 
-#include"clsPerson.h" 
+#include"clsPerson.h"  
 using namespace std;
 
 class clsEmployee : public clsPerson
