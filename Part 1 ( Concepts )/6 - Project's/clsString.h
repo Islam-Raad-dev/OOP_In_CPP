@@ -31,7 +31,6 @@ public:
         return _Value;
     }
 
-
    
     static short Length(string S1)
     {
