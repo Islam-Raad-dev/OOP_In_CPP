@@ -16,7 +16,7 @@ int main()
 
     clsString String2 ("Mohammed");
 
-    String1.Value = "Ali Ahmed";
+    String1.SetValue = ("Ali Ahmed");
 
     cout << "String1 = " << String1.Value << endl;
     cout << "String2 = " << String2.Value << endl;
