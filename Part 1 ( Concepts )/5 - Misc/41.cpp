@@ -25,3 +25,17 @@ class clsA
     }
 
 };
+
+int main()
+{
+
+    clsA obj[] = { clsA(10), clsA(20), clsA(30)};
+
+    for(int i = 0; i < 3; i++)
+    {
+        obj[i].Print();
+    }
+
+    return 0;
+
+}
