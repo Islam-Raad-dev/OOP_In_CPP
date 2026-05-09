@@ -20,6 +20,7 @@ public:
         this->ID = ID;
         this->Name = Name;
         this->Salary = Salary;
+
     
     }
 
