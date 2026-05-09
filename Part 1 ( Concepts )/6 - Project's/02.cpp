@@ -15,11 +15,11 @@ int main()
     
 
     clsString String2 ("Mohammed");
+    
+    String1.SetValue("Islam Raad");
 
-    String1.SetValue = ("Ali Ahmed");
-
-    cout << "String1 = " << String1.Value << endl;
-    cout << "String2 = " << String2.Value << endl;
+    cout << "String1 = " << String1.GetValue() << endl;
+    cout << "String2 = " << String2.GetValue() << endl;
    
     cout << "Number of words: " << String1.CountWords() <<endl;
 
@@ -31,27 +31,27 @@ int main()
     //----------------
     clsString String3("hi how are you?");
     
-    cout << "String 3 = " << String3.Value << endl;
+    cout << "String 3 = " << String3.GetValue() << endl;
 
     cout << "String Length = " <<String3.Length() << endl;
 
     String3.UpperFirstLetterOfEachWord();
-    cout << String3.Value << endl;
+    cout << String3.GetValue() << endl;
 
     //----------------
 
     String3.LowerFirstLetterOfEachWord();
-    cout << String3.Value << endl;
+    cout << String3.GetValue() << endl;
 
     //----------------
 
     String3.UpperAllString();
-    cout << String3.Value << endl;
+    cout << String3.GetValue() << endl;
 
     //----------------
 
     String3.LowerAllString();
-    cout << String3.Value << endl;
+    cout << String3.GetValue() << endl;
 
     //----------------
 
@@ -60,13 +60,13 @@ int main()
 
     //----------------
 
-    String3.Value = "AbCdEfg";
+    String3.SetValue("AbCdEfg");
     
     String3.InvertAllLettersCase();
-    cout << String3.Value << endl;
+    cout << String3.GetValue() << endl;
 
     String3.InvertAllLettersCase();
-    cout << String3.Value << endl;
+    cout << String3.GetValue() << endl;
 
     //----------------
 
@@ -76,8 +76,8 @@ int main()
 
     //----------------
 
-    String3.Value = "Welcome to Jordan";
-    cout << String3.Value << endl;
+    String3.SetValue("Welcome to Jordan");
+    cout << String3.GetValue() << endl;
 
     cout << "Capital Letters count :" << String3.CountCapitalLetters() << endl;
 
@@ -120,24 +120,24 @@ int main()
     //----------------
 
     //Tirms
-    String3.Value=  "    Mohammed Abu-Hahdoud     ";
-    cout << "\nString     = " << String3.Value;
+    String3.SetValue("    Mohammed Abu-Hahdoud     ");
+    cout << "\nString     = " << String3.GetValue();
     
-    String3.Value = "    Mohammed Abu-Hahdoud     ";
+    String3.SetValue("    Mohammed Abu-Hahdoud     ");
     String3.TrimLeft();
-    cout << "\n\nTrim Left  = " << String3.Value;
+    cout << "\n\nTrim Left  = " << String3.GetValue();
 
     //----------------
 
-    String3.Value = "    Mohammed Abu-Hahdoud     ";
+    String3.SetValue("    Mohammed Abu-Hahdoud     ");
     String3.TrimRight();
-    cout << "\nTrim Right = " << String3.Value;
+    cout << "\nTrim Right = " << String3.GetValue();
 
     //----------------
 
-    String3.Value = "    Mohammed Abu-Hahdoud     ";
+    String3.SetValue("    Mohammed Abu-Hahdoud     ");
     String3.Trim();
-    cout << "\nTrim       = " << String3.Value;
+    cout << "\nTrim       = " << String3.GetValue();
 
     //----------------
 
@@ -155,26 +155,26 @@ int main()
 
     //----------------
 
-    String3.Value = "Mohammed Saqer Abu-Hahdoud";
-    cout << "\n\nString     = " << String3.Value;
+    String3.SetValue("Mohammed Saqer Abu-Hahdoud");
+    cout << "\n\nString     = " << String3.GetValue();
 
     String3.ReverseWordsInString();
-    cout << "\nReverse Words : " << String3.Value
+    cout << "\nReverse Words : " << String3.GetValue()
         << endl;
     
     //---------------
 
-    String3.Value = "Mohammed Saqer Abu-Hahdoud";
+    String3.SetValue("Mohammed Saqer Abu-Hahdoud");
     cout << "\nReplace : " << String3.ReplaceWord("Mohammed", "Sari")
         << endl;
     
     //---------------
 
-    String3.Value = "This is: a sample text, with punctuations.";
-    cout << "\n\nString     = " << String3.Value;
+    String3.SetValue("This is: a sample text, with punctuations.");
+    cout << "\n\nString     = " << String3.GetValue();
 
     String3.RemovePunctuations();
-    cout << "\nRemove Punctuations : " << String3.Value
+    cout << "\nRemove Punctuations : " << String3.GetValue()
         << endl;
 
     //---------------
