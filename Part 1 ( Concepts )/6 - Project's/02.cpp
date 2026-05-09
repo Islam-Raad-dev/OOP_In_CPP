@@ -12,7 +12,9 @@ int main()
 
 {
     clsString String1("Islam Raad");
+
     
+
 
     return 0;
 };
