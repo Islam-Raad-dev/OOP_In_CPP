@@ -4,7 +4,7 @@
 class clsPeriod
 {
 public:
-
+     
     clsDate StartDate;
     clsDate EndDate;
 
