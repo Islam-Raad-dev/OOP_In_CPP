@@ -6,5 +6,9 @@ Date Library
 */
 #include<iostream>
 #include "clsDate.h"
-using namespace std
+using namespace std;
 
+int main()
+{
+
+}
