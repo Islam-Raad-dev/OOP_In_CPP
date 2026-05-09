@@ -14,7 +14,6 @@ Parameterized Constructor Of The Base Class
 using namespace std; 
 
 
-
 class clsEmployee : public clsPerson
 {
 
