@@ -17,7 +17,7 @@ public:
     {
        _Value = "";
     }
-
+ 
     clsString(string Value)
     {
         _Value = Value;
