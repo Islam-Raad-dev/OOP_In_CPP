@@ -7,7 +7,7 @@ Utility Library
 #include "clsUtil.h"
 using namespace std;
 
-class clsUtil
+int main()
 {
-
-};
+    
+}
