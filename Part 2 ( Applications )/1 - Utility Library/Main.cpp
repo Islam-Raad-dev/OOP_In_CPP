@@ -103,3 +103,6 @@ int main()
     cout << TextAfterEncryption << endl;
     cout << "Text After Decryption  : ";
     cout << TextAfterDecryption << endl;
+
+    return 0;
+}
