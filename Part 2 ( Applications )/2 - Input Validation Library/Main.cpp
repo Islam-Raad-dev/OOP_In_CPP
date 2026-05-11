@@ -4,6 +4,7 @@ Input Validation Library
 
 */
 #include <iostream>
+#include<limits>
 #include<clsInputValidate.h>
 
 int main()
