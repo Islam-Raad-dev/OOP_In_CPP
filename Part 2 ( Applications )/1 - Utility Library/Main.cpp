@@ -1,6 +1,6 @@
 /*
 
-Utility Library
+Utility Library           
 
 */
 #include <iostream>
@@ -9,5 +9,5 @@ using namespace std;
 
 class clsUtil
 {
-    
+
 };
