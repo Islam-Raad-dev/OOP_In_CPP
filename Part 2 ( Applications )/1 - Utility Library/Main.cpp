@@ -1,10 +1,13 @@
 /*
 
-Utility Library           
+Utility Library
 
 */
 #include <iostream>
 #include "clsUtil.h"
+#include "clsDate.h"
+
+using namespace std;
 
 int main()
 
@@ -18,34 +21,37 @@ int main()
 
     cout << "\n";
 
-    //Swap Int
+    // Swap Int
     int x = 10, y = 20;
     cout << x << " " << y << endl;
     clsUtil::Swap(x, y);
-    cout << x << " " << y << endl << endl;
+    cout << x << " " << y << endl
+         << endl;
 
-    //Swap double
+    // Swap double
     double a = 10.5, b = 20.5;
     cout << a << " " << b << endl;
     clsUtil::Swap(a, b);
-    cout << a << " " << b << endl << endl;
+    cout << a << " " << b << endl
+         << endl;
 
-    //Swap String
+    // Swap String
     string s1 = "Ali", s2 = "Ahmed";
     cout << s1 << " " << s2 << endl;
     clsUtil::Swap(s1, s2);
-    cout << s1 << " " << s2 << endl << endl;
+    cout << s1 << " " << s2 << endl
+         << endl;
 
-    //Swap Dates
+    // Swap Dates
     clsDate d1(1, 10, 2022), d2(1, 1, 2022);
     cout << d1.DateToString() << " " << d2.DateToString() << endl;
     clsUtil::Swap(d1, d2);
     cout << d1.DateToString() << " " << d2.DateToString() << endl;
 
-    //Shuffl Array
+    // Shuffl Array
 
-    //int array
-    int Arr1[5] = { 1,2,3,4,5 };
+    // int array
+    int Arr1[5] = {1, 2, 3, 4, 5};
     clsUtil::ShuffleArray(Arr1, 5);
     cout << "\nArray after shuffle:\n";
     for (int i = 0; i < 5; i++)
@@ -53,8 +59,8 @@ int main()
         cout << Arr1[i] << endl;
     }
 
-    //string array
-    string Arr2[5] = { "Ali","Fadi","Ahmed","Qasem","Khalid" };
+    // string array
+    string Arr2[5] = {"Ali", "Fadi", "Ahmed", "Qasem", "Khalid"};
     clsUtil::ShuffleArray(Arr2, 5);
     cout << "\nArray after shuffle:\n";
     for (int i = 0; i < 5; i++)
@@ -70,7 +76,6 @@ int main()
         cout << Arr3[i] << endl;
     }
 
-
     string Arr4[5];
     clsUtil::FillArrayWithRandomWords(Arr4, 5, clsUtil::MixChars, 8);
     cout << "\nArray after fill:\n";
@@ -78,7 +83,6 @@ int main()
     {
         cout << Arr4[i] << endl;
     }
-
 
     string Arr5[5];
     clsUtil::FillArrayWithRandomKeys(Arr5, 5, clsUtil::MixChars);
@@ -90,7 +94,7 @@ int main()
 
     cout << "\nText1 " << clsUtil::Tabs(5) << "Text2\n";
 
-    const short EncryptionKey = 2; //this is the key.
+    const short EncryptionKey = 2; // this is the key.
 
     string TextAfterEncryption, TextAfterDecryption;
     string Text = "Mohammed Abu-Hadhoud";
