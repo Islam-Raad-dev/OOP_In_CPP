@@ -88,7 +88,17 @@ public:
         cout << "\nAccount Number  : " << _AccountNumber;
         cout << "\nPin Code        : " << _PinCode;
         cout << "\nAccount Balance : " << _AccountBalance;
-        cout << "\n-----------------------------------";
+        cout << "\n-----------------------------------\n";
+    }
+
+    static clsBankClient Find(string AccountNumber)
+    {
+
+    }
+
+    static clsBankClient Find(string AccountNumber, string PinCode)
+    {
+        
     }
     
 
