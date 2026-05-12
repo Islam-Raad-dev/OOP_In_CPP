@@ -56,9 +56,9 @@ public:
         return _Mode == enMode::UpdateMode;
     }
 
-    void AccountNumber(string AccountNumber)
+    string AccountNumber()
     {
-        _AccountNumber = AccountNumber;
+        return _AccountNumber;
     }
 
     void SetPinCode(string PinCode)
