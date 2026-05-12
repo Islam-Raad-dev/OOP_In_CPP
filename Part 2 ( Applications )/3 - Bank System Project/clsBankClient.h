@@ -48,12 +48,12 @@ public:
 
     bool IsEmpty()
     {
-        return _Mode == EmptyMode;
+        return _Mode == enMode::EmptyMode;
     }
 
     bool IsUpdate()
     {
-        return _Mode == UpdateMode;
+        return _Mode == enMode::UpdateMode;
     }
 
     void SetAccountNumber(string AccountNumber)
