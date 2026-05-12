@@ -36,4 +36,16 @@ private:
     }
 
 public:
+
+    clsBankClient(enMode Mode,string FirstName, string LastName, string Email, string Phone, string AccountNumber, string PinCode, float AccountBalance)
+        : clsPerson(FirstName, LastName, Email, Phone)
+    {
+        _Mode = Mode;
+        _AccountNumber = AccountNumber;
+        _PinCode = PinCode;
+        _AccountBalance = AccountBalance;
+    }
+
+    
+
 };
