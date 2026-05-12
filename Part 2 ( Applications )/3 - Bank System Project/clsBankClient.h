@@ -75,6 +75,21 @@ public:
     {
         return _AccountBalance;
     }
+
+    void Print()
+    {
+        cout << "\nClient Card:";
+        cout << "\n-----------------------------------";
+        cout << "\nFirst Name: " << FirstName;
+        cout << "\nLast Name: " << LastName;
+        cout << "\nFull Name" << FullName();
+        cout << "\nEmail: " << Email;
+        cout << "\nPhone: " << Phone;
+        cout << "\nAccount Number: " << _AccountNumber;
+        cout << "\nPin Code: " << _PinCode;
+        cout << "\nAccount Balance: " << _AccountBalance;
+        cout << "\n-----------------------------------";
+    }
     
 
 };
