@@ -46,6 +46,31 @@ public:
         _AccountBalance = AccountBalance;
     }
 
+    bool IsEmpty()
+    {
+        return _Mode == EmptyMode;
+    }
+
+    bool IsUpdate()
+    {
+        return _Mode == UpdateMode;
+    }
+
+    void SetAccountNumber(string AccountNumber)
+    {
+        _AccountNumber = AccountNumber;
+    }
+
+    void SetPinCode(string PinCode)
+    {
+        _PinCode = PinCode;
+    }
+
+    void SetAccountBalance(float AccountBalance)
+    {
+        _AccountBalance = AccountBalance;
+    }
+
     
 
 };
