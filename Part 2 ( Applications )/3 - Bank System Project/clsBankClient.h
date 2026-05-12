@@ -51,11 +51,6 @@ public:
         return _Mode == enMode::EmptyMode;
     }
 
-    bool IsUpdate()
-    {
-        return _Mode == enMode::UpdateMode;
-    }
-
     string AccountNumber()
     {
         return _AccountNumber;
@@ -80,9 +75,6 @@ public:
     {
         return _AccountBalance;
     }
-
-
-
     
 
 };
