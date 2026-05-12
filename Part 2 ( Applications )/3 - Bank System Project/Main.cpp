@@ -4,10 +4,16 @@ Bank Project
 
 */
 #include <iostream>
-#include<clsDate.h>
-#include<clsString.h>
-#include<clsInputValidate.h>
-#include<clsUtil.h>
-#include "clsPerson.h"
+#include<clsPerson.h>
+#include <clsBankClient.h>
+
 using namespace std;
 
+int main()
+{
+    clsBankClient Client1 = clsBankClient::Find("A100");
+    Client1.Print();
+
+    return 0;
+
+}
