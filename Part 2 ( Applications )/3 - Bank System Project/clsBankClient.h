@@ -56,7 +56,7 @@ public:
         return _Mode == enMode::UpdateMode;
     }
 
-    void SetAccountNumber(string AccountNumber)
+    void AccountNumber(string AccountNumber)
     {
         _AccountNumber = AccountNumber;
     }
@@ -66,10 +66,22 @@ public:
         _PinCode = PinCode;
     }
 
+    string GetPinCode()
+    {
+        return _PinCode;
+    }
+
     void SetAccountBalance(float AccountBalance)
     {
         _AccountBalance = AccountBalance;
     }
+
+    float GetAccountBalance()
+    {
+        return _AccountBalance;
+    }
+
+
 
     
 
