@@ -11,5 +11,9 @@ using namespace std;
 
 class clsBankClient : public clsPerson
 {
-    
+
+private:
+
+    enum enMode {EmptyMode = 0, UpdateMode = 1};
+
 };
