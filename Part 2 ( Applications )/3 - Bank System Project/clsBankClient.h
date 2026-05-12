@@ -98,8 +98,15 @@ public:
 
     static clsBankClient Find(string AccountNumber, string PinCode)
     {
-        
+
     }
+
+    static bool IsClientExists(string AccountNumber)
+    {
+
+    }
+
+    
     
 
 };
