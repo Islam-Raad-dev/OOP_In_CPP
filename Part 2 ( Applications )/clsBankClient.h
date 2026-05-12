@@ -80,11 +80,6 @@ public:
     {
         cout << "\nClient Card:";
         cout << "\n-----------------------------------";
-        cout << "\nFirst Name      : " << ;
-        cout << "\nLast Name       : " << _LastName;
-        cout << "\nFull Name       : " << FullName();
-        cout << "\nEmail           : " << GetEmail();
-        cout << "\nPhone           : " << GetPhone();
         cout << "\nAccount Number  : " << _AccountNumber;
         cout << "\nPin Code        : " << _PinCode;
         cout << "\nAccount Balance : " << _AccountBalance;
