@@ -22,6 +22,18 @@ private:
     string _PinCode;
     float _AccountBalance;
 
+    static clsBankClient _ConvertLineToClientObject(string Line, string ass)
+    {}
+    static clsBankClient _ConvertClientObjectToLine(clsBankClient Client, string ass)
+    {}
+
+    static clsBankClient _GetEmptyClientObject()
+    {}
+    static clsBankClient _GetUpdateClientObject()
+    {}
+
+
+
 public:
 
 
