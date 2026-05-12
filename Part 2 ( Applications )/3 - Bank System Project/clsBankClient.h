@@ -15,5 +15,15 @@ class clsBankClient : public clsPerson
 private:
 
     enum enMode {EmptyMode = 0, UpdateMode = 1};
+    enMode _Mode;
+
+
+    string _AccountNumber;
+    string _PinCode;
+    float _AccountBalance;
+
+public:
+
+
 
 };
