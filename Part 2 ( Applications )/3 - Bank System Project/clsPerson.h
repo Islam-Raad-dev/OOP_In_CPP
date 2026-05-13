@@ -36,7 +36,7 @@ public:
 
     string FullName()
     {
-        return _FirstName + " " << _LastName ;
+        return _FirstName + " " +  _LastName ;
     }
     void SetEmail(string Email)
     {
