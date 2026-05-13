@@ -11,7 +11,23 @@ using namespace std;
 void ReadCleintInfo(clsBankClient &Client)
 {
 
-    
+    cout << "\nEnter FirstName: ";
+    Client.GetFirstName() = clsInputValidate::ReadString();
+
+    cout << "\nEnter LastName: ";
+    Client.GetLastName() = clsInputValidate::ReadString();
+
+    cout << "\nEnter Email: ";
+    Client.GetEmail() = clsInputValidate::ReadString();
+
+    cout << "\nEnter Phone: ";
+    Client.GetPhone() = clsInputValidate::ReadString();
+
+    cout << "\nEnter PinCode: ";
+    Client.GetPinCode() = clsInputValidate::ReadString();
+
+    cout << "\nEnter Account Balance: ";
+    Client.SetAccountBalance = clsInputValidate::ReadFloatNumber();
 }
 
 void UpdateClient()
