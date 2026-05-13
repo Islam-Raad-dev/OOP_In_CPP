@@ -38,9 +38,27 @@ private:
         return clsBankClient(enMode::EmptyMode, "", "", "", "", "", "", 0);
     }
 
-    void _Upadte()
+    static vector<clsBankClient> _LoadClientDateFormFile()
     {
         
+    }
+
+    void _Upadte()
+    {
+
+        vector<clsBankClient> _vClient;
+
+        _vClient = _LoadClientDateFormFile();
+
+        for (clsBankClient & C : _vClient)
+        {
+            if(C.AccountNumber() == AccountNumber())
+            {
+                C = *this;
+                break;
+            }
+        }
+
     }
 
 public:
@@ -176,12 +194,6 @@ public:
             return enSaveResult::svSucceeded;
 
             break;
-        }
-
-
-        
-        default:
-
         }
 
     }
