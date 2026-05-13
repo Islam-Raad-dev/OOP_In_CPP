@@ -24,25 +24,21 @@ private:
     string _PinCode;
     float _AccountBalance;
 
-    static clsBankClient _ConvertLineToClientObject(string Line, string Seperator = "#//#") 
+    static clsBankClient _ConvertLineToClientObject(string Line, string Seperator = "#//#")
     {
-      vector<string> vClientData;
+        vector<string> vClientData;
 
-      vClientData = clsString::Split(Line, Seperator);
+        vClientData = clsString::Split(Line, Seperator);
 
-      return clsBankClient(enMode::UpdateMode, vClientData[0], vClientData[1], vClientData[2], vClientData[3], vClientData[4], vClientData[5], stod(vClientData[6]));
- 
-
+        return clsBankClient(enMode::UpdateMode, vClientData[0], vClientData[1], vClientData[2], vClientData[3], vClientData[4], vClientData[5], stod(vClientData[6]));
     }
-    static clsBankClient _ConvertClientObjectToLine(clsBankClient Client, string Seperator = "#//#") 
+    static clsBankClient _ConvertClientObjectToLine(clsBankClient Client, string Seperator = "#//#")
     {
-
     }
 
-    static clsBankClient _GetEmptyClientObject() 
+    static clsBankClient _GetEmptyClientObject()
     {
         return clsBankClient(enMode::EmptyMode, "", "", "", "", "", "", 0);
-
     }
 
 public:
@@ -130,7 +126,37 @@ public:
         return _GetEmptyClientObject();
     }
 
-    static clsBankClient Find(string AccountNumber, string PinCode) {}
+    static clsBankClient Find(string AccountNumber, string PinCode)
+    {
+        vector<clsBankClient> vClients;
+        fstream MyFile;
 
-    static bool IsClientExists(string AccountNumber) {}
+        MyFile.open("Clients.txt", ios::in);
+
+        if (MyFile.is_open())
+        {
+            string Line;
+
+            while (getline(MyFile, Line))
+            {
+                clsBankClient Client = _ConvertLineToClientObject(Line);
+
+                if (Client.AccountNumber() == AccountNumber && Client.GetPinCode() == PinCode)
+                {
+                    MyFile.close();
+                    return Client;
+                }
+
+                vClients.push_back(Client);
+            }
+
+            MyFile.close();
+        }
+
+        return _GetEmptyClientObject();
+    }
+
+    static bool IsClientExists(string AccountNumber)
+    {
+    }
 };
