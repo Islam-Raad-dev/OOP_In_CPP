@@ -107,6 +107,8 @@ public:
 
                 vClients.push_back(Client);
             }
+
+            MyFile.close();
         }
     }
 
