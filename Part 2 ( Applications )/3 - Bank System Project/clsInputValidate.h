@@ -118,10 +118,11 @@ public:
 
 	static string ReadString()
 	{
-		string string;
-		cin >> string;
+		string  S1="";
 
-		return string;
+		getline(cin >> ws, S1);
+		
+		return S1;
 	}
 
 };
