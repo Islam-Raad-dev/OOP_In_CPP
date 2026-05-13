@@ -24,10 +24,10 @@ private:
     string _PinCode;
     float _AccountBalance;
 
-    //static clsBankClient _ConvertLineToClientObject(string Line, string Seperator = "#//#"){}
-   // static clsBankClient _ConvertClientObjectToLine(clsBankClient Client, string Seperator = "#//#"){}
+    static clsBankClient _ConvertLineToClientObject(string Line, string Seperator = "#//#"){}
+   static clsBankClient _ConvertClientObjectToLine(clsBankClient Client, string Seperator = "#//#"){}
 
-//    static clsBankClient _GetEmptyClientObject(){}
+    static clsBankClient _GetEmptyClientObject(){}
 
 public:
 
@@ -85,11 +85,11 @@ public:
         cout << "\n-----------------------------------\n";
     }
 
-    //static clsBankClient Find(string AccountNumber){}
+    static clsBankClient Find(string AccountNumber){}
 
-    //static clsBankClient Find(string AccountNumber, string PinCode){}
+    static clsBankClient Find(string AccountNumber, string PinCode){}
 
-   // static bool IsClientExists(string AccountNumber){}
+    static bool IsClientExists(string AccountNumber){}
 
     
     
