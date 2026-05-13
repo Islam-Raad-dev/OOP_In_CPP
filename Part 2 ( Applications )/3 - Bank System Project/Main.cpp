@@ -24,10 +24,10 @@ void ReadCleintInfo(clsBankClient &Client)
     Client.GetPhone() = clsInputValidate::ReadString();
 
     cout << "\nEnter PinCode: ";
-    Client.GetPinCode() = clsInputValidate::ReadString();
+    Client.SetPinCode(clsInputValidate::ReadString());
 
     cout << "\nEnter Account Balance: ";
-    Client.SetAccountBalance = clsInputValidate::ReadFloatNumber();
+    Client.SetAccountBalance(clsInputValidate::ReadDblNumber());
 }
 
 void UpdateClient()
