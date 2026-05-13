@@ -63,8 +63,8 @@ void UpdateClient()
 
         break;
 
-    case clsBankClient::enSaveResult::svFailed:
-
+    case clsBankClient::enSaveResult::svFaildEmpteObject:
+    
         break;
 
     default:
