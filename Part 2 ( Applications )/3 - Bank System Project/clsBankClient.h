@@ -34,6 +34,17 @@ private:
     }
     static clsBankClient _ConvertClientObjectToLine(clsBankClient Client, string Seperator = "#//#")
     {
+        string stClientRecord = "";
+
+        stClientRecord += Client.AccountNumber() + Seperator;
+        stClientRecord += Client.GetFirstName() + Seperator;
+        stClientRecord += Client.GetLastName() + Seperator;
+        stClientRecord += Client.GetPhone() + Seperator;
+        stClientRecord += Client.GetEmail() + Seperator;
+        stClientRecord += Client.GetPinCode() + Seperator;
+        stClientRecord += to_string(Client.GetAccountBalance());
+
+        return stClientRecord;
     }
 
     static clsBankClient _GetEmptyClientObject()
