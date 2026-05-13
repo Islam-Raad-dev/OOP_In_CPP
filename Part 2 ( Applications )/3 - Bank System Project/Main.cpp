@@ -1,16 +1,15 @@
 /*
 
-Bank Project   
+Bank Project
 
 */
 #include <iostream>
 #include "clsBankClient.h"
-#include"clsInputValidate.h"
+#include "clsInputValidate.h"
 
 using namespace std;
 void ReadCleintInfo(clsBankClient &Client)
 {
-
 }
 
 void UpdateClient()
@@ -18,15 +17,14 @@ void UpdateClient()
 
     string AccountNumber = "";
 
-    cout <<"\nPlease Enter Client Account Number: ";
-    AccountNumber =clsInputValidate::ReadString();
+    cout << "\nPlease Enter Client Account Number: ";
+    AccountNumber = clsInputValidate::ReadString();
 
-    while(!clsBankClient::IsClientExists(AccountNumber))
+    while (!clsBankClient::IsClientExists(AccountNumber))
     {
 
-        cout <<"\nAccount Number Is Not Found, Choose Another One: ";
+        cout << "\nAccount Number Is Not Found, Choose Another One: ";
         AccountNumber = clsInputValidate::ReadString();
-
     }
 
     clsBankClient Client = clsBankClient::Find(AccountNumber);
@@ -37,8 +35,23 @@ void UpdateClient()
 
     ReadCleintInfo(Client);
 
-    clsBankClient ;
+    clsBankClient::enSaveResult SaveResult;
 
+    SaveResult = Client.Save();
+
+    switch (SaveResult)
+    {
+    case clsBankClient::enSaveResult::svSucceeded:
+
+        break;
+
+    case clsBankClient::enSaveResult::svFailed:
+
+        break;
+
+    default:
+        break;
+    }
 }
 
 int main()
@@ -48,5 +61,4 @@ int main()
 
     UpdateClient();
     return 0;
-
 }
