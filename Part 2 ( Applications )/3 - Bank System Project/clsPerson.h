@@ -34,6 +34,10 @@ public:
         _LastName = LastName;
     }
 
+    void FullName()
+    {
+        cout << _FirstName + " " << _LastName ;
+    }
     void SetEmail(string Email)
     {
         _Email = Email;
