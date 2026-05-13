@@ -10,7 +10,7 @@ using namespace std;
 
 int main()
 {
-    clsBankClient Client1 = clsBankClient::Find("A100");
+    clsBankClient Client1 = clsBankClient::Find("A101");
     Client1.Print();
 
 
