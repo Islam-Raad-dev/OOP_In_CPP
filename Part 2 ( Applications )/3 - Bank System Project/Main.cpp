@@ -10,18 +10,17 @@ Bank Project
 using namespace std;
 void ReadCleintInfo(clsBankClient &Client)
 {
-
     cout << "\nEnter FirstName: ";
-    Client.GetFirstName() = clsInputValidate::ReadString();
+    Client.SetFirstName(clsInputValidate::ReadString());
 
     cout << "\nEnter LastName: ";
-    Client.GetLastName() = clsInputValidate::ReadString();
+    Client.SetLastName(clsInputValidate::ReadString());
 
     cout << "\nEnter Email: ";
-    Client.GetEmail() = clsInputValidate::ReadString();
+    Client.SetEmail(clsInputValidate::ReadString());
 
     cout << "\nEnter Phone: ";
-    Client.GetPhone() = clsInputValidate::ReadString();
+    Client.SetPhone(clsInputValidate::ReadString());
 
     cout << "\nEnter PinCode: ";
     Client.SetPinCode(clsInputValidate::ReadString());
