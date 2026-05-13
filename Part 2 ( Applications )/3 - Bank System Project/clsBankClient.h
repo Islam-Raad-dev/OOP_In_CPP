@@ -153,6 +153,12 @@ public:
         return _GetEmptyClientObject();
     }
 
+    enum enSaveResult {svFaildEmpteObject = 0, svSucceeded = 1};
+
+    static enSaveResult Save()
+    {
+
+    }
     static bool IsClientExists(string AccountNumber)
     {
         clsBankClient Client1 = clsBankClient::Find(AccountNumber);
@@ -160,10 +166,5 @@ public:
         return (!Client1.IsEmpty());
     }
 
-    enum enSaveResult {svSucceeded = 0, svFailed = 1};
 
-    static enSaveResult Save()
-    {
-
-    }
 };
