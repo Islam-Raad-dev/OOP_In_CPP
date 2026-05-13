@@ -5,7 +5,7 @@
 #include <string>
 #include <vector>
 #include <clsString.h>
-#include "clsPerson.h"   
+#include "clsPerson.h"
 
 using namespace std;
 
@@ -24,7 +24,7 @@ private:
     string _PinCode;
     float _AccountBalance;
 
-    static clsBankClient _ConvertLineToClientObject(string Line, string Seperator = "#//#")
+    static clsBankClient _ConvertLinetoClientObject(string Line, string Seperator = "#//#")
     {
         vector<string> vClientData;
 
@@ -38,9 +38,45 @@ private:
         return clsBankClient(enMode::EmptyMode, "", "", "", "", "", "", 0);
     }
 
+    static string _ConverClientObjectToLine(clsBankClient Client, string Seperator = "#//#")
+    {
+
+        string stClientRecord = "";
+        stClientRecord += Client.GetFirstName() + Seperator;
+        stClientRecord += Client.GetLastName() + Seperator;
+        stClientRecord += Client.GetEmail() + Seperator;
+        stClientRecord += Client.GetPhone() + Seperator;
+        stClientRecord += Client.AccountNumber() + Seperator;
+        stClientRecord += Client.GetPinCode() + Seperator;
+        stClientRecord += to_string(Client.GetAccountBalance());
+
+        return stClientRecord;
+    }
+
     static vector<clsBankClient> _LoadClientDateFormFile()
     {
-        
+        vector<clsBankClient> vClients;
+
+        fstream MyFile;
+        MyFile.open("Clients.txt", ios::in); // read Mode
+
+        if (MyFile.is_open())
+        {
+
+            string Line;
+
+            while (getline(MyFile, Line))
+            {
+
+                clsBankClient Client = _ConvertLinetoClientObject(Line);
+
+                vClients.push_back(Client);
+            }
+
+            MyFile.close();
+        }
+
+        return vClients;
     }
 
     void _Upadte()
@@ -50,15 +86,14 @@ private:
 
         _vClient = _LoadClientDateFormFile();
 
-        for (clsBankClient & C : _vClient)
+        for (clsBankClient &C : _vClient)
         {
-            if(C.AccountNumber() == AccountNumber())
+            if (C.AccountNumber() == AccountNumber())
             {
                 C = *this;
                 break;
             }
         }
-
     }
 
 public:
@@ -129,7 +164,7 @@ public:
 
             while (getline(MyFile, Line))
             {
-                clsBankClient Client = _ConvertLineToClientObject(Line);
+                clsBankClient Client = _ConvertLinetoClientObject(Line);
 
                 if (Client.AccountNumber() == AccountNumber)
                 {
@@ -159,7 +194,7 @@ public:
 
             while (getline(MyFile, Line))
             {
-                clsBankClient Client = _ConvertLineToClientObject(Line);
+                clsBankClient Client = _ConvertLinetoClientObject(Line);
 
                 if (Client.AccountNumber() == AccountNumber && Client.GetPinCode() == PinCode)
                 {
@@ -176,7 +211,11 @@ public:
         return _GetEmptyClientObject();
     }
 
-    enum enSaveResult {svFaildEmpteObject = 0, svSucceeded = 1};
+    enum enSaveResult
+    {
+        svFaildEmpteObject = 0,
+        svSucceeded = 1
+    };
 
     enSaveResult Save()
     {
@@ -184,7 +223,7 @@ public:
         {
         case enMode::EmptyMode:
 
-        return enSaveResult::svFaildEmpteObject;
+            return enSaveResult::svFaildEmpteObject;
 
         case enMode::UpdateMode:
 
@@ -195,14 +234,14 @@ public:
 
             break;
         }
-
+        }
     }
+
     static bool IsClientExists(string AccountNumber)
+
     {
         clsBankClient Client1 = clsBankClient::Find(AccountNumber);
 
         return (!Client1.IsEmpty());
     }
-
-
 };
