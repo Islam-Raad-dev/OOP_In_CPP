@@ -74,6 +74,11 @@ public:
     {
         cout << "\nClient Card:";
         cout << "\n-----------------------------------";
+        cout << "\nFirst Name      : " << _FirstName;
+        cout << "\nLast Name       : " << _LastName;
+        cout << "\nFull Name       : " << FullName();
+        cout << "\nPhone           : " << _Email;
+        cout << "\nEmail           : " << _Phone;
         cout << "\nAccount Number  : " << _AccountNumber;
         cout << "\nPin Code        : " << _PinCode;
         cout << "\nAccount Balance : " << _AccountBalance;
