@@ -84,20 +84,20 @@ public:
         cout << "\n-----------------------------------\n";
     }
 
-    static clsBankClient Find(string AccountNumber) 
+    static clsBankClient Find(string AccountNumber)
     {
-        vector <clsBankClient> vClients;
+        vector<clsBankClient> vClients;
         fstream MyFile;
 
         MyFile.open("Clients.txt", ios::in);
 
-        if(MyFile.is_open())
+        if (MyFile.is_open())
         {
             string Line;
 
-            while(getline(MyFile, Line))
+            while (getline(MyFile, Line))
             {
-                clsBankClient Client  = _ConvertLineToClientObject(Line);
+                clsBankClient Client = _ConvertLineToClientObject(Line);
 
                 if (Client.AccountNumber() == AccountNumber)
                 {
@@ -106,9 +106,7 @@ public:
                 }
 
                 vClients.push_back(Client);
-
             }
-
         }
     }
 
