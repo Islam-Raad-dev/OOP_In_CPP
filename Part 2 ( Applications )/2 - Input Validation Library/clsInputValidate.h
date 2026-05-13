@@ -5,7 +5,7 @@
 #include <clsString.h>
 #include <clsDate.h>
 
-class clsInputValidate
+class clsInputValidate  
 {
 
 public:
