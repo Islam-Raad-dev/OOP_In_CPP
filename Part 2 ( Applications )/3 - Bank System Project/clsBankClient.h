@@ -32,20 +32,6 @@ private:
 
         return clsBankClient(enMode::UpdateMode, vClientData[0], vClientData[1], vClientData[2], vClientData[3], vClientData[4], vClientData[5], stod(vClientData[6]));
     }
-    static clsBankClient _ConvertClientObjectToLine(clsBankClient Client, string Seperator = "#//#")
-    {
-        string stClientRecord = "";
-
-        stClientRecord += Client.AccountNumber() + Seperator;
-        stClientRecord += Client.GetFirstName() + Seperator;
-        stClientRecord += Client.GetLastName() + Seperator;
-        stClientRecord += Client.GetPhone() + Seperator;
-        stClientRecord += Client.GetEmail() + Seperator;
-        stClientRecord += Client.GetPinCode() + Seperator;
-        stClientRecord += to_string(Client.GetAccountBalance());
-
-        return stClientRecord;
-    }
 
     static clsBankClient _GetEmptyClientObject()
     {
