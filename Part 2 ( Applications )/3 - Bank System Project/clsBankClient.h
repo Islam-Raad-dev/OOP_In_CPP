@@ -79,12 +79,11 @@ private:
         return vClients;
     }
 
-
-    static void _SaveCleintsDataToFile(vector <clsBankClient> vClients)
+    static void _SaveCleintsDataToFile(vector<clsBankClient> vClients)
     {
 
         fstream MyFile;
-        MyFile.open("/home/islam-raad/Projects/OOP_In_CPP/Part 2 ( Applications )/3 - Bank System Project/Clients.txt", ios::out);//overwrite
+        MyFile.open("/home/islam-raad/Projects/OOP_In_CPP/Part 2 ( Applications )/3 - Bank System Project/Clients.txt", ios::out); // overwrite
 
         string DataLine;
 
@@ -95,13 +94,10 @@ private:
             {
                 DataLine = _ConverClientObjectToLine(C);
                 MyFile << DataLine << endl;
-
             }
 
             MyFile.close();
-
         }
-
     }
 
     void _Update()
@@ -249,20 +245,14 @@ public:
         switch (_Mode)
         {
         case enMode::EmptyMode:
-
             return enSaveResult::svFaildEmpteObject;
 
         case enMode::UpdateMode:
-
-        {
             _Update();
-
             return enSaveResult::svSucceeded;
+        }
 
-            break;
-        }
-        
-        }
+        return enSaveResult::svFaildEmpteObject;
     }
 
     static bool IsClientExists(string AccountNumber)
