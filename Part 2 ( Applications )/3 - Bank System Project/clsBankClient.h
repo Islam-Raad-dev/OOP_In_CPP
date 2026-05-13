@@ -41,6 +41,7 @@ private:
 
     static clsBankClient _GetEmptyClientObject() 
     {
+        return clsBankClient(enMode::EmptyMode, "", "", "", "", "", "", 0);
 
     }
 
