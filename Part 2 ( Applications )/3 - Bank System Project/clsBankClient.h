@@ -26,7 +26,12 @@ private:
 
     static clsBankClient _ConvertLineToClientObject(string Line, string Seperator = "#//#") 
     {
-        
+      vector<string> vClientData;
+
+      vClientData = clsString::Split(Line, Seperator);
+
+      return clsBankClient(enMode::UpdateMode, vClientData[0], vClientData[1], vClientData[2], vClientData[3], vClientData[4], vClientData[5], stod(vClientData[6]));
+ 
 
     }
     static clsBankClient _ConvertClientObjectToLine(clsBankClient Client, string Seperator = "#//#") 
