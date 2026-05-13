@@ -10,6 +10,8 @@ Bank Project
 using namespace std;
 void ReadCleintInfo(clsBankClient &Client)
 {
+
+    
 }
 
 void UpdateClient()
