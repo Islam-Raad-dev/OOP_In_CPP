@@ -60,12 +60,20 @@ void UpdateClient()
     switch (SaveResult)
     {
     case clsBankClient::enSaveResult::svSucceeded:
-
+    {
+        cout << "\nAccount Updated Successfully :-\n";
+        Client.Print();
         break;
+
+    }
 
     case clsBankClient::enSaveResult::svFaildEmpteObject:
-    
+    {
+        cout << "\nError Account Was Not Saved Because It's Empty.";
+        Client.Print();    
         break;
+
+    }
 
     default:
         break;
