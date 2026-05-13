@@ -69,14 +69,11 @@ void UpdateClient()
 
     case clsBankClient::enSaveResult::svFaildEmpteObject:
     {
-        cout << "\nError Account Was Not Saved Because It's Empty.";
-        Client.Print();    
+        cout << "\nError Account Was Not Saved Because It's Empty.";  
         break;
 
     }
 
-    default:
-        break;
     }
 }
 

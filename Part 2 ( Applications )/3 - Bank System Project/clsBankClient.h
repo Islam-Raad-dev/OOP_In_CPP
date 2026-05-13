@@ -155,8 +155,29 @@ public:
 
     enum enSaveResult {svFaildEmpteObject = 0, svSucceeded = 1};
 
-    static enSaveResult Save()
+    enSaveResult Save()
     {
+        switch (_Mode)
+        {
+        case enMode::EmptyMode:
+
+        return enSaveResult::svFaildEmpteObject;
+
+        case enMode::UpdateMode:
+
+        {
+            _Upadte();
+
+            return enSaveResult::svSucceeded;
+
+            break;
+        }
+
+
+        
+        default:
+
+        }
 
     }
     static bool IsClientExists(string AccountNumber)
