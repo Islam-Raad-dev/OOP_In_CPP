@@ -110,6 +110,8 @@ public:
 
             MyFile.close();
         }
+
+        return _GetEmptyClientObject();
     }
 
     static clsBankClient Find(string AccountNumber, string PinCode) {}
