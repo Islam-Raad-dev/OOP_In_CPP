@@ -60,7 +60,7 @@ void UpdateClient()
     {
     case clsBankClient::enSaveResult::svSucceeded:
     {
-        cout << "\nAccount Updated Successfully :-\n";
+        cout << "\n\nAccount Updated Successfully :-\n";
         Client.Print();
         break;
 
