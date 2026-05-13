@@ -103,7 +103,7 @@ private:
         }
 
     }
-    
+
     void _Upadte()
     {
 
@@ -119,6 +119,8 @@ private:
                 break;
             }
         }
+        
+        _SaveCleintsDataToFile(_vClient);
     }
 
 public:
