@@ -29,55 +29,7 @@ void ReadCleintInfo(clsBankClient &Client)
     Client.SetAccountBalance(clsInputValidate::ReadDblNumber());
 }
 
-void UpdateClient()
-{
-
-    string AccountNumber = "";
-
-    cout << "\nPlease Enter Client Account Number: ";
-    AccountNumber = clsInputValidate::ReadString();
-
-    while (!clsBankClient::IsClientExists(AccountNumber))
-    {
-
-        cout << "\nAccount Number Is Not Found, Choose Another One: ";
-        AccountNumber = clsInputValidate::ReadString();
-    }
-
-    clsBankClient Client = clsBankClient::Find(AccountNumber);
-    Client.Print();
-
-    cout << "\nUpdate Client Info: ";
-    cout << "\n------------------------\n";
-
-    ReadCleintInfo(Client);
-
-    clsBankClient::enSaveResult SaveResult;
-
-    SaveResult = Client.Save();
-
-    switch (SaveResult)
-    {
-    case clsBankClient::enSaveResult::svSucceeded:
-    {
-        cout << "\n\nAccount Updated Successfully :-\n";
-        Client.Print();
-        break;
-
-    }
-
-    case clsBankClient::enSaveResult::svFaildEmpteObject:
-    {
-        cout << "\nError Account Was Not Saved Because It's Empty.";  
-        break;
-
-    }
-
-    }
-}
-
 int main()
 {
-    UpdateClient();
     return 0;
 }
