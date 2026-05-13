@@ -159,4 +159,11 @@ public:
 
         return (!Client1.IsEmpty());
     }
+
+    enum enSaveResult {svSucceeded = 0, svFailed = 1};
+
+    static enSaveResult Save()
+    {
+
+    }
 };
