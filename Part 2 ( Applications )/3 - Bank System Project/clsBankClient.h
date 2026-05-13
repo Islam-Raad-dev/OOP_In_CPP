@@ -58,7 +58,7 @@ private:
         vector<clsBankClient> vClients;
 
         fstream MyFile;
-        MyFile.open("Clients.txt", ios::in); // read Mode
+        MyFile.open("/home/islam-raad/Projects/OOP_In_CPP/Part 2 ( Applications )/3 - Bank System Project/Clients.txt", ios::in); // read Mode
 
         if (MyFile.is_open())
         {
@@ -84,7 +84,7 @@ private:
     {
 
         fstream MyFile;
-        MyFile.open("Clients.txt", ios::out);//overwrite
+        MyFile.open("/home/islam-raad/Projects/OOP_In_CPP/Part 2 ( Applications )/3 - Bank System Project/Clients.txt", ios::out);//overwrite
 
         string DataLine;
 
@@ -104,7 +104,7 @@ private:
 
     }
 
-    void _Upadte()
+    void _Update()
     {
 
         vector<clsBankClient> _vClient;
@@ -119,7 +119,7 @@ private:
                 break;
             }
         }
-        
+
         _SaveCleintsDataToFile(_vClient);
     }
 
@@ -213,7 +213,7 @@ public:
         vector<clsBankClient> vClients;
         fstream MyFile;
 
-        MyFile.open("Clients.txt", ios::in);
+        MyFile.open("/home/islam-raad/Projects/OOP_In_CPP/Part 2 ( Applications )/3 - Bank System Project/Clients.txt", ios::in);
 
         if (MyFile.is_open())
         {
@@ -255,12 +255,13 @@ public:
         case enMode::UpdateMode:
 
         {
-            _Upadte();
+            _Update();
 
             return enSaveResult::svSucceeded;
 
             break;
         }
+        
         }
     }
 
