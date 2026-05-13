@@ -98,7 +98,7 @@ public:
         vector<clsBankClient> vClients;
         fstream MyFile;
 
-        MyFile.open("Clients.txt", ios::in);
+        MyFile.open("/home/islam-raad/Projects/OOP_In_CPP/Part 2 ( Applications )/3 - Bank System Project/Clients.txt", ios::in);
 
         if (MyFile.is_open())
         {
