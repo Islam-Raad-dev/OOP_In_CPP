@@ -18,7 +18,8 @@ private:
     {
         EmptyMode = 0,
         UpdateMode = 1,
-        AddNewMode = 2
+        AddNewMode = 2,
+        DeleteMode = 3
     };
     enMode _Mode;
 
@@ -259,7 +260,7 @@ public:
     {
         svFaildEmpteObject = 0,
         svSucceeded = 1,
-        svFaildAccountNumberExist
+        svFaildAccountNumberExist = 2
     };
 
     enSaveResult Save()
@@ -300,8 +301,7 @@ public:
         }
 
         default:
-        return enSaveResult::svFaildEmpteObject;
-        
+            return enSaveResult::svFaildEmpteObject;
         }
     }
 
@@ -311,6 +311,21 @@ public:
         clsBankClient Client1 = clsBankClient::Find(AccountNumber);
 
         return (!Client1.IsEmpty());
+    }
+
+    bool Delete()
+    {
+        vector <clsBankClient> _vClient;
+        _vClient = _LoadClientDateFormFile();
+
+        for(clsBankClient &C : _vClient)
+        {
+            if(C.AccountNumber() == _AccountNumber)
+            {
+                C.MarkedForDelete = true;
+                break;
+            }
+        }
     }
 
     void ReadCleintInfo(clsBankClient &Client)
@@ -423,5 +438,53 @@ public:
             break;
         }
         }
+    }
+
+    static clsBankClient GetDeleteNewClientObject(string AccountNumber)
+    {
+        return clsBankClient(enMode::DeleteMode, "", "", "", "", AccountNumber, "", 0);
+    }
+
+    static void DeleteClient()
+    {
+        string AccountNumber = "";
+
+        cout << "\nDelete New Client Info: ";
+        cout << "\n------------------------\n";
+
+        cout << "\nPlease Enter Client Account Number: ";
+        AccountNumber = clsInputValidate::ReadString();
+
+        while (!clsBankClient::IsClientExists(AccountNumber))
+        {
+
+            cout << "\nAccount Number Is Not Found, Choose Another One: ";
+            AccountNumber = clsInputValidate::ReadString();
+        }
+
+        clsBankClient Client = clsBankClient::Find(AccountNumber);
+        Client.Print();
+
+        cout << "\nAre You Sure That You Want To Delete This Client? (y/n) ";
+
+        char Answer = 'n';
+        cin >> Answer;
+
+        if (Answer == 'y' || Answer == 'Y')
+        {
+            if (Client.Delete())
+            {
+                cout << "\nClient Deleted Succeesfully. \n";
+
+                Client.Print();
+            }
+
+            else
+            {
+                cout << "|nError Client Was Not Deleted.\n";
+            }
+        }
+
+        
     }
 };
