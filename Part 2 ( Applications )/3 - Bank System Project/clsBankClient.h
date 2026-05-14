@@ -498,10 +498,6 @@ public:
         }
     }
 
-    void PrintClientRecordIsLine(clsBankClient Client)
-    {
-    }
-
     static void ShowListClient()
     {
         vector<clsBankClient> vClient = clsBankClient::GetClientList();
@@ -519,18 +515,27 @@ public:
         cout << "\n_________________________________________________________________________________________________"
              << endl;
 
-        for (clsBankClient Client : vClient)
+        if (vClient.size() == 0)
         {
-            cout << "| " << left << setw(15) << Client.AccountNumber();
-            cout << "| " << left << setw(20) << Client.FullName();
-            cout << "| " << left << setw(12) << Client.GetPhone();
-            cout << "| " << left << setw(20) << Client.GetEmail();
-            cout << "| " << left << setw(10) << Client.GetPinCode();
-            cout << "| " << left << setw(12) << Client.GetAccountBalance();
-            cout << endl;
+            cout << "\t\t\t\tNo Client Available In The System!";
         }
 
-        cout << "_________________________________________________________________________________________________\n"
-             << endl;
+        else
+        {
+
+            for (clsBankClient Client : vClient)
+            {
+                cout << "| " << left << setw(15) << Client.AccountNumber();
+                cout << "| " << left << setw(20) << Client.FullName();
+                cout << "| " << left << setw(12) << Client.GetPhone();
+                cout << "| " << left << setw(20) << Client.GetEmail();
+                cout << "| " << left << setw(10) << Client.GetPinCode();
+                cout << "| " << left << setw(12) << Client.GetAccountBalance();
+                cout << endl;
+            }
+
+            cout << "_________________________________________________________________________________________________\n"
+                 << endl;
+        }
     }
 };
