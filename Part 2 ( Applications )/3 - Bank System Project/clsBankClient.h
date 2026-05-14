@@ -17,7 +17,8 @@ private:
     enum enMode
     {
         EmptyMode = 0,
-        UpdateMode = 1
+        UpdateMode = 1,
+        AddNewMode = 2
     };
     enMode _Mode;
 
@@ -238,7 +239,8 @@ public:
     enum enSaveResult
     {
         svFaildEmpteObject = 0,
-        svSucceeded = 1
+        svSucceeded = 1,
+        svFaildAccountNumberExist
     };
 
     enSaveResult Save()
@@ -246,15 +248,28 @@ public:
         switch (_Mode)
         {
         case enMode::EmptyMode:
-            return enSaveResult::svFaildEmpteObject;
 
-        case enMode::UpdateMode:
-            _Update();
-            return enSaveResult::svSucceeded;
+        if(IsEmpty())
+        {
+            return enSaveResult::svFaildEmpteObject;
         }
 
-        return enSaveResult::svFaildEmpteObject;
+        case enMode::UpdateMode:
+        {
+            _Update();
+            return enSaveResult::svSucceeded;
+            break;
+        }
+
+        case enMode::AddNewMode:
+        {
+            if(clsBankClient::IsClientExists())
+            {
+
+            }
+        }
     }
+}
 
     static bool IsClientExists(string AccountNumber)
 
@@ -329,8 +344,8 @@ public:
         }
     }
 
-    static string GetAddNewClientObject(string AccountNumber)
+    static clsBankClient GetAddNewClientObject(string AccountNumber)
     {
-
+        return clsBankClient(enMode::AddNewMode, "", "", "", "", AccountNumber, "", 00000);
     }
 };
