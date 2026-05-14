@@ -11,7 +11,7 @@ using namespace std;
 
 int main()
 {
-    clsBankClient::AddNewClient();
+    clsBankClient::DeleteClient();
 
     return 0;
 }
