@@ -35,7 +35,6 @@ private:
         return clsBankClient(enMode::UpdateMode, vClientData[0], vClientData[1], vClientData[2], vClientData[3], vClientData[4], vClientData[5], stod(vClientData[6]));
     }
 
-
     static string _ConverClientObjectToLine(clsBankClient Client, string Seperator = "#//#")
     {
 
@@ -119,6 +118,11 @@ private:
 
     void _AddNew()
     {
+        _AddDataLineToFile(_ConverClientObjectToLine(*this));
+    }
+
+    static clsBankClient _AddDataLineToFile(string stDataLine)
+    {
         vector<clsBankClient> _vClient;
 
         _vClient = _LoadClientDateFormFile();
@@ -135,12 +139,7 @@ private:
         _SaveCleintsDataToFile(_vClient);
     }
 
-    static clsBankClient _AddDataLineToFile(string stDataLine)
-    {
-
-    }
-
-        static clsBankClient _GetEmptyClientObject()
+    static clsBankClient _GetEmptyClientObject()
     {
         return clsBankClient(enMode::EmptyMode, "", "", "", "", "", "", 0);
     }
@@ -303,8 +302,7 @@ public:
                 return enSaveResult::svSucceeded;
             }
         }
-
-       }
+        }
     }
 
     static bool IsClientExists(string AccountNumber)
