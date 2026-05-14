@@ -328,4 +328,9 @@ public:
         }
         }
     }
+
+    static string GetAddNewClientObject(string AccountNumber)
+    {
+
+    }
 };
