@@ -46,11 +46,7 @@ string AccountNumber = "";
         clsBankClient NewClient = clsBankClient::GetAddNewClientObject(AccountNumber);
 
         ReadCleintInfo(NewClient);
-
-        clsBankClient::enSaveResult SaveResult;
-
-        SaveResult = NewClient.Save();
-
+        
         cout << "\nAdd New Client Info: ";
         cout << "\n------------------------\n";
 
@@ -77,5 +73,7 @@ string AccountNumber = "";
 
 int main()
 {
+    AddNewClient();
+
     return 0;
 }
