@@ -35,10 +35,6 @@ private:
         return clsBankClient(enMode::UpdateMode, vClientData[0], vClientData[1], vClientData[2], vClientData[3], vClientData[4], vClientData[5], stod(vClientData[6]));
     }
 
-    static clsBankClient _GetEmptyClientObject()
-    {
-        return clsBankClient(enMode::EmptyMode, "", "", "", "", "", "", 0);
-    }
 
     static string _ConverClientObjectToLine(clsBankClient Client, string Seperator = "#//#")
     {
@@ -137,6 +133,16 @@ private:
         }
 
         _SaveCleintsDataToFile(_vClient);
+    }
+
+    static clsBankClient _AddDataLineToFile(string stDataLine)
+    {
+
+    }
+
+        static clsBankClient _GetEmptyClientObject()
+    {
+        return clsBankClient(enMode::EmptyMode, "", "", "", "", "", "", 0);
     }
 
 public:
@@ -277,7 +283,7 @@ public:
             _Update();
 
             return enSaveResult::svSucceeded;
-            
+
             break;
         }
 
