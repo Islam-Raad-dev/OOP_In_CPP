@@ -47,21 +47,23 @@ string AccountNumber = "";
 
         ReadCleintInfo(NewClient);
 
+        clsBankClient::enSaveResult SaveResult;
+
+        SaveResult = NewClient.Save();
+
         cout << "\nAdd New Client Info: ";
         cout << "\n------------------------\n";
 
-        Client.ReadCleintInfo(Client);
-
         clsBankClient::enSaveResult SaveResult;
 
-        SaveResult = Client.Save();
+        SaveResult = NewClient.Save();
 
         switch (SaveResult)
         {
         case clsBankClient::enSaveResult::svSucceeded:
         {
             cout << "\n\nAccount Added Successfully :-\n";
-            Client.Print();
+            NewClient.Print();
             break;
         }
 
