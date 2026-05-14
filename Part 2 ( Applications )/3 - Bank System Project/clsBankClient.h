@@ -26,6 +26,7 @@ private:
     string _AccountNumber;
     string _PinCode;
     float _AccountBalance;
+    bool MarkedForDelete = false;
 
     static clsBankClient _ConvertLinetoClientObject(string Line, string Seperator = "#//#")
     {
@@ -326,6 +327,9 @@ public:
                 break;
             }
         }
+        _SaveCleintsDataToFile(_vClient);
+
+        *this = _GetEmptyClientObject();
     }
 
     void ReadCleintInfo(clsBankClient &Client)
