@@ -124,7 +124,7 @@ private:
     static clsBankClient _AddDataLineToFile(string stDataLine)
     {
         fstream MyFile;
-        MyFile.open("Clients.txt", ios::out | ios::app);
+        MyFile.open("/home/islam-raad/Projects/OOP_In_CPP/Part 2 ( Applications )/3 - Bank System Project/Clients.txt", ios::out | ios::app);
 
         if (MyFile.is_open())
         {
@@ -133,6 +133,7 @@ private:
 
             MyFile.close();
         }
+
     }
 
     static clsBankClient _GetEmptyClientObject()
@@ -376,6 +377,50 @@ public:
 
     static clsBankClient GetAddNewClientObject(string AccountNumber)
     {
-        return clsBankClient(enMode::AddNewMode, "", "", "", "", AccountNumber, "", 00000);
+        return clsBankClient(enMode::AddNewMode, "", "", "", "", AccountNumber, "", 0);
     }
+
+    static void AddNewClient()
+{
+string AccountNumber = "";
+
+        cout << "\nAdd New Client Info: ";
+        cout << "\n------------------------\n";
+
+        cout << "\nPlease Enter Client Account Number: ";
+        AccountNumber = clsInputValidate::ReadString();
+
+        while (clsBankClient::IsClientExists(AccountNumber))
+        {
+
+            cout << "\nThis Account Number Is Exist Found, Choose Another One: ";
+            AccountNumber = clsInputValidate::ReadString();
+        }
+
+        clsBankClient NewClient = clsBankClient::GetAddNewClientObject(AccountNumber);
+
+        NewClient.ReadCleintInfo(NewClient);
+    
+
+        clsBankClient::enSaveResult SaveResult;
+
+        SaveResult = NewClient.Save();
+
+        switch (SaveResult)
+        {
+        case clsBankClient::enSaveResult::svSucceeded:
+        {
+            cout << "\n\nAccount Added Successfully :-\n";
+            NewClient.Print();
+            break;
+        }
+
+        case clsBankClient::enSaveResult::svFaildEmpteObject:
+        {
+            cout << "\nError Account Was Not Saved Because It's Empty.";
+            break;
+        }
+        }
+}
+
 };
