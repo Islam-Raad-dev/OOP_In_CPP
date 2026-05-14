@@ -123,20 +123,16 @@ private:
 
     static clsBankClient _AddDataLineToFile(string stDataLine)
     {
-        vector<clsBankClient> _vClient;
+        fstream MyFile;
+        MyFile.open("Clients.txt", ios::out | ios::app);
 
-        _vClient = _LoadClientDateFormFile();
-
-        for (clsBankClient &C : _vClient)
+        if (MyFile.is_open())
         {
-            if (C.AccountNumber() == AccountNumber())
-            {
-                C = *this;
-                break;
-            }
-        }
 
-        _SaveCleintsDataToFile(_vClient);
+            MyFile << stDataLine << endl;
+
+            MyFile.close();
+        }
     }
 
     static clsBankClient _GetEmptyClientObject()
