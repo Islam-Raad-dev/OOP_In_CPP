@@ -11,7 +11,7 @@ using namespace std;
 
 int main()
 {
-    clsBankClient::ListClient();
+    clsBankClient::ShowListClient();
 
     return 0;
 }
