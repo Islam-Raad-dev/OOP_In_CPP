@@ -121,6 +121,24 @@ private:
         _SaveCleintsDataToFile(_vClient);
     }
 
+    void AddNew()
+    {
+        vector<clsBankClient> _vClient;
+
+        _vClient = _LoadClientDateFormFile();
+
+        for (clsBankClient &C : _vClient)
+        {
+            if (C.AccountNumber() == AccountNumber())
+            {
+                C = *this;
+                break;
+            }
+        }
+
+        _SaveCleintsDataToFile(_vClient);
+    }
+
 public:
     clsBankClient(enMode Mode, string FirstName, string LastName, string Email, string Phone, string AccountNumber, string PinCode, float AccountBalance)
         : clsPerson(FirstName, LastName, Email, Phone)
@@ -249,10 +267,10 @@ public:
         {
         case enMode::EmptyMode:
 
-        if(IsEmpty())
-        {
-            return enSaveResult::svFaildEmpteObject;
-        }
+            if (IsEmpty())
+            {
+                return enSaveResult::svFaildEmpteObject;
+            }
 
         case enMode::UpdateMode:
         {
@@ -263,13 +281,18 @@ public:
 
         case enMode::AddNewMode:
         {
-            if(clsBankClient::IsClientExists(_AccountNumber))
+            if (clsBankClient::IsClientExists(_AccountNumber))
             {
+                return enSaveResult::svFaildAccountNumberExist;
+            }
 
+            else
+            {
+                _AddNew();
             }
         }
+        }
     }
-}
 
     static bool IsClientExists(string AccountNumber)
 
