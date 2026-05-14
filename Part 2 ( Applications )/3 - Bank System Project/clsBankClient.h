@@ -502,8 +502,8 @@ public:
     {
         vector<clsBankClient> vClient = clsBankClient::GetClientList();
 
-        cout << "\n\t\t\t\t\tClient List (" << vClient.size() << ") Clients\n\n";
-        cout << "_________________________________________________________________________________________________\n";
+        cout << "\n\t\t\t\t\tClient List (" << vClient.size() << ") Clients\n";
+        cout << "_________________________________________________________________________________________________\n\n";
 
         cout << "| " << left << setw(15) << "AccoutNumber";
         cout << "| " << left << setw(20) << "Client Name";
@@ -512,7 +512,7 @@ public:
         cout << "| " << left << setw(10) << "Pin Code";
         cout << "| " << left << setw(12) << "Balance";
 
-        cout << "\n_________________________________________________________________________________________________"
+        cout << "\n_________________________________________________________________________________________________\n"
              << endl;
 
         if (vClient.size() == 0)
