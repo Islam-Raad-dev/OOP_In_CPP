@@ -4,7 +4,7 @@
 #include <fstream>
 #include <string>
 #include <vector>
-#include<iomanip>
+#include <iomanip>
 #include <clsString.h>
 #include "clsPerson.h"
 #include "clsInputValidate.h"
@@ -317,12 +317,12 @@ public:
 
     bool Delete()
     {
-        vector <clsBankClient> _vClient;
+        vector<clsBankClient> _vClient;
         _vClient = _LoadClientDateFormFile();
 
-        for(clsBankClient &C : _vClient)
+        for (clsBankClient &C : _vClient)
         {
-            if(C.AccountNumber() == _AccountNumber)
+            if (C.AccountNumber() == _AccountNumber)
             {
                 C.MarkedForDelete = true;
                 break;
@@ -403,6 +403,11 @@ public:
     static clsBankClient GetAddNewClientObject(string AccountNumber)
     {
         return clsBankClient(enMode::AddNewMode, "", "", "", "", AccountNumber, "", 0);
+    }
+
+    static vector<clsBankClient> GetClientList()
+    {
+        return _LoadClientDateFormFile();
     }
 
     static void AddNewClient()
@@ -490,11 +495,45 @@ public:
             {
                 cout << "|nError Client Was Not Deleted.\n";
             }
-        }  
+        }
     }
 
-    static void ListClient()
+    void PrintClientRecordIsLine(clsBankClient Client)
     {
+    }
 
+    static void ShowListClient()
+    {
+        vector<clsBankClient> vClient = clsBankClient::GetClientList();
+
+        cout << "\n\t\t\t\t\tClient List (" << vClient.size() << ") Clients\n\n";
+        cout << "\n-----------------------------------------------------------------\n";
+        cout << "-----------------------------------------------------------------\n"
+             << endl;
+
+        cout << "| " << left << setw(15) << "AccoutNumber";
+        cout << "| " << left << setw(20) << "Client Name";
+        cout << "| " << left << setw(12) << "Phone";
+        cout << "| " << left << setw(20) << "Email";
+        cout << "| " << left << setw(10) << "Pin Code";
+        cout << "| " << left << setw(12) << "Balance";
+        cout << "\n-----------------------------------------------------------------\n";
+        cout << "-----------------------------------------------------------------\n"
+             << endl;
+
+        for (clsBankClient Client : vClient)
+        {
+            cout << "| " << left << setw(15) << Client.AccountNumber();
+            cout << "| " << left << setw(20) << Client.FullName();
+            cout << "| " << left << setw(12) << Client.GetPhone();
+            cout << "| " << left << setw(20) << Client.GetEmail();
+            cout << "| " << left << setw(10) << Client.GetPinCode();
+            cout << "| " << left << setw(12) << Client.GetAccountBalance();
+            cout << endl;
+        }
+
+        cout << "\n-----------------------------------------------------------------\n";
+        cout << "-----------------------------------------------------------------\n"
+             << endl;
     }
 };
