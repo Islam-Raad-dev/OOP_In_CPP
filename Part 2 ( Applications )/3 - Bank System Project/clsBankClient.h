@@ -263,7 +263,7 @@ public:
 
         case enMode::AddNewMode:
         {
-            if(clsBankClient::IsClientExists())
+            if(clsBankClient::IsClientExists(_AccountNumber))
             {
 
             }
