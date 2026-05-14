@@ -121,7 +121,7 @@ private:
         _SaveCleintsDataToFile(_vClient);
     }
 
-    void AddNew()
+    void _AddNew()
     {
         vector<clsBankClient> _vClient;
 
@@ -275,7 +275,9 @@ public:
         case enMode::UpdateMode:
         {
             _Update();
+
             return enSaveResult::svSucceeded;
+            
             break;
         }
 
@@ -289,9 +291,14 @@ public:
             else
             {
                 _AddNew();
+
+                _Mode = enMode::UpdateMode;
+
+                return enSaveResult::svSucceeded;
             }
         }
-        }
+
+       }
     }
 
     static bool IsClientExists(string AccountNumber)
