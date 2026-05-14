@@ -330,6 +330,8 @@ public:
         _SaveCleintsDataToFile(_vClient);
 
         *this = _GetEmptyClientObject();
+
+        return true;
     }
 
     void ReadCleintInfo(clsBankClient &Client)
