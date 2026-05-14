@@ -489,8 +489,11 @@ public:
             {
                 cout << "|nError Client Was Not Deleted.\n";
             }
-        }
+        }  
+    }
 
-        
+    static void ListClient()
+    {
+
     }
 };
