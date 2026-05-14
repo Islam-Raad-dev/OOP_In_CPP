@@ -55,7 +55,7 @@ private:
         vector<clsBankClient> vClients;
 
         fstream MyFile;
-        MyFile.open("/home/islam-raad/Projects/OOP_In_CPP/Part 2 ( Applications )/3 - Bank System Project/Clients.txt", ios::in); // read Mode
+        MyFile.open("/home/islam-raad/Projects/OOP_In_CPP/Part 2 ( Applications )/3 - Bank System Project/Clients.txt", ios::in);
 
         if (MyFile.is_open())
         {
@@ -80,7 +80,7 @@ private:
     {
 
         fstream MyFile;
-        MyFile.open("/home/islam-raad/Projects/OOP_In_CPP/Part 2 ( Applications )/3 - Bank System Project/Clients.txt", ios::out); // overwrite
+        MyFile.open("/home/islam-raad/Projects/OOP_In_CPP/Part 2 ( Applications )/3 - Bank System Project/Clients.txt", ios::out);
 
         string DataLine;
 
@@ -121,7 +121,7 @@ private:
         _AddDataLineToFile(_ConverClientObjectToLine(*this));
     }
 
-    static clsBankClient _AddDataLineToFile(string stDataLine)
+    static void _AddDataLineToFile(string stDataLine)
     {
         fstream MyFile;
         MyFile.open("/home/islam-raad/Projects/OOP_In_CPP/Part 2 ( Applications )/3 - Bank System Project/Clients.txt", ios::out | ios::app);
@@ -133,7 +133,6 @@ private:
 
             MyFile.close();
         }
-
     }
 
     static clsBankClient _GetEmptyClientObject()
@@ -299,6 +298,10 @@ public:
                 return enSaveResult::svSucceeded;
             }
         }
+
+        default:
+        return enSaveResult::svFaildEmpteObject;
+        
         }
     }
 
@@ -381,8 +384,8 @@ public:
     }
 
     static void AddNewClient()
-{
-string AccountNumber = "";
+    {
+        string AccountNumber = "";
 
         cout << "\nAdd New Client Info: ";
         cout << "\n------------------------\n";
@@ -400,7 +403,6 @@ string AccountNumber = "";
         clsBankClient NewClient = clsBankClient::GetAddNewClientObject(AccountNumber);
 
         NewClient.ReadCleintInfo(NewClient);
-    
 
         clsBankClient::enSaveResult SaveResult;
 
@@ -421,6 +423,5 @@ string AccountNumber = "";
             break;
         }
         }
-}
-
+    }
 };
