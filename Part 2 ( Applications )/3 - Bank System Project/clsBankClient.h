@@ -4,6 +4,7 @@
 #include <fstream>
 #include <string>
 #include <vector>
+#include<iomanip>
 #include <clsString.h>
 #include "clsPerson.h"
 #include "clsInputValidate.h"
