@@ -20,7 +20,7 @@ private:
         EmptyMode = 0,
         UpdateMode = 1,
         AddNewMode = 2,
-        DeleteMode = 3
+        DeleteMode = 3    
     };
     enMode _Mode;
 
