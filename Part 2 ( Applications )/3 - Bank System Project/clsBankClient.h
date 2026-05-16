@@ -2,7 +2,7 @@
 
 #include <iostream>
 #include <fstream>
-#include <string>
+#include <string>   
 #include <vector>   
 #include <iomanip>
 #include <clsString.h>
