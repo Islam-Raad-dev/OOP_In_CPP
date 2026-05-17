@@ -58,14 +58,14 @@ class clsMainScreen:protected clsScreen
 
        static void _ShowUpdateClientScreen()
        {
-           cout << "\nUpdate Client Screen Will be here...\n";
-
+              clsUpdateClientScreen::ShowUpdateClientScreen();
+              _GoBackToMainMenue();
        }
 
        static void _ShowFindClientScreen()
        {
-           cout << "\nFind Client Screen Will be here...\n";
-
+                clsFindClientScreen::ShowFindClientScreen();
+                _GoBackToMainMenue();
        }
 
        static void _ShowTransactionsMenue()
