@@ -184,21 +184,6 @@ public:
         return _AccountBalance;
     }
 
-    /*
-    void Print(){
-        cout << "\nClient Card:";
-        cout << "\n-----------------------------------";
-        cout << "\nFirst Name      : " << GetFirstName();
-        cout << "\nLast Name       : " << GetLastName();
-        cout << "\nFull Name       : " << FullName();
-        cout << "\nPhone           : " << GetPhone();
-        cout << "\nEmail           : " << GetEmail();
-        cout << "\nAccount Number  : " << _AccountNumber;
-        cout << "\nPin Code        : " << _PinCode;
-        cout << "\nAccount Balance : " << _AccountBalance;
-        cout << "\n-----------------------------------\n";
-}*/
-
     static clsBankClient Find(string AccountNumber)
     {
         vector<clsBankClient> vClients;
@@ -357,49 +342,7 @@ public:
         Client.SetAccountBalance(clsInputValidate::ReadDblNumber());
     }
 
-    static void UpdateClient()
-    {
 
-        string AccountNumber = "";
-
-        cout << "\nPlease Enter Client Account Number: ";
-        AccountNumber = clsInputValidate::ReadString();
-
-        while (!clsBankClient::IsClientExists(AccountNumber))
-        {
-
-            cout << "\nAccount Number Is Not Found, Choose Another One: ";
-            AccountNumber = clsInputValidate::ReadString();
-        }
-
-        clsBankClient Client = clsBankClient::Find(AccountNumber);
-        Client.Print();
-
-        cout << "\nUpdate Client Info: ";
-        cout << "\n------------------------\n";
-
-        Client.ReadCleintInfo(Client);
-
-        clsBankClient::enSaveResult SaveResult;
-
-        SaveResult = Client.Save();
-
-        switch (SaveResult)
-        {
-        case clsBankClient::enSaveResult::svSucceeded:
-        {
-            cout << "\n\nAccount Updated Successfully :-\n";
-            Client.Print();
-            break;
-        }
-
-        case clsBankClient::enSaveResult::svFaildEmpteObject:
-        {
-            cout << "\nError Account Was Not Saved Because It's Empty.";
-            break;
-        }
-        }
-    }
 
     static clsBankClient GetAddNewClientObject(string AccountNumber)
     {
@@ -411,47 +354,7 @@ public:
         return _LoadClientDateFormFile();
     }
 
-    static void AddNewClient()
-    {
-        string AccountNumber = "";
 
-        cout << "\nAdd New Client Info: ";
-        cout << "\n------------------------\n";
-
-        cout << "\nPlease Enter Client Account Number: ";
-        AccountNumber = clsInputValidate::ReadString();
-
-        while (clsBankClient::IsClientExists(AccountNumber))
-        {
-
-            cout << "\nThis Account Number Is Exist Found, Choose Another One: ";
-            AccountNumber = clsInputValidate::ReadString();
-        }
-
-        clsBankClient NewClient = clsBankClient::GetAddNewClientObject(AccountNumber);
-
-        NewClient.ReadCleintInfo(NewClient);
-
-        clsBankClient::enSaveResult SaveResult;
-
-        SaveResult = NewClient.Save();
-
-        switch (SaveResult)
-        {
-        case clsBankClient::enSaveResult::svSucceeded:
-        {
-            cout << "\n\nAccount Added Successfully :-\n";
-            NewClient.Print();
-            break;
-        }
-
-        case clsBankClient::enSaveResult::svFaildEmpteObject:
-        {
-            cout << "\nError Account Was Not Saved Because It's Empty.";
-            break;
-        }
-        }
-    }
 
     static double GetTotalBalance()
     {
@@ -473,123 +376,5 @@ public:
         return clsBankClient(enMode::DeleteMode, "", "", "", "", AccountNumber, "", 0);
     }
 
-    static void DeleteClient()
-    {
-        string AccountNumber = "";
 
-        cout << "\nDelete New Client Info: ";
-        cout << "\n------------------------\n";
-
-        cout << "\nPlease Enter Client Account Number: ";
-        AccountNumber = clsInputValidate::ReadString();
-
-        while (!clsBankClient::IsClientExists(AccountNumber))
-        {
-
-            cout << "\nAccount Number Is Not Found, Choose Another One: ";
-            AccountNumber = clsInputValidate::ReadString();
-        }
-
-        clsBankClient Client = clsBankClient::Find(AccountNumber);
-        Client.Print();
-
-        cout << "\nAre You Sure That You Want To Delete This Client? (y/n) ";
-
-        char Answer = 'n';
-        cin >> Answer;
-
-        if (Answer == 'y' || Answer == 'Y')
-        {
-            if (Client.Delete())
-            {
-                cout << "\nClient Deleted Succeesfully. \n";
-
-                Client.Print();
-            }
-
-            else
-            {
-                cout << "|nError Client Was Not Deleted.\n";
-            }
-        }
-    }
-
-    static void ShowListClient()
-    {
-        vector<clsBankClient> vClient = clsBankClient::GetClientList();
-
-        cout << "\n\t\t\t\t\tClient List (" << vClient.size() << ") Clients\n";
-        cout << "_________________________________________________________________________________________________\n\n";
-
-        cout << "| " << left << setw(15) << "AccoutNumber";
-        cout << "| " << left << setw(20) << "Client Name";
-        cout << "| " << left << setw(12) << "Phone";
-        cout << "| " << left << setw(20) << "Email";
-        cout << "| " << left << setw(10) << "Pin Code";
-        cout << "| " << left << setw(12) << "Balance";
-
-        cout << "\n_________________________________________________________________________________________________\n"
-             << endl;
-
-        if (vClient.size() == 0)
-        {
-            cout << "\t\t\t\tNo Client Available In The System!";
-        }
-
-        else
-        {
-
-            for (clsBankClient Client : vClient)
-            {
-                cout << "| " << left << setw(15) << Client.AccountNumber();
-                cout << "| " << left << setw(20) << Client.FullName();
-                cout << "| " << left << setw(12) << Client.GetPhone();
-                cout << "| " << left << setw(20) << Client.GetEmail();
-                cout << "| " << left << setw(10) << Client.GetPinCode();
-                cout << "| " << left << setw(12) << Client.GetAccountBalance();
-                cout << endl;
-            }
-
-            cout << "_________________________________________________________________________________________________\n"
-                 << endl;
-        }
-    }
-
-    static void ShowTotalBalance()
-    {
-        vector<clsBankClient> vClient = clsBankClient::GetClientList();
-
-        cout << "\t\t\t\tBalances List( " << vClient.size() << " ) Client\n";
-        cout << "_________________________________________________________________________________________________\n\n";
-
-        cout << "| " << left << setw(15) << "AccountNumber";
-        cout << "| " << left << setw(40) << "Client Name";
-        cout << "| " << left << setw(12) << "Balancec";
-
-        cout << "\n_________________________________________________________________________________________________\n\n";
-
-        double TotalBalances = clsBankClient::GetTotalBalance();
-
-        if (vClient.size() == 0)
-        {
-            cout << "\t\t\t\tNo Client Available In The System!";
-        }
-
-        else
-        {
-            for (clsBankClient Client : vClient)
-            {
-                cout << "| " << left << setw(15) << Client.AccountNumber();
-                cout << "| " << left << setw(40) << Client.FullName();
-                cout << "| " << left << setw(12) << Client.GetAccountBalance();
-                cout << endl;
-            }
-
-            cout << "_________________________________________________________________________________________________\n"
-                 << endl;
-
-                 cout << "\t\t\t\t\tTotal Balances: " << TotalBalances << endl;
-                 cout <<"\t\t\t\t ( " << clsUtil::NumberToText(TotalBalances) << ") \n" << endl;
-        }
-    }
 };
