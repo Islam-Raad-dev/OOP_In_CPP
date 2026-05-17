@@ -2,6 +2,7 @@
 #include <iostream>
 #include "clsScreen.h"
 #include "clsInputValidate.h"
+#include "clsClientScreen.h"
 #include <iomanip>
 
 
@@ -35,9 +36,8 @@ class clsMainScreen:protected clsScreen
        
        static void _ShowAllClientsScreen()
        {
-        cout << "\nClient List Screen Will be here...\n";
-        
-
+              clsClientListScreen::ShowClientsList();
+              _GoBackToMainMenue();
        }
 
        static void _ShowAddNewClientsScreen()
