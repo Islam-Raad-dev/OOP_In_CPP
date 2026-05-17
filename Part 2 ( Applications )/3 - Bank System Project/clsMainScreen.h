@@ -88,47 +88,47 @@ class clsMainScreen:protected clsScreen
             {
             case enMainMenueOptions::eListClients:
             {
-                system("cls");
+                system("clear");
                 _ShowAllClientsScreen();
                 _GoBackToMainMenue();
                 break;
             }
             case enMainMenueOptions::eAddNewClient:
-                system("cls");
+                system("clear");
                _ShowAddNewClientsScreen();
                 _GoBackToMainMenue();
                 break;
 
             case enMainMenueOptions::eDeleteClient:
-                system("cls");
+                system("clear");
                 _ShowDeleteClientScreen();
                 _GoBackToMainMenue();
                 break;
 
             case enMainMenueOptions::eUpdateClient:
-                system("cls");
+                system("clear");
                 _ShowUpdateClientScreen();
                 _GoBackToMainMenue();
                 break;
 
             case enMainMenueOptions::eFindClient:
-                system("cls");
+                system("clear");
                 _ShowFindClientScreen();
                 _GoBackToMainMenue();
                 break;
 
             case enMainMenueOptions::eShowTransactionsMenue:
-                system("cls");
+                system("clear");
                 _ShowTransactionsMenue();
                 break;
 
             case enMainMenueOptions::eManageUsers:
-                system("cls");
+                system("clear");
                 _ShowManageUsersMenue();
                 break;
 
             case enMainMenueOptions::eExit:
-                system("cls");
+                system("clear");
                 _ShowEndScreen();
                 //Login();
 
@@ -145,7 +145,7 @@ class clsMainScreen:protected clsScreen
        static void ShowMainMenue()
         {
            
-            system("cls");
+            system("clear");
             _DrawScreenHeader("\t\tMain Screen");
 
             cout << setw(37) << left <<""<< "===========================================\n";
