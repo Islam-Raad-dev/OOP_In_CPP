@@ -1,10 +1,8 @@
 #pragma once
-
 #include <iostream>
-#include <iomanip>
-
 #include "clsScreen.h"
 #include "clsBankClient.h"
+#include <iomanip>
 #include "clsUtil.h"
 
 class clsTotalBalancesScreen : protected clsScreen
@@ -37,7 +35,7 @@ public:
         cout << setw(25) << left << "" << "| " << left << setw(15) << "Accout Number";
         cout << "| " << left << setw(40) << "Client Name";
         cout << "| " << left << setw(12) << "Balance";
-        cout << setw(25) << left << "" << "\t\t_______________________________________________________";
+        cout << setw(25) << left << "" << "\n\t\t_______________________________________________________";
         cout << "__________________________\n" << endl;
 
         double TotalBalances = clsBankClient::GetTotalBalance();
@@ -55,7 +53,7 @@ public:
         cout << setw(25) << left << "" << "\n\t\t_______________________________________________________";
         cout << "__________________________\n" << endl;
         
-        cout << setw(8) << left << "" << "\t\t\t\t\t\t\t     Total Balances = " << TotalBalances << endl;
+        cout << setw(8) << left << "" << "\t\t\t\t\t     Total Balances = " << TotalBalances << endl;
         cout << setw(8) << left << "" << "\t\t\t\t  ( " << clsUtil::NumberToText(TotalBalances) << ")";
     }
 
