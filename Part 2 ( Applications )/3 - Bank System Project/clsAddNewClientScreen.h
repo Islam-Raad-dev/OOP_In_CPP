@@ -33,7 +33,7 @@ private:
     static void _PrintClient(clsBankClient Client)
     {
         cout << "\nClient Card:";
-        cout << "\n___________________";
+        cout << "\n___________________\n";
         cout << "\nFirstName   : " << Client.GetFirstName();
         cout << "\nLastName    : " << Client.GetLastName();
         cout << "\nFull Name   : " << Client.FullName();
@@ -46,6 +46,8 @@ private:
     }
 
 public:
+
+
     static void ShowAddNewClientScreen()
     {
 
@@ -89,4 +91,5 @@ public:
         }
         }
     }
+
 };
