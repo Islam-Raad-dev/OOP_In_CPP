@@ -3,6 +3,7 @@
 #include "clsScreen.h"
 #include "clsInputValidate.h"
 #include "clsClientScreen.h"
+#include "clsAddNewClientScreen.h"
 #include <iomanip>
 
 
@@ -42,8 +43,8 @@ class clsMainScreen:protected clsScreen
 
        static void _ShowAddNewClientsScreen()
        {
-           cout << "\nAdd New Client Screen Will be here...\n";
-         
+           clsAddNewClientScreen::ShowAddNewClientScreen();
+           _GoBackToMainMenue();
        }
 
        static void _ShowDeleteClientScreen()
