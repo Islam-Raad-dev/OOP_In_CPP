@@ -79,7 +79,7 @@ private:
 
         case enTransactionsMenueOptions::eShowMainMenue:
         {
-            //do nothing here the main screen will handle it :-) ;
+            //Nothing here Because The Main Screen Will Handle It :-) ;
         }
         }
 
@@ -95,7 +95,7 @@ public:
     {
 
 
-        system("cls");
+        system("clear");
         _DrawScreenHeader("\t  Transactions Screen");
 
         cout << setw(37) << left << "" << "===========================================\n";
