@@ -452,7 +452,7 @@ public:
         }
     }
 
-    static float GetTotalBalance()
+    static double GetTotalBalance()
     {
 
         vector<clsBankClient> vClient = clsBankClient::GetClientList();
@@ -565,7 +565,7 @@ public:
         cout << "| " << left << setw(40) << "Client Name";
         cout << "| " << left << setw(12) << "Balancec";
 
-        cout << "_________________________________________________________________________________________________\n\n";
+        cout << "\n_________________________________________________________________________________________________\n\n";
 
         double TotalBalances = clsBankClient::GetTotalBalance();
 
@@ -579,10 +579,7 @@ public:
             for (clsBankClient Client : vClient)
             {
                 cout << "| " << left << setw(15) << Client.AccountNumber();
-                cout << "| " << left << setw(20) << Client.FullName();
-                cout << "| " << left << setw(12) << Client.GetPhone();
-                cout << "| " << left << setw(20) << Client.GetEmail();
-                cout << "| " << left << setw(10) << Client.GetPinCode();
+                cout << "| " << left << setw(40) << Client.FullName();
                 cout << "| " << left << setw(12) << Client.GetAccountBalance();
                 cout << endl;
             }
