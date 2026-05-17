@@ -125,12 +125,6 @@ private:
         _AddDataLineToFile(_ConverClientObjectToLine(*this));
     }
 
-    void Deposit(double Amount)
-    {
-        _AccountBalance += Amount;
-        Save();
-    }
-
     static void _AddDataLineToFile(string stDataLine)
     {
         fstream MyFile;
@@ -188,6 +182,18 @@ public:
     float GetAccountBalance()
     {
         return _AccountBalance;
+    }
+
+    void Deposit(double Amount)
+    {
+        _AccountBalance += Amount;
+        Save();
+    }
+
+    void Withdraw(double Amount)
+    {
+        _AccountBalance -= Amount;
+        Save();
     }
 
     static clsBankClient Find(string AccountNumber)
@@ -348,8 +354,6 @@ public:
         Client.SetAccountBalance(clsInputValidate::ReadDblNumber());
     }
 
-
-
     static clsBankClient GetAddNewClientObject(string AccountNumber)
     {
         return clsBankClient(enMode::AddNewMode, "", "", "", "", AccountNumber, "", 0);
@@ -359,8 +363,6 @@ public:
     {
         return _LoadClientDateFormFile();
     }
-
-
 
     static double GetTotalBalance()
     {
@@ -381,6 +383,4 @@ public:
     {
         return clsBankClient(enMode::DeleteMode, "", "", "", "", AccountNumber, "", 0);
     }
-
-
 };
