@@ -11,7 +11,7 @@ using namespace std;
 
 int main()
 {
-    clsBankClient::ShowListClient();
+    clsBankClient::ShowTotalBalance();
 
     return 0;
 }
