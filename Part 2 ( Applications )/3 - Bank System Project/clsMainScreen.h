@@ -28,8 +28,8 @@ class clsMainScreen:protected clsScreen
        static  void _GoBackToMainMenue()
         {
             cout << setw(37) << left << ""<<"\n\tPress any key to go back to Main Menue...\n";
-           
-            system("pause>0");
+            cin.ignore();
+            cin.get();
             ShowMainMenue();
         }
        
