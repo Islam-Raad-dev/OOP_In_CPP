@@ -184,26 +184,6 @@ public:
         return _AccountBalance;
     }
 
-    void Deposit(double Amount)
-    {
-        _AccountBalance += Amount;
-        Save();
-    }
-
-    bool Withdraw(double Amount)
-    {
-        if (Amount > _AccountBalance)
-        {
-            return false;
-        }
-
-        else
-        {
-            _AccountBalance -= Amount;
-            Save();
-        }
-    }
-
     static clsBankClient Find(string AccountNumber)
     {
         vector<clsBankClient> vClients;
@@ -310,6 +290,26 @@ public:
 
         default:
             return enSaveResult::svFaildEmpteObject;
+        }
+    }
+
+    void Deposit(double Amount)
+    {
+        _AccountBalance += Amount;
+        Save();
+    }
+
+    bool Withdraw(double Amount)
+    {
+        if (Amount > _AccountBalance)
+        {
+            return false;
+        }
+
+        else
+        {
+            _AccountBalance -= Amount;
+            Save();
         }
     }
 
