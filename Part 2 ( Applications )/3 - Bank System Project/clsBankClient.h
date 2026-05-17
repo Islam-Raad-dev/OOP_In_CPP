@@ -246,24 +246,28 @@ public:
 
     enum enSaveResult
     {
-        svFaildEmpteObject = 0,
+        svFaildEmptyObject = 0,
         svSucceeded = 1,
-        svFaildAccountNumberExist = 2
+        svFaildAccountNumberExists = 2
     };
 
     enSaveResult Save()
     {
+
         switch (_Mode)
         {
         case enMode::EmptyMode:
-
+        {
             if (IsEmpty())
             {
-                return enSaveResult::svFaildEmpteObject;
+
+                return enSaveResult::svFaildEmptyObject;
             }
+        }
 
         case enMode::UpdateMode:
         {
+
             _Update();
 
             return enSaveResult::svSucceeded;
@@ -275,21 +279,18 @@ public:
         {
             if (clsBankClient::IsClientExists(_AccountNumber))
             {
-                return enSaveResult::svFaildAccountNumberExist;
+                return enSaveResult::svFaildAccountNumberExists;
             }
-
             else
             {
                 _AddNew();
 
                 _Mode = enMode::UpdateMode;
-
                 return enSaveResult::svSucceeded;
             }
-        }
 
-        default:
-            return enSaveResult::svFaildEmpteObject;
+            break;
+        }
         }
     }
 
