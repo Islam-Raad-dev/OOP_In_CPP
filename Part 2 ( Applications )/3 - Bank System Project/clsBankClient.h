@@ -128,7 +128,7 @@ private:
     void Deposit(double Amount)
     {
         _AccountBalance += Amount;
-        _Update();
+        Save();
     }
 
     static void _AddDataLineToFile(string stDataLine)
