@@ -538,4 +538,18 @@ public:
                  << endl;
         }
     }
+
+    static void ShowTotalBalance()
+    {
+        vector<clsBankClient> vClient = clsBankClient::GetClientList();
+
+        double TotalBalance = 0;
+
+        for (clsBankClient Client : vClient)
+        {
+            TotalBalance += Client.GetAccountBalance();
+        }
+
+        cout << "\nTotal Balance For All Clients In The System Is: " << TotalBalance << endl;
+    }
 };
