@@ -8,6 +8,7 @@
 #include <clsString.h>
 #include "clsPerson.h"
 #include "clsInputValidate.h"
+#include "clsUtil.h"
 
 using namespace std;
 
