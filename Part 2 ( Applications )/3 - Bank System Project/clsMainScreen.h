@@ -7,7 +7,6 @@
 #include "clsAddNewClientScreen.h"
 
 
-
 using namespace std;
 
 class clsMainScreen:protected clsScreen
