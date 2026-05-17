@@ -184,8 +184,8 @@ public:
         return _AccountBalance;
     }
 
-    void Print()
-    {
+    /*
+    void Print(){
         cout << "\nClient Card:";
         cout << "\n-----------------------------------";
         cout << "\nFirst Name      : " << GetFirstName();
@@ -197,7 +197,7 @@ public:
         cout << "\nPin Code        : " << _PinCode;
         cout << "\nAccount Balance : " << _AccountBalance;
         cout << "\n-----------------------------------\n";
-    }
+}*/
 
     static clsBankClient Find(string AccountNumber)
     {
