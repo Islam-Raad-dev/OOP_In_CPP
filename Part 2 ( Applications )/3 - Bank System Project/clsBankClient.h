@@ -125,6 +125,12 @@ private:
         _AddDataLineToFile(_ConverClientObjectToLine(*this));
     }
 
+    void Deposit(double Amount)
+    {
+        _AccountBalance += Amount;
+        _Update();
+    }
+
     static void _AddDataLineToFile(string stDataLine)
     {
         fstream MyFile;
