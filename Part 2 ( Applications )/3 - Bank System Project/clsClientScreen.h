@@ -5,7 +5,7 @@
 #include "clsBankClient.h"
 #include <iomanip>
 
-class clsClientListScreen:protected clsScreen
+class clsClientListScreen : protected clsScreen
 {
 
 private:
