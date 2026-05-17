@@ -1,9 +1,9 @@
-   #pragma once
+#pragma once
 
 #include <iostream>
 #include <fstream>
-#include <string>   
-#include <vector>   
+#include <string>
+#include <vector>
 #include <iomanip>
 #include <clsString.h>
 #include "clsPerson.h"
@@ -20,7 +20,7 @@ private:
         EmptyMode = 0,
         UpdateMode = 1,
         AddNewMode = 2,
-        DeleteMode = 3    
+        DeleteMode = 3
     };
     enMode _Mode;
 
@@ -452,6 +452,21 @@ public:
         }
     }
 
+    static float GetTotalBalance()
+    {
+
+        vector<clsBankClient> vClient = clsBankClient::GetClientList();
+
+        double TotalBalances = 0;
+
+        for (clsBankClient Client : vClient)
+        {
+            TotalBalances += Client._AccountBalance;
+        }
+
+        return TotalBalances;
+    }
+
     static clsBankClient GetDeleteNewClientObject(string AccountNumber)
     {
         return clsBankClient(enMode::DeleteMode, "", "", "", "", AccountNumber, "", 0);
@@ -543,13 +558,37 @@ public:
     {
         vector<clsBankClient> vClient = clsBankClient::GetClientList();
 
-        double TotalBalance = 0;
+        cout << "\t\t\t\tBalances List(" << vClient.size() << ") Client\n";
+        cout << "_________________________________________________________________________________________________\n\n";
 
-        for (clsBankClient Client : vClient)
+        cout << "| " << left << setw(15) << "AccountNumber";
+        cout << "| " << left << setw(40) << "Client Name";
+        cout << "| " << left << setw(12) << "Balancec";
+
+        cout << "_________________________________________________________________________________________________\n\n";
+
+        double TotalBalances = clsBankClient::GetTotalBalance();
+
+        if (vClient.size() == 0)
         {
-            TotalBalance += Client.GetAccountBalance();
+            cout << "\t\t\t\tNo Client Available In The System!";
         }
 
-        cout << "\nTotal Balance For All Clients In The System Is: " << TotalBalance << endl;
+        else
+        {
+            for (clsBankClient Client : vClient)
+            {
+                cout << "| " << left << setw(15) << Client.AccountNumber();
+                cout << "| " << left << setw(20) << Client.FullName();
+                cout << "| " << left << setw(12) << Client.GetPhone();
+                cout << "| " << left << setw(20) << Client.GetEmail();
+                cout << "| " << left << setw(10) << Client.GetPinCode();
+                cout << "| " << left << setw(12) << Client.GetAccountBalance();
+                cout << endl;
+            }
+
+            cout << "_________________________________________________________________________________________________\n"
+                 << endl;
+        }
     }
 };
