@@ -3,9 +3,11 @@
 #include <iomanip>
 #include "clsScreen.h"
 #include "clsInputValidate.h"
-#include "clsClientScreen.h"
+#include "clsListClientScreen.h"
 #include "clsAddNewClientScreen.h"
 #include "clsDeleteClientScreen.h"
+#include "clsUpdateClientScreen.h"
+#include "clsFindClientScreen.h"
 
 
 using namespace std;
