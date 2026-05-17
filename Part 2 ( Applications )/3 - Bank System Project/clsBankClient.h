@@ -559,7 +559,7 @@ public:
     {
         vector<clsBankClient> vClient = clsBankClient::GetClientList();
 
-        cout << "\t\t\t\tBalances List(" << vClient.size() << ") Client\n";
+        cout << "\t\t\t\tBalances List( " << vClient.size() << " ) Client\n";
         cout << "_________________________________________________________________________________________________\n\n";
 
         cout << "| " << left << setw(15) << "AccountNumber";
@@ -589,6 +589,7 @@ public:
                  << endl;
 
                  cout << "\t\t\t\t\tTotal Balances: " << TotalBalances << endl;
+                 cout <<"\t\t\t\t ( " << clsUtil::NumberToText(TotalBalances) << ") \n" << endl;
         }
     }
 };
