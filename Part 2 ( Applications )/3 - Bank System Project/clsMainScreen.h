@@ -28,7 +28,7 @@ class clsMainScreen:protected clsScreen
 
        static  void _GoBackToMainMenue()
         {
-            cout << setw(37) << left << ""<<"\nPress any key to go back to Main Menue...\n";
+            cout << setw(37) << left << ""<<"\nPress any key to go back to Main Menue...";
             cin.ignore();
             cin.get();
             ShowMainMenue();
