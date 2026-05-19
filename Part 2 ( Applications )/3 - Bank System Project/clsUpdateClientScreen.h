@@ -69,7 +69,7 @@ public:
     
         _PrintClient(Client1);
 
-        cout << "\nAre you sure you want to update this client y/n? ";
+        cout << "\nAre You Sure That You Want To Update This Client(y/n): ";
 
         char Answer = 'n';
         cin >> Answer;
