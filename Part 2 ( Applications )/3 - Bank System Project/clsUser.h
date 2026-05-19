@@ -178,7 +178,6 @@ public:
         _UserName = UserName;
     }
 
-
     void SetPassword(string Password)
     {
         _Password = Password;
@@ -189,7 +188,6 @@ public:
         return _Password;
     }
 
-
     void SetPermissions(int Permissions)
     {
         _Permissions = Permissions;
@@ -199,7 +197,6 @@ public:
     {
         return _Permissions;
     }
-
 
     static clsUser Find(string UserName)
     {
