@@ -13,6 +13,18 @@ using namespace std;
 class clsUser : public clsPerson
 {
 private:
+    enum enPermissions
+    {
+        eAll = -1,
+        pListClients = 1,
+        pAddNewClient = 2,
+        pDeleteClient = 4,
+        pUpdateClients = 8,
+        pFindClient = 16,
+        pTranactions = 32,
+        pManageUsers = 64
+    };
+    
     enum enMode
     {
         EmptyMode = 0,
@@ -33,8 +45,7 @@ private:
         vUserData = clsString::Split(Line, Seperator);
 
         return clsUser(enMode::UpdateMode,
-             vUserData[0], vUserData[1], vUserData[2],vUserData[3], vUserData[4], vUserData[5], stoi(vUserData[6])
-            );
+                       vUserData[0], vUserData[1], vUserData[2], vUserData[3], vUserData[4], vUserData[5], stoi(vUserData[6]));
     }
 
     static string _ConverUserObjectToLine(clsUser User, string Seperator = "#//#")
