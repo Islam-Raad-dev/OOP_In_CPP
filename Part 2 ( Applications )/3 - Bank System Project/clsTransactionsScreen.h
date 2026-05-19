@@ -8,6 +8,7 @@
 #include "clsDepositScreen.h"
 #include "clsWithdrawScreen.h"
 #include "clsTotalBalancesScreen.h"
+#include "clsUser.h"
 
 using namespace std;
 
@@ -101,7 +102,7 @@ public:
         {
             return;
         }
-        
+
         _DrawScreenHeader("\t  Transactions Screen");
 
         cout << setw(37) << left << "" << "===========================================\n";

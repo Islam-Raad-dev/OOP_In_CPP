@@ -10,6 +10,7 @@
 #include "clsDeleteUserScreen.h"
 #include "clsUpdateUserScreen.h"
 #include "clsFindUserScreen.h"
+#include "clsUser.h"
 
 using namespace std;
 
