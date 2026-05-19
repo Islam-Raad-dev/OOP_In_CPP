@@ -1,7 +1,10 @@
 #pragma once
+
 #include <iostream>
 #include <iomanip>
+
 #include "clsScreen.h"
+#include "Global.h"
 #include "clsInputValidate.h"
 #include "clsListClientScreen.h"
 #include "clsAddNewClientScreen.h"
@@ -10,6 +13,7 @@
 #include "clsFindClientScreen.h"
 #include "clsTransactionsScreen.h"
 #include "clsMangeUsersScreen.h"
+#include "clsLoginScreen.h"
 
 using namespace std;
 
@@ -86,9 +90,9 @@ private:
         _GoBackToMainMenue();
     }
 
-    static void _ShowEndScreen()
+    static void _Logout()
     {
-        cout << "\nEnd Screen Will be here...\n";
+        CurrentUser = clsUser::Find("", "");
     }
 
     static void _PerfromMainMenueOption(enMainMenueOptions MainMenueOption)
@@ -138,9 +142,7 @@ private:
 
         case enMainMenueOptions::eExit:
             system("clear");
-            _ShowEndScreen();
-            // Login();
-
+            _Logout();
             break;
         }
     }
