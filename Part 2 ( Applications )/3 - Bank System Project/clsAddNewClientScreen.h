@@ -1,10 +1,13 @@
 #pragma once
 
 #include <iostream>
+#include <iomanip>
+
 #include "clsScreen.h"
 #include "clsBankClient.h"
 #include "clsInputValidate.h"
-#include <iomanip>
+#include "clsUser.h"
+
 
 class clsAddNewClientScreen : protected clsScreen
 {
@@ -54,7 +57,7 @@ public:
         {
             return;
         }
-        
+
         _DrawScreenHeader("\t  Add New Client Screen");
 
         string AccountNumber = "";
