@@ -43,7 +43,7 @@ private:
 
     static void _ShowAddNewUserScreen()
     {
-        clsAddNewClientScreen::ShowAddNewClientScreen();
+        clsAddNewUserScreen::ShowAddNewUserScreen();
         _GoBackToManageUsersMenue();
     }
 
