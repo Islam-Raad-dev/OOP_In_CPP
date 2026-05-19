@@ -29,7 +29,7 @@ private:
     static string _ReadAccountNumber()
     {
         string AccountNumber = "";
-        cout << "\nPlease enter AccountNumber? ";
+        cout << "\nPlease Enter Account Number: ";
         cin >> AccountNumber;
         return AccountNumber;
     }
@@ -46,7 +46,7 @@ public:
 
         while (!clsBankClient::IsClientExists(AccountNumber))
         {
-            cout << "\nClient with [" << AccountNumber << "] does not exist.\n";
+            cout << "\nClient with [" << AccountNumber << "] Does Not Exist.\n";
             AccountNumber = _ReadAccountNumber();
         }
 
@@ -54,10 +54,10 @@ public:
         _PrintClient(Client1);
 
         double Amount = 0;
-        cout << "\nPlease enter deposit amount? ";
+        cout << "\nPlease Enter Deposit Amount: ";
         Amount = clsInputValidate::ReadDblNumber();
 
-        cout << "\nAre you sure you want to perform this transaction? ";
+        cout << "\nAre You Sure That You Want To Preforme This Transaction(y/n): ";
         char Answer = 'n';
         cin >> Answer;
 
@@ -70,7 +70,7 @@ public:
         }
         else
         {
-            cout << "\nOperation was cancelled.\n";
+            cout << "\nOperation Was Cancelled.\n";
         }
 
     }
