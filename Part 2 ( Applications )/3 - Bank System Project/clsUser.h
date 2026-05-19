@@ -302,9 +302,9 @@ public:
 
             break;
         }
-        
+
         }
-        return enSaveResult::svFaildEmpteObject;
+        return enSaveResults::svFaildEmptyObject;
     }
 
     static bool IsUserExist(string UserName)
