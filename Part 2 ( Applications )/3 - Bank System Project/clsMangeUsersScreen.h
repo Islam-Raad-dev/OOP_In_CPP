@@ -68,7 +68,6 @@ private:
         _GoBackToManageUsersMenue();
     }
 
-
     static void _PerformManageUsersMenueOption(enManageUsersMenueOptions ManageUsersMenueOption)
     {
 
@@ -124,9 +123,7 @@ private:
     }
 
 
-
 public:
-
 
     static void ShowManageUsersMenue()
     {
