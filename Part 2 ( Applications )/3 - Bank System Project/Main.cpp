@@ -10,7 +10,7 @@ using namespace std;
 
 int main()
 {
-    
+    clsLoginScreen::ShowLoginScreen();
 
     return 0;
 }
