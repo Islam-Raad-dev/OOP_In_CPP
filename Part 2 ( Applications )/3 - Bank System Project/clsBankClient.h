@@ -246,9 +246,9 @@ public:
 
     enum enSaveResult
     {
-        svFaildEmptyObject = 0,
+        svFaildEmpteObject = 0,
         svSucceeded = 1,
-        svFaildAccountNumberExists = 2
+        svFaildAccountNumberExist = 2
     };
 
     enSaveResult Save()
@@ -261,7 +261,7 @@ public:
             if (IsEmpty())
             {
 
-                return enSaveResult::svFaildEmptyObject;
+                return enSaveResult::svFaildEmpteObject;
             }
         }
 
@@ -279,7 +279,7 @@ public:
         {
             if (clsBankClient::IsClientExists(_AccountNumber))
             {
-                return enSaveResult::svFaildAccountNumberExists;
+                return enSaveResult::svFaildAccountNumberExist;
             }
             else
             {
@@ -291,7 +291,13 @@ public:
 
             break;
         }
+
+        default:
+            return enSaveResult::svFaildEmpteObject;
+
         }
+
+         return enSaveResult::svFaildEmpteObject;
     }
 
     void Deposit(double Amount)
@@ -311,6 +317,7 @@ public:
         {
             _AccountBalance -= Amount;
             Save();
+            return true;
         }
     }
 
