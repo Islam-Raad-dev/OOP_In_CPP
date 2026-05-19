@@ -5,6 +5,7 @@
 
 #include "clsScreen.h"
 #include "clsInputValidate.h"
+#include "clsUsersListScreen.h"
 
 using namespace std;
 
@@ -35,8 +36,8 @@ private:
 
     static void _ShowListUsersScreen()
     {
-        cout << "\nList Users Screen Will Be Here.\n";
-
+        clsListUsersScreen::ShowUsersList();
+        _GoBackToManageUsersMenue();
     }
 
     static void _ShowAddNewUserScreen()
