@@ -26,6 +26,16 @@ private:
 
     bool _MarkedForDelete = false;
 
+    string _PrepareLogInRecord( string Seperator = "#//#")
+    {
+        string LoginRecord = "";
+        LoginRecord += clsDate::GetSystemDateTimeString() + Seperator;
+        LoginRecord += _UserName + Seperator;
+        LoginRecord += _Password + Seperator;
+        LoginRecord += to_string(_Permissions);
+        return LoginRecord;
+    }
+
     static clsUser _ConvertLinetoUserObject(string Line, string Seperator = "#//#")
     {
         vector<string> vUserData;
@@ -302,7 +312,6 @@ public:
 
             break;
         }
-
         }
         return enSaveResults::svFaildEmptyObject;
     }
@@ -347,15 +356,32 @@ public:
 
     bool CheckAccessPermission(enPermissions Permission)
     {
-        if(this->GetPermissions() == enPermissions::eAll)
+        if (this->GetPermissions() == enPermissions::eAll)
         {
             return true;
         }
-        if((GetPermissions() & this->GetPermissions()) == Permission)
+        if ((GetPermissions() & this->GetPermissions()) == Permission)
         {
             return true;
         }
-        
+
         return false;
+    }
+
+    void RegisterLogIn()
+    {
+
+        string stDataLine = _PrepareLogInRecord();
+
+        fstream MyFile;
+        MyFile.open("/home/islam-raad/Projects/OOP_In_CPP/Part 2 ( Applications )/3 - Bank System Project/LoginRegister.txt", ios::out | ios::app);
+
+        if (MyFile.is_open())
+        {
+
+            MyFile << stDataLine << endl;
+
+            MyFile.close();
+        }
     }
 };
