@@ -1,9 +1,12 @@
 #pragma once
+
 #include <iostream>
+
 #include "clsScreen.h"
 #include "clsPerson.h"
 #include "clsBankClient.h"
 #include "clsInputValidate.h"
+#include "clsUser.h"
 
 class clsFindClientScreen :protected clsScreen
 {
