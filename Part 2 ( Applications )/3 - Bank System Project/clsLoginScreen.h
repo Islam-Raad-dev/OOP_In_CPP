@@ -59,7 +59,7 @@ public:
     {
         system("clear");
         _DrawScreenHeader("\t  Login Screen");
-        _Login();
+        return _Login();
 
     }
 
