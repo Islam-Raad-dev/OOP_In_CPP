@@ -55,7 +55,7 @@ private :
 public:
 
 
-    static void ShowLoginScreen()
+    static bool ShowLoginScreen()
     {
         system("clear");
         _DrawScreenHeader("\t  Login Screen");
