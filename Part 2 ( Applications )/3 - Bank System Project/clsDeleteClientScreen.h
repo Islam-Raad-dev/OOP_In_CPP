@@ -44,7 +44,7 @@ public:
         clsBankClient Client1 = clsBankClient::Find(AccountNumber);
         _PrintClient(Client1);
 
-        cout << "\nAre you sure you want to delete this client y/n? ";
+        cout << "\nAre You Sure You Want To Delete This Client(y/n): ";
 
         char Answer = 'n';
         cin >> Answer;
