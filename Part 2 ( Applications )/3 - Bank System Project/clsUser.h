@@ -29,7 +29,7 @@ private:
     static clsUser _ConvertLinetoUserObject(string Line, string Seperator = "#//#")
     {
         vector<string> vUserData;
-        
+
         vUserData = clsString::Split(Line, Seperator);
 
         return clsUser(enMode::UpdateMode,
@@ -58,7 +58,7 @@ private:
         vector<clsUser> vUsers;
 
         fstream MyFile;
-        MyFile.open("Users.txt", ios::in); // read Mode
+        MyFile.open("/home/islam-raad/Projects/OOP_In_CPP/Part 2 ( Applications )/3 - Bank System Project/Users.txt", ios::in); // read Mode
 
         if (MyFile.is_open())
         {
@@ -83,7 +83,7 @@ private:
     {
 
         fstream MyFile;
-        MyFile.open("Users.txt", ios::out); // overwrite
+        MyFile.open("/home/islam-raad/Projects/OOP_In_CPP/Part 2 ( Applications )/3 - Bank System Project/Users.txt", ios::out); // overwrite
 
         string DataLine;
 
@@ -130,7 +130,7 @@ private:
     void _AddDataLineToFile(string stDataLine)
     {
         fstream MyFile;
-        MyFile.open("Users.txt", ios::out | ios::app);
+        MyFile.open("/home/islam-raad/Projects/OOP_In_CPP/Part 2 ( Applications )/3 - Bank System Project/Users.txt", ios::out | ios::app);
 
         if (MyFile.is_open())
         {
@@ -204,7 +204,7 @@ public:
     static clsUser Find(string UserName)
     {
         fstream MyFile;
-        MyFile.open("Users.txt", ios::in); // read Mode
+        MyFile.open("/home/islam-raad/Projects/OOP_In_CPP/Part 2 ( Applications )/3 - Bank System Project/Users.txt", ios::in); // read Mode
 
         if (MyFile.is_open())
         {
@@ -229,7 +229,7 @@ public:
     {
 
         fstream MyFile;
-        MyFile.open("Users.txt", ios::in); // read Mode
+        MyFile.open("/home/islam-raad/Projects/OOP_In_CPP/Part 2 ( Applications )/3 - Bank System Project/Users.txt", ios::in); // read Mode
 
         if (MyFile.is_open())
         {
