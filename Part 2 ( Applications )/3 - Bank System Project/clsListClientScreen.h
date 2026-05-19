@@ -1,9 +1,12 @@
 #pragma once
 
 #include <iostream>
+#include <iomanip>
+
 #include "clsScreen.h"
 #include "clsBankClient.h"
-#include <iomanip>
+#include "clsUser.h"
+
 
 class clsClientListScreen : protected clsScreen
 {
@@ -31,7 +34,7 @@ public:
         {
             return;
         }
-        
+
         vector <clsBankClient> vClients = clsBankClient::GetClientList();
         string Title = "\t  Client List Screen";
         string SubTitle ="\t    (" + to_string(vClients.size()) + ") Client(s).";
