@@ -22,13 +22,13 @@ private :
      
             if (LoginFaild)
             {
-                cout << "\nInvlaid Username/Password!\n\n";
+                cout << "\nInvalid Username / Password!\n\n";
             }
 
-            cout << "Enter Username? ";
+            cout << "Enter Username: ";
             cin >> Username;
 
-            cout << "Enter Password? ";
+            cout << "Enter Password: ";
             cin >> Password;
 
             CurrentUser = clsUser::Find(Username, Password);
@@ -46,7 +46,7 @@ public:
 
     static void ShowLoginScreen()
     {
-        system("cls");
+        system("clear");
         _DrawScreenHeader("\t  Login Screen");
         _Login();
 
