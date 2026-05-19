@@ -12,9 +12,10 @@ class clsLoginScreen :protected clsScreen
 
 private :
 
-  static  void _Login()
+  static  bool _Login()
     {
         bool LoginFaild = false;
+        short LoginAttempts = 0;
 
         string Username, Password;
         do
@@ -22,7 +23,16 @@ private :
      
             if (LoginFaild)
             {
+                LoginAttempts++;
+
                 cout << "\nInvalid Username / Password!\n\n";
+                cout << "You Have " << 3 - LoginAttempts << " Attempts Left.\n\n";
+            }
+
+            if(LoginAttempts == 3)
+            {
+                cout << "You Are Locked After 3 Failed Attempts.\n";
+                return false;
             }
 
             cout << "Enter Username: ";
