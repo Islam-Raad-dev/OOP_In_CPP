@@ -1,6 +1,8 @@
 #pragma once
 
 #include <iostream>
+#include "Global.h"
+#include "clsUser.h"
 
 using namespace std;
 
