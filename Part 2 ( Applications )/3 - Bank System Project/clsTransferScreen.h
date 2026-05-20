@@ -26,9 +26,9 @@ private:
         string AccountNumber;
         cout << "\nPlease Enter Account Number to Transfer From: ";
         AccountNumber = clsInputValidate::ReadString();
-        while (!clsBankClient::IsClientExist(AccountNumber))
+        while (!clsBankClient::IsClientExists(AccountNumber))
         {
-            cout << "\nAccount number is not found, choose another one: ";
+            cout << "\nAccount Number Is Not Found, Choose Another One: ";
             AccountNumber = clsInputValidate::ReadString();
         }
         return AccountNumber;
@@ -38,13 +38,13 @@ private:
     {
         float Amount;
 
-        cout << "\nEnter Transfer Amount? ";
+        cout << "\nEnter Transfer Amount: ";
 
         Amount = clsInputValidate::ReadFloatNumber();
 
-        while (Amount > SourceClient.AccountBalance)
+        while (Amount > SourceClient.GetAccountBalance())
         {
-            cout << "\nAmount Exceeds the available Balance, Enter another Amount ? ";
+            cout << "\nAmount Exceeds The Available Balance, Enter another Amount : ";
             Amount = clsInputValidate::ReadDblNumber();
         }
         return Amount;
@@ -73,11 +73,11 @@ public:
         {
             if (SourceClient.Transfer(Amount, DestinationClient))
             {
-                cout << "\nTransfer done successfully\n";
+                cout << "\nTransfer Done Successfully\n";
             }
             else
             {
-                cout << "\nTransfer Faild \n";
+                cout << "\nTransfer Failed \n";
             }
         }
 
