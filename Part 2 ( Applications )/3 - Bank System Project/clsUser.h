@@ -13,12 +13,8 @@ using namespace std;
 class clsUser : public clsPerson
 {
 private:
-    enum enMode
-    {
-        EmptyMode = 0,
-        UpdateMode = 1,
-        AddNewMode = 2
-    };
+
+    enum enMode { EmptyMode = 0, UpdateMode = 1, AddNewMode = 2 };
     enMode _Mode;
     string _UserName;
     string _Password;
@@ -26,6 +22,7 @@ private:
 
     bool _MarkedForDelete = false;
 
+    struct stLoginRegisterRecord;
     static stLoginRegisterRecord _ConvertLoginRegisterLineToRecord(string Line, string Seperator = "#//#")
     {
         stLoginRegisterRecord LoginRegisterRecord;
@@ -54,11 +51,11 @@ private:
     static clsUser _ConvertLinetoUserObject(string Line, string Seperator = "#//#")
     {
         vector<string> vUserData;
-
         vUserData = clsString::Split(Line, Seperator);
 
-        return clsUser(enMode::UpdateMode,
-                       vUserData[0], vUserData[1], vUserData[2], vUserData[3], vUserData[4], vUserData[5], stoi(vUserData[6]));
+        return clsUser(enMode::UpdateMode, vUserData[0], vUserData[1], vUserData[2],
+            vUserData[3], vUserData[4], vUserData[5], stoi(vUserData[6]));
+
     }
 
     static string _ConverUserObjectToLine(clsUser User, string Seperator = "#//#")
@@ -74,20 +71,22 @@ private:
         UserRecord += to_string(User.GetPermissions());
 
         return UserRecord;
+
     }
 
-    static vector<clsUser> _LoadUsersDataFromFile()
+    static  vector <clsUser> _LoadUsersDataFromFile()
     {
 
-        vector<clsUser> vUsers;
+        vector <clsUser> vUsers;
 
         fstream MyFile;
-        MyFile.open("/home/islam-raad/Projects/OOP_In_CPP/Part 2 ( Applications )/3 - Bank System Project/Users.txt", ios::in); // read Mode
+        MyFile.open("/home/islam-raad/Projects/OOP_In_CPP/Part 2 ( Applications )/3 - Bank System Project/Users.txt", ios::in);//read Mode
 
         if (MyFile.is_open())
         {
 
             string Line;
+
 
             while (getline(MyFile, Line))
             {
@@ -98,16 +97,18 @@ private:
             }
 
             MyFile.close();
+
         }
 
         return vUsers;
+
     }
 
-    static void _SaveUsersDataToFile(vector<clsUser> vUsers)
+    static void _SaveUsersDataToFile(vector <clsUser> vUsers)
     {
 
         fstream MyFile;
-        MyFile.open("/home/islam-raad/Projects/OOP_In_CPP/Part 2 ( Applications )/3 - Bank System Project/Users.txt", ios::out); // overwrite
+        MyFile.open("/home/islam-raad/Projects/OOP_In_CPP/Part 2 ( Applications )/3 - Bank System Project/Users.txt", ios::out);//overwrite
 
         string DataLine;
 
@@ -118,31 +119,37 @@ private:
             {
                 if (U.MarkedForDeleted() == false)
                 {
-                    // we only write records that are not marked for delete.
+                    //we only write records that are not marked for delete.  
                     DataLine = _ConverUserObjectToLine(U);
                     MyFile << DataLine << endl;
+
                 }
+
             }
 
             MyFile.close();
+
         }
+
     }
 
     void _Update()
     {
-        vector<clsUser> _vUsers;
+        vector <clsUser> _vUsers;
         _vUsers = _LoadUsersDataFromFile();
 
-        for (clsUser &U : _vUsers)
+        for (clsUser& U : _vUsers)
         {
             if (U.GetUserName() == GetUserName())
             {
                 U = *this;
                 break;
             }
+
         }
 
         _SaveUsersDataToFile(_vUsers);
+
     }
 
     void _AddNew()
@@ -151,7 +158,7 @@ private:
         _AddDataLineToFile(_ConverUserObjectToLine(*this));
     }
 
-    void _AddDataLineToFile(string stDataLine)
+    void _AddDataLineToFile(string  stDataLine)
     {
         fstream MyFile;
         MyFile.open("/home/islam-raad/Projects/OOP_In_CPP/Part 2 ( Applications )/3 - Bank System Project/Users.txt", ios::out | ios::app);
@@ -163,12 +170,14 @@ private:
 
             MyFile.close();
         }
+
     }
 
     static clsUser _GetEmptyUserObject()
     {
         return clsUser(enMode::EmptyMode, "", "", "", "", "", "", 0);
     }
+
 
 public:
     clsUser(enMode Mode, string FirstName, string LastName,
