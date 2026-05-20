@@ -53,7 +53,8 @@ private:
 
     static void _ShowTransferScreen()
     {
-        cout << "Transfer Screen Well Be Here.";
+        clsTransferScreen::ShowTransferScreen();
+        _GoBackToTransactionsMenue();
     }
 
     static void _GoBackToTransactionsMenue()
