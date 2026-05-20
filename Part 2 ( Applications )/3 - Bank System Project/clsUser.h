@@ -27,6 +27,7 @@ private:
     enMode _Mode;
     string _UserName;
     string _Password;
+    string _EncryptedPassword;
     int _Permissions;
 
     bool _MarkedForDelete = false;
@@ -185,6 +186,12 @@ private:
     {
         return clsUser(enMode::EmptyMode, "", "", "", "", "", "", 0);
     }
+
+    static string EnctyptedPassword(string Password)
+    {
+        return clsUtil::EncryptText(Password);
+    }
+
 
 
 public:
