@@ -8,6 +8,7 @@
 #include "clsDepositScreen.h"
 #include "clsWithdrawScreen.h"
 #include "clsTotalBalancesScreen.h"
+#include "clsTransferScreen.h"
 #include "clsUser.h"
 
 using namespace std;
