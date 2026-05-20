@@ -63,8 +63,7 @@ private:
         vector<string> vUserData;
         vUserData = clsString::Split(Line, Seperator);
 
-        return clsUser(enMode::UpdateMode, vUserData[0], vUserData[1], vUserData[2],
-            vUserData[3], vUserData[4], vUserData[5], stoi(vUserData[6]));
+        return clsUser(enMode::UpdateMode, vUserData[0], vUserData[1], vUserData[2],vUserData[3], vUserData[4], clsUtil::DecryptText(vUserData[5]), stoi(vUserData[6]));
 
     }
 
