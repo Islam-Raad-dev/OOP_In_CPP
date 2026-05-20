@@ -26,7 +26,13 @@ private:
 
     bool _MarkedForDelete = false;
 
-    struct stLoginRegisterRecord;
+    struct stLoginRegisterRecord
+    {
+        string DateTime;
+        string UserName;
+        string Password;
+        int Permissions;
+    };
 
     static stLoginRegisterRecord _ConvertLoginRegisterLineToRecord(string Line, string Seperator = "#//#")
     {
@@ -407,7 +413,7 @@ public:
          vector <stLoginRegisterRecord> vLoginRegisterRecord;
 
          fstream MyFile;
-         MyFile.open("LoginRegister.txt", ios::in);//read Mode
+         MyFile.open("/home/islam-raad/Projects/OOP_In_CPP/Part 2 ( Applications )/3 - Bank System Project/LoginRegister.txt", ios::in);//read Mode
 
          if (MyFile.is_open())
          {
