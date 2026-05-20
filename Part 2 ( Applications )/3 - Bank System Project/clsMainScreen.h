@@ -91,9 +91,9 @@ private:
         _GoBackToMainMenue();
     }
 
-    static void _ShowLoginRegisterMenue()
+    static void _ShowLoginRegisterScreen()
     {
-
+        cls
     }
 
     static void _Logout()
@@ -148,7 +148,7 @@ private:
 
         case enMainMenueOptions::eLoginRegister:
             system("clear");
-            _ShowLoginRegisterMenue();
+            _ShowLoginRegisterScreen();
             break;
 
         case enMainMenueOptions::eExit:
