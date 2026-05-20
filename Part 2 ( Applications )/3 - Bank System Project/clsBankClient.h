@@ -5,10 +5,12 @@
 #include <string>
 #include <vector>
 #include <iomanip>
+
 #include <clsString.h>
 #include "clsPerson.h"
 #include "clsInputValidate.h"
 #include "clsUtil.h"
+#include "clsDate.h"
 
 using namespace std;
 
@@ -159,7 +161,7 @@ private:
         return TransferLogRecord;
     }
 
-    
+
     void _RegisterTransferLog(float Amount, clsBankClient DestinationClient, string UserName)
     {
         string stDataLine = _PrepareTransferLogRecord(Amount, DestinationClient, UserName);
