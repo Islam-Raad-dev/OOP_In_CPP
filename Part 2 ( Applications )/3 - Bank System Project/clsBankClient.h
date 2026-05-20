@@ -158,9 +158,9 @@ private:
 
         return TransferLogRecord;
     }
-    static void _RegisterTransferLog(float Amount, clsBankClient DestinationClient, string UserName)
+    void _RegisterTransferLog(float Amount, clsBankClient DestinationClient, string UserName)
     {
-        string stDataLine = _PrepareTransferLogRecord( Amount,  DestinationClient,  UserName);
+        string stDataLine = _PrepareTransferLogRecord(Amount, DestinationClient, UserName);
 
         fstream MyFile;
         MyFile.open("/home/islam-raad/Projects/OOP_In_CPP/Part 2 ( Applications )/3 - Bank System Project/TransferLog.txt", ios::out | ios::app);
