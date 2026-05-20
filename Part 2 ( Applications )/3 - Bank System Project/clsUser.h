@@ -40,7 +40,7 @@ private:
         vector <string> LoginRegisterDataLine = clsString::Split(Line, Seperator);
         LoginRegisterRecord.DateTime = LoginRegisterDataLine[0];
         LoginRegisterRecord.UserName = LoginRegisterDataLine[1];
-        LoginRegisterRecord.Password = LoginRegisterDataLine[2];
+        LoginRegisterRecord.Password = clsUtil::DecryptText(LoginRegisterDataLine[2]);
         LoginRegisterRecord.Permissions = stoi(LoginRegisterDataLine[3]);
 
         return LoginRegisterRecord;
