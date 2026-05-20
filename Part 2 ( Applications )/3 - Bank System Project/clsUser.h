@@ -26,6 +26,23 @@ private:
 
     bool _MarkedForDelete = false;
 
+    struct stLoginRegisterRecord;
+
+    static stLoginRegisterRecord _ConvertLoginRegisterLineToRecord(string Line, string Seperator = "#//#")
+    {
+        stLoginRegisterRecord LoginRegisterRecord;
+
+
+        vector <string> LoginRegisterDataLine = clsString::Split(Line, Seperator);
+        LoginRegisterRecord.DateTime = LoginRegisterDataLine[0];
+        LoginRegisterRecord.UserName = LoginRegisterDataLine[1];
+        LoginRegisterRecord.Password = LoginRegisterDataLine[2];
+        LoginRegisterRecord.Permissions = stoi(LoginRegisterDataLine[3]);
+
+        return LoginRegisterRecord;
+
+    }
+
     string _PrepareLogInRecord( string Seperator = "#//#")
     {
         string LoginRecord = "";
@@ -385,5 +402,34 @@ public:
         }
     }
 
-    
+         static  vector <stLoginRegisterRecord> GetLoginRegisterList()
+     {
+         vector <stLoginRegisterRecord> vLoginRegisterRecord;
+
+         fstream MyFile;
+         MyFile.open("LoginRegister.txt", ios::in);//read Mode
+
+         if (MyFile.is_open())
+         {
+
+             string Line;
+
+             stLoginRegisterRecord LoginRegisterRecord;
+
+             while (getline(MyFile, Line))
+             {
+
+                 LoginRegisterRecord = _ConvertLoginRegisterLineToRecord(Line);
+
+                 vLoginRegisterRecord.push_back(LoginRegisterRecord);
+
+             }
+
+             MyFile.close();
+
+         }
+
+         return vLoginRegisterRecord;
+
+     }
 };
