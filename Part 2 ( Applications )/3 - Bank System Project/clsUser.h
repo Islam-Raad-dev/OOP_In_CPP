@@ -77,6 +77,7 @@ private:
         UserRecord += User.GetPhone() + Seperator;
         UserRecord += User.GetUserName() + Seperator;
         UserRecord += User.GetPassword() + Seperator;
+        UserRecord += clsUtil::EncryptText(User.GetPassword()) + Seperator;
         UserRecord += to_string(User.GetPermissions());
 
         return UserRecord;
