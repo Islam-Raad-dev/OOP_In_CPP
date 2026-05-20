@@ -12,6 +12,15 @@ using namespace std;
 
 class clsUser : public clsPerson
 {
+public:
+    struct stLoginRegisterRecord
+    {
+        string DateTime;
+        string UserName;
+        string Password;
+        int Permissions;
+    };
+
 private:
 
     enum enMode { EmptyMode = 0, UpdateMode = 1, AddNewMode = 2 };
@@ -22,7 +31,6 @@ private:
 
     bool _MarkedForDelete = false;
 
-    struct stLoginRegisterRecord;
     static stLoginRegisterRecord _ConvertLoginRegisterLineToRecord(string Line, string Seperator = "#//#")
     {
         stLoginRegisterRecord LoginRegisterRecord;
@@ -201,14 +209,6 @@ public:
         pFindClient = 16,
         pTranactions = 32,
         pManageUsers = 64
-    };
-
-    struct stLoginRegisterRecord
-    {
-        string DateTime;
-        string UserName;
-        string Password;
-        int Permissions;
     };
 
     bool IsEmpty()
