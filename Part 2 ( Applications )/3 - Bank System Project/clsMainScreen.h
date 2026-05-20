@@ -14,6 +14,7 @@
 #include "clsTransactionsScreen.h"
 #include "clsMangeUsersScreen.h"
 #include "clsLoginScreen.h"
+#include "clsRegisterScreen.h"
 
 using namespace std;
 
@@ -93,7 +94,8 @@ private:
 
     static void _ShowLoginRegisterScreen()
     {
-        cls
+        clsLoginRegisterScreen::ShowLoginRegisterScreen();
+        _GoBackToMainMenue();
     }
 
     static void _Logout()
