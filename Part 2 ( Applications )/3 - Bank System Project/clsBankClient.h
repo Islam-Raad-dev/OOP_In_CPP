@@ -484,7 +484,7 @@ public:
         vector <stTrnsferLogRecord> vTransferLogRecord;
 
         fstream MyFile;
-        MyFile.open("TransfersLog.txt", ios::in);//read Mode
+        MyFile.open("/home/islam-raad/Projects/OOP_In_CPP/Part 2 ( Applications )/3 - Bank System Project/TransferLog.txt", ios::in);//read Mode
 
         if (MyFile.is_open())
         {
