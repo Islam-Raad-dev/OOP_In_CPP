@@ -144,6 +144,37 @@ private:
         return clsBankClient(enMode::EmptyMode, "", "", "", "", "", "", 0);
     }
 
+        string _PrepareTransferLogRecord(float Amount,clsBankClient DestinationClient,string UserName, string Seperator = "#//#")
+    {
+        string TransferLogRecord = "";
+        
+        TransferLogRecord += clsDate::GetSystemDateTimeString() + Seperator;
+        TransferLogRecord += AccountNumber() + Seperator;
+        TransferLogRecord += DestinationClient.AccountNumber() + Seperator;
+        TransferLogRecord += to_string(Amount) + Seperator;
+        TransferLogRecord += to_string(_AccountBalance) + Seperator;
+        TransferLogRecord += to_string(DestinationClient.GetAccountBalance()) + Seperator;
+        TransferLogRecord += UserName;
+
+        return TransferLogRecord;
+    }
+    static void _RegisterTransferLog(float Amount, clsBankClient DestinationClient, string UserName)
+    {
+        string stDataLine = _PrepareTransferLogRecord( Amount,  DestinationClient,  UserName);
+
+        fstream MyFile;
+        MyFile.open("/home/islam-raad/Projects/OOP_In_CPP/Part 2 ( Applications )/3 - Bank System Project/TransferLog.txt", ios::out | ios::app);
+
+        if (MyFile.is_open())
+        {
+
+            MyFile << stDataLine << endl;
+
+            MyFile.close();
+        }
+
+    }
+
 public:
     clsBankClient(enMode Mode, string FirstName, string LastName, string Email, string Phone, string AccountNumber, string PinCode, float AccountBalance)
         : clsPerson(FirstName, LastName, Email, Phone)
@@ -400,7 +431,7 @@ public:
         return clsBankClient(enMode::DeleteMode, "", "", "", "", AccountNumber, "", 0);
     }
 
-    bool Transfer(float Amount, clsBankClient &DestinationClient)
+    bool Transfer(float Amount, clsBankClient &DestinationClient, string UserName)
     {
         if (Amount > GetAccountBalance())
         {
@@ -409,6 +440,7 @@ public:
     
         Withdraw(Amount);
         DestinationClient.Deposit(Amount);
+        _RegisterTransferLog(Amount, DestinationClient, UserName);
         return true;
     }
 };
