@@ -7,6 +7,7 @@
 
 #include "clsPerson.h"
 #include "clsString.h"
+#include "clsDate.h"
 
 using namespace std;
 
@@ -25,14 +26,6 @@ private:
     int _Permissions;
 
     bool _MarkedForDelete = false;
-
-    struct stLoginRegisterRecord
-    {
-        string DateTime;
-        string UserName;
-        string Password;
-        int Permissions;
-    };
 
     static stLoginRegisterRecord _ConvertLoginRegisterLineToRecord(string Line, string Seperator = "#//#")
     {
@@ -200,6 +193,14 @@ public:
         pFindClient = 16,
         pTranactions = 32,
         pManageUsers = 64
+    };
+
+    struct stLoginRegisterRecord
+    {
+        string DateTime;
+        string UserName;
+        string Password;
+        int Permissions;
     };
 
     bool IsEmpty()
