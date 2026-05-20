@@ -158,6 +158,8 @@ private:
 
         return TransferLogRecord;
     }
+
+    
     void _RegisterTransferLog(float Amount, clsBankClient DestinationClient, string UserName)
     {
         string stDataLine = _PrepareTransferLogRecord(Amount, DestinationClient, UserName);
