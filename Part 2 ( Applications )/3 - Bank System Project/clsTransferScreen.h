@@ -66,7 +66,7 @@ public:
 
         float Amount = ReadAmount(SourceClient);
 
-        cout << "\nAre you sure you want to perform this operation? y/n? ";
+        cout << "\nAre You Sure You Want To Perform This Operation (y/n): ";
         char Answer = 'n';
         cin >> Answer;
         if (Answer == 'Y' || Answer == 'y')
