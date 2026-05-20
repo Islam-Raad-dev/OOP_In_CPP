@@ -14,7 +14,7 @@
 #include "clsTransactionsScreen.h"
 #include "clsMangeUsersScreen.h"
 #include "clsLoginScreen.h"
-#include "clsRegisterScreen.h"
+#include "clsLoginRegisterScreen.h"
 
 using namespace std;
 
