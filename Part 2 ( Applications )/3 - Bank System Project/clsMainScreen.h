@@ -30,13 +30,14 @@ private:
         eFindClient = 5,
         eShowTransactionsMenue = 6,
         eManageUsers = 7,
-        eExit = 8
+        eLoginRegister = 8,
+        eExit = 9
     };
 
     static short _ReadMainMenueOption()
     {
         cout << setw(37) << left << "" << "Choose What Do You Want To Do [1 to 8]: ";
-        short Choice = clsInputValidate::ReadShortNumberBetween(1, 8, "\t\t\t\tEnter Number Between 1 to 8: ");
+        short Choice = clsInputValidate::ReadShortNumberBetween(1, 9, "\t\t\t\tEnter Number Between 1 to 8: ");
         return Choice;
     }
 
@@ -90,6 +91,11 @@ private:
         _GoBackToMainMenue();
     }
 
+    static void _ShowLoginRegisterMenue()
+    {
+
+    }
+
     static void _Logout()
     {
         CurrentUser = clsUser::Find("", "");
@@ -140,6 +146,11 @@ private:
             _ShowManageUsersMenue();
             break;
 
+        case enMainMenueOptions::eLoginRegister:
+            system("clear");
+            _ShowLoginRegisterMenue();
+            break;
+
         case enMainMenueOptions::eExit:
             system("clear");
             _Logout();
@@ -164,7 +175,8 @@ public:
         cout << setw(37) << left << "" << "\t[5] Find Client.\n";
         cout << setw(37) << left << "" << "\t[6] Transactions.\n";
         cout << setw(37) << left << "" << "\t[7] Manage Users.\n";
-        cout << setw(37) << left << "" << "\t[8] Logout.\n";
+        cout << setw(37) << left << "" << "\t[8] Login Resister.\n";
+        cout << setw(37) << left << "" << "\t[9] Logout.\n";
         cout << setw(37) << left << "" << "===========================================\n";
 
         _PerfromMainMenueOption((enMainMenueOptions)_ReadMainMenueOption());
