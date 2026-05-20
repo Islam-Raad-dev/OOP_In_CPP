@@ -53,6 +53,7 @@ private:
         LoginRecord += clsDate::GetSystemDateTimeString() + Seperator;
         LoginRecord += _UserName + Seperator;
         LoginRecord += _Password + Seperator;
+        LoginRecord += clsUtil::EncryptText(_Password) + Seperator;
         LoginRecord += to_string(_Permissions);
         return LoginRecord;
     }
