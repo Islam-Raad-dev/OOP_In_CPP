@@ -21,13 +21,14 @@ private:
         eDeposit = 1,
         eWithdraw = 2,
         eShowTotalBalance = 3,
-        eShowMainMenue = 4
+        eTransfer = 4,
+        eShowMainMenue = 5
     };
 
     static short ReadTransactionsMenueOption()
     {
-        cout << setw(37) << left << "" << "Choose what do you want to do? [1 to 4]? ";
-        short Choice = clsInputValidate::ReadShortNumberBetween(1, 4, "\t\t\t\tEnter Number between 1 to 4? ");
+        cout << setw(37) << left << "" << "Choose what do you want to do? [1 to 5]? ";
+        short Choice = clsInputValidate::ReadShortNumberBetween(1, 5, "\t\t\t\tEnter Number between 1 to 5? ");
         return Choice;
     }
 
@@ -47,6 +48,11 @@ private:
     {
         clsTotalBalancesScreen::ShowTotalBalances();
         _GoBackToTransactionsMenue();
+    }
+
+    static void _ShowTransferScreen()
+    {
+        cout << "Transfer Screen Well Be Here.";
     }
 
     static void _GoBackToTransactionsMenue()
@@ -85,6 +91,14 @@ private:
             break;
         }
 
+        case enTransactionsMenueOptions::eTransfer:
+        {
+            system("clear");
+            _ShowTransferScreen();
+            _GoBackToTransactionsMenue();
+            break;
+        }
+
         case enTransactionsMenueOptions::eShowMainMenue:
         {
             // Nothing here Because The Main Screen Will Handle It :-) ;
@@ -111,7 +125,8 @@ public:
         cout << setw(37) << left << "" << "\t[1] Deposit.\n";
         cout << setw(37) << left << "" << "\t[2] Withdraw.\n";
         cout << setw(37) << left << "" << "\t[3] Total Balances.\n";
-        cout << setw(37) << left << "" << "\t[4] Main Menue.\n";
+        cout << setw(37) << left << "" << "\t[4] Transfer.\n";
+        cout << setw(37) << left << "" << "\t[5] Main Menue.\n";
         cout << setw(37) << left << "" << "===========================================\n";
 
         _PerformTransactionsMenueOption((enTransactionsMenueOptions)ReadTransactionsMenueOption());
