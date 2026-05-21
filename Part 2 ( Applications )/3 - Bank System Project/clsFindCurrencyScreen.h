@@ -54,13 +54,18 @@ public:
             clsCurrency Currency = clsCurrency::FindByCode(CurrencyCode);
             _ShowResults(Currency);
         }
-        else
+        else if (Answer == 2)
         {
             string Country;
             cout << "\nPlease Enter Country Name: ";
             Country = clsInputValidate::ReadString();
             clsCurrency Currency = clsCurrency::FindByCountry(Country);
             _ShowResults(Currency);
+        }
+
+        else
+        {
+            cout << "\nInvalid Choice, Choose 1 or 2 only.\n";
         }
     }
 };
