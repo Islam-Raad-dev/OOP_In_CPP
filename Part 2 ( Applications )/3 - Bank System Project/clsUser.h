@@ -7,6 +7,7 @@
 #include "clsPerson.h"
 #include "clsString.h"
 #include "clsDate.h"
+#include "clsUtil.h"
 
 using namespace std;
 
@@ -53,7 +54,7 @@ private:
         LoginRecord += clsDate::GetSystemDateTimeString() + Seperator;
         LoginRecord += _UserName + Seperator;
         LoginRecord += _Password + Seperator;
-        LoginRecord += clsUtil::EncryptText(_Password) + Seperator;
+        LoginRecord += clsUtil::EncryptText(GetPassword()) + Seperator;
         LoginRecord += to_string(_Permissions);
         return LoginRecord;
     }
