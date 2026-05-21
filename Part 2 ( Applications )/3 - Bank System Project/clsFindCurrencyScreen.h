@@ -31,7 +31,7 @@ private:
         }
         else
         {
-            cout << "\nCurrency Was not Found :-(\n";
+            cout << "\nCurrency Was Not Found :-(\n";
         }
     }
 
@@ -41,10 +41,17 @@ public:
 
         _DrawScreenHeader("\t  Find Currency Screen");
 
-        cout << "\nFind By: [1] Code or [2] Country ? ";
+        cout << "\nFind By: [1] Code or [2] Country: ";
         short Answer = 1;
 
         cin >> Answer;
+
+        while (Answer != 1 && Answer != 2)
+        {
+            cout << "\nInvalid Choice, Choose 1 or 2 only.\n";
+            cout << "\nFind By: [1] Code or [2] Country: ";
+            cin >> Answer;
+        }
 
         if (Answer == 1)
         {
@@ -61,11 +68,6 @@ public:
             Country = clsInputValidate::ReadString();
             clsCurrency Currency = clsCurrency::FindByCountry(Country);
             _ShowResults(Currency);
-        }
-
-        else
-        {
-            cout << "\nInvalid Choice, Choose 1 or 2 only.\n";
         }
     }
 };
