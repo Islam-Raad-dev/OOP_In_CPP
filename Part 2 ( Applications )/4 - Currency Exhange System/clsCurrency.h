@@ -49,7 +49,7 @@ private:
         vector<clsCurrency> vCurrencys;
 
         fstream MyFile;
-        MyFile.open("Currencies.txt", ios::in); // read Mode
+        MyFile.open("/home/islam-raad/Projects/OOP_In_CPP/Part 2 ( Applications )/4 - Currency Exhange System/Currencies.txt", ios::in); // read Mode
 
         if (MyFile.is_open())
         {
@@ -74,7 +74,7 @@ private:
     {
 
         fstream MyFile;
-        MyFile.open("Currencies.txt", ios::out); // overwrite
+        MyFile.open("/home/islam-raad/Projects/OOP_In_CPP/Part 2 ( Applications )/4 - Currency Exhange System/Currencies.txt", ios::out); // overwrite
 
         string DataLine;
 
@@ -166,7 +166,7 @@ public:
         CurrencyCode = clsString::UpperAllString(CurrencyCode);
 
         fstream MyFile;
-        MyFile.open("Currencies.txt", ios::in); // read Mode
+        MyFile.open("/home/islam-raad/Projects/OOP_In_CPP/Part 2 ( Applications )/4 - Currency Exhange System/Currencies.txt", ios::in); // read Mode
 
         if (MyFile.is_open())
         {
@@ -192,7 +192,7 @@ public:
         Country = clsString::UpperAllString(Country);
 
         fstream MyFile;
-        MyFile.open("Currencies.txt", ios::in); // read Mode
+        MyFile.open("/home/islam-raad/Projects/OOP_In_CPP/Part 2 ( Applications )/4 - Currency Exhange System/Currencies.txt", ios::in); // read Mode
 
         if (MyFile.is_open())
         {
