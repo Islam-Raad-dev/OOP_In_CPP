@@ -57,7 +57,7 @@ private:
 
     static void _GoBackToCurrencyExchangeMenue()
     {
-        cout << setw(37) << left << "" << "\nPress any key to go back to Main Menue...\n";
+        cout << setw(37) << left << "" << "\nPress any key to go back to Currency Exchange Menue...\n";
         cin.ignore();
         cin.get();
         ShowCurrencyExchangeMenue();
