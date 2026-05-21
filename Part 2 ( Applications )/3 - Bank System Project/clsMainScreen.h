@@ -15,6 +15,7 @@
 #include "clsMangeUsersScreen.h"
 #include "clsLoginScreen.h"
 #include "clsLoginRegisterScreen.h"
+#include "clsCurrencyExchangeScreen.h"
 
 using namespace std;
 
@@ -101,7 +102,7 @@ private:
 
     static void _ShowCurrencyExchangeScreen()
     {
-        //clsCurrencyExchangeScreen::ShowCurrencyExchangeScreen();
+        clsCurrencyExchangeScreen::ShowCurrencyExchangeMenue();
         _GoBackToMainMenue();
     }
 
