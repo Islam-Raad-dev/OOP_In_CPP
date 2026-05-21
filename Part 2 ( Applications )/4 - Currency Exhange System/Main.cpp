@@ -1,6 +1,8 @@
 #include <iostream>
+
 #include "clsCurrency.h"
 
+using namespace std;
 
 static void _PrintCurrency(clsCurrency Currency)
 {
