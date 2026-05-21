@@ -20,7 +20,7 @@ static void _PrintCurrency(clsCurrency Currency)
 int main()
 
 {
-    clsCurrency Currency1 = Currency1.FindByCode("jod");
+    clsCurrency Currency1 = Currency1.FindByCode("iqd");
 
     if (Currency1.IsEmpty())
     {
@@ -31,19 +31,8 @@ int main()
         _PrintCurrency(Currency1);
     }
 
-    clsCurrency Currency2 = Currency2.FindByCountry("Egypt");
-
-    if (Currency2.IsEmpty())
-    {
-        cout << "\nCurrency Is Not Found!\n";
-    }
-    else
-    {
-        _PrintCurrency(Currency2);
-    }
-
     cout << "Currency1 after updating Rate:\n";
-    Currency1.UpdateRate(0.71);
+    Currency1.UpdateRate(1500);
     _PrintCurrency(Currency1);
 
 
