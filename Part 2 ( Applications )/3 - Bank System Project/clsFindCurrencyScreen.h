@@ -49,7 +49,7 @@ public:
         if (Answer == 1)
         {
             string CurrencyCode;
-            cout << "\nPlease Enter CurrencyCode: ";
+            cout << "\nPlease Enter Currency Code: ";
             CurrencyCode = clsInputValidate::ReadString();
             clsCurrency Currency = clsCurrency::FindByCode(CurrencyCode);
             _ShowResults(Currency);
