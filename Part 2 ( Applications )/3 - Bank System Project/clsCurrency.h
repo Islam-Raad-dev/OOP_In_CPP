@@ -229,7 +229,6 @@ public:
         return (float)(Amount / Rate());
     }
 
-
     float ConvertToOtherCurrency(float Amount, clsCurrency Currency2)
     {
         float AmountInUSD = ConvertToUSD(Amount);
