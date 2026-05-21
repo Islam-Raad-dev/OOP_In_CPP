@@ -96,6 +96,7 @@ private:
              _GoBackToCurrencyExchangeMenue();
             break;
         }
+        
         case enCurrencyExchangeMenueOptions::eMainMenue:
         {
             // Nothing here Because The Main Screen Will Handle It :-) ;
