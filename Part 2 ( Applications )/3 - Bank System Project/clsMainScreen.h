@@ -182,15 +182,15 @@ public:
         cout << setw(37) << left << "" << "===========================================\n";
         cout << setw(37) << left << "" << "\t\t\tMain Menue\n";
         cout << setw(37) << left << "" << "===========================================\n";
-        cout << setw(37) << left << "" << "\t[1] Show Client List.\n";
-        cout << setw(37) << left << "" << "\t[2] Add New Client.\n";
-        cout << setw(37) << left << "" << "\t[3] Delete Client.\n";
-        cout << setw(37) << left << "" << "\t[4] Update Client Info.\n";
-        cout << setw(37) << left << "" << "\t[5] Find Client.\n";
-        cout << setw(37) << left << "" << "\t[6] Transactions.\n";
-        cout << setw(37) << left << "" << "\t[7] Manage Users.\n";
-        cout << setw(37) << left << "" << "\t[8] Login Resister.\n";
-        cout << setw(37) << left << "" << "\t[9] Currency Exchange.\n";
+        cout << setw(37) << left << "" << "\t[01] Show Client List.\n";
+        cout << setw(37) << left << "" << "\t[02] Add New Client.\n";
+        cout << setw(37) << left << "" << "\t[03] Delete Client.\n";
+        cout << setw(37) << left << "" << "\t[04] Update Client Info.\n";
+        cout << setw(37) << left << "" << "\t[05] Find Client.\n";
+        cout << setw(37) << left << "" << "\t[06] Transactions.\n";
+        cout << setw(37) << left << "" << "\t[07] Manage Users.\n";
+        cout << setw(37) << left << "" << "\t[08] Login Resister.\n";
+        cout << setw(37) << left << "" << "\t[09] Currency Exchange.\n";
         cout << setw(37) << left << "" << "\t[10] Logout.\n";
         cout << setw(37) << left << "" << "===========================================\n";
 
