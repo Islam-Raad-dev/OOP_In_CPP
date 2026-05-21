@@ -280,7 +280,7 @@ public:
    }
 
 
-    static string  EncryptText(string Text, short EncryptionKey=2)
+    static string  EncryptText(string Text, short EncryptionKey = 2)
     {
 
         for (int i = 0; i <= Text.length(); i++)
@@ -294,7 +294,7 @@ public:
 
     }
 
-    static string  DecryptText(string Text, short EncryptionKey=2)
+    static string  DecryptText(string Text, short EncryptionKey = 2)
     {
 
         for (int i = 0; i <= Text.length(); i++)
