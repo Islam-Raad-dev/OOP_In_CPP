@@ -36,25 +36,25 @@ private:
     static void _ShowListCurrenciesScreen()
     {
         clsCurrenciesListScreen::ShowCurrenciesListScreen();
-        _GoBackToCurrencyExchangeMenue();
+
     }
 
     static void _ShowFindCurrencyScreen()
     {
         clsFindCurrencyScreen::ShowFindCurrencyScreen();
-        _GoBackToCurrencyExchangeMenue();
+
     }
 
     static void _ShowUpdateCurrencyScreen()
     {
         clsUpdateCurrencyRateScreen::ShowUpdateCurrencyRateScreen();
-        _GoBackToCurrencyExchangeMenue();
+
     }
 
     static void _ShowCurrencyCalculatorScreen()
     {
         clsCurrencyCalculatorScreen::ShowCurrencyCalculatorScreen();
-        _GoBackToCurrencyExchangeMenue();
+
     }
 
     static void _GoBackToCurrencyExchangeMenue()
