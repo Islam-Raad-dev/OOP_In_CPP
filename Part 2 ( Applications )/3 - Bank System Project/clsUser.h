@@ -53,7 +53,6 @@ private:
         string LoginRecord = "";
         LoginRecord += clsDate::GetSystemDateTimeString() + Seperator;
         LoginRecord += _UserName + Seperator;
-        LoginRecord += _Password + Seperator;
         LoginRecord += clsUtil::EncryptText(GetPassword()) + Seperator;
         LoginRecord += to_string(_Permissions);
         return LoginRecord;
@@ -77,7 +76,6 @@ private:
         UserRecord += User.GetEmail() + Seperator;
         UserRecord += User.GetPhone() + Seperator;
         UserRecord += User.GetUserName() + Seperator;
-        UserRecord += User.GetPassword() + Seperator;
         UserRecord += clsUtil::EncryptText(User.GetPassword()) + Seperator;
         UserRecord += to_string(User.GetPermissions());
 
