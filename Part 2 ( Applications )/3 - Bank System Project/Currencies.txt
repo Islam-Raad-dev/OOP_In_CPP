@@ -219,4 +219,4 @@ Virgin Islands (USA)#//#USD#//#US Dollar#//#1.000000
 Wallis and Futuna Islands#//#XPF#//#CFP Franc#//#111.954002
 "Yemen, Republic of"#//#YER#//#Yemeni Rial#//#541.750000
 Zambia#//#ZMW#//#Zambia Kwacha#//#17.440001
-Zimbabwe#//#ZWL#//#Zimbabwe RTGS dollar#//#645.414001
+Zimbabwe#//#ZWL#//#Zimbabwe RTGS dollar#//#645.414001 
