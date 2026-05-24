@@ -1,3 +1,15 @@
+/*
+Screen Files:
+
+This is Login Register Screen Class in Bank System Project.
+
+This class is responsible for displaying the login register records in the 
+system. It inherits from the clsScreen class and uses the clsUser 
+class to retrieve the login register data.
+
+
+*/
+
 #pragma once
 
 #include <iostream>
