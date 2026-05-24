@@ -1,4 +1,19 @@
+/*
+Core Files:
+
+This is the clsUser class of Bank System Project
+
+This class represents a user in the bank system. It inherits from the 
+clsPerson class and includes additional attributes such as username, 
+password, permissions, and methods for managing user data. The class 
+provides functionality to load and save user data from/to a file, convert 
+between user objects and string representations, and handle user 
+authentication and authorization based on permissions.
+
+*/
+
 #pragma once
+
 #include <iostream>
 #include <string>
 #include <vector>
