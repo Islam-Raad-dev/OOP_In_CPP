@@ -1,6 +1,14 @@
 /*
+Screen File:
 
 This is Add New Client Screen of Bank System Project
+
+This screen is responsible for adding new clients to the bank system. It
+allows the user to input the client's information, such as first name,
+last name, email, phone number, pin code, and account balance. The screen
+also checks for access rights before allowing the user to add a new
+client. If the client is added successfully, it displays the client's
+information on the screen.
 
 */
 #pragma once
