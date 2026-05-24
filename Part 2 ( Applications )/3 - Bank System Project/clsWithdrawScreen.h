@@ -1,6 +1,20 @@
+/*
+Screen Files:
+
+This is Withdraw Screen Class in Bank System Project,
+
+This class is responsible for handling the withdraw operation in the 
+banking system. It allows users to enter their account number, verifies if 
+the account exists, and then prompts the user to enter the amount they 
+wish to withdraw. The class also handles the confirmation of the 
+transaction and updates the account balance accordingly.
+
+*/
+
 #pragma once
 
 #include <iostream>
+
 #include "clsScreen.h"
 #include "clsBankClient.h"
 #include "clsInputValidate.h"
