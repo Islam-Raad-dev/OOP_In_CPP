@@ -1,3 +1,16 @@
+/*
+Screen Files:
+
+This is Transfer Log Screen of Bank System Project
+
+This screen displays a list of all fund transfer operations that have been 
+performed in the bank system. It shows the date and time of each 
+transfer, the account numbers of the source and destination clients, 
+the transfer amount, and the balances of both accounts after the 
+transfer.
+
+*/
+
 #pragma once
 
 #include <iostream>
