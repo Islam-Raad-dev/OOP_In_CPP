@@ -1,3 +1,19 @@
+/*
+Screen Files:
+
+This is Transfer Screen of Bank System Project
+
+This screen allows users to transfer funds between two existing clients 
+in the bank system. It prompts the user to enter the account numbers of 
+the source and destination clients, and if both account numbers exist, 
+it displays the information of both clients. The user is then asked to 
+enter the transfer amount, which must be less than or equal to the 
+available balance of the source client. If all validations pass, the 
+screen attempts to perform the transfer and provides feedback on whether 
+the operation was successful or if there were any errors.
+
+*/
+
 #pragma once
 
 #include <iostream>
