@@ -1,5 +1,27 @@
+/*
+Screen Files:
+
+This is Update Client Screen of Bank System Project
+
+This screen allows users to update the information of an existing client 
+in the bank system. It prompts the user to enter the account number of the 
+client they wish to update, and if the account number exists, it displays 
+the client's current information. The user is then asked to confirm if 
+they want to proceed with updating the client's information. If confirmed, 
+the screen allows the user to input new values for the client's first 
+name, last name, email, phone number, pin code, and account balance. After 
+entering the new information, the screen attempts to save the updated 
+client data and provides feedback on whether the update was successful or 
+if there were any errors (such as an empty object). This screen is 
+essential for maintaining accurate and up-to-date client information in 
+the bank system.
+
+*/
+
 #pragma once
+
 #include <iostream>
+
 #include "clsScreen.h"
 #include "clsPerson.h"
 #include "clsBankClient.h"
