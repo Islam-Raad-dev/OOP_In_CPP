@@ -1,3 +1,15 @@
+/*
+Screen Files:
+
+This is List Users Screen of Bank System Project
+
+This screen displays a list of all users in the system. It retrieves the 
+user data from the file and presents it in a formatted table, showing 
+details such as username, full name, phone number, email, password, and 
+permissions.
+
+*/
+
 #pragma once
 
 #include <iostream>
