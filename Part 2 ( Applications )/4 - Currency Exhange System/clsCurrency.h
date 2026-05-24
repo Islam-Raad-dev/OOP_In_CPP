@@ -1,3 +1,17 @@
+/*
+
+Currency Exchange System Project
+
+Author: Islam Raad
+Date: 17-5-2026
+
+Currency Exchange System is a console-based application that allows users 
+to view and update currency exchange rates. The project is designed to 
+demonstrate the use of file handling, object-oriented programming 
+concepts, and data manipulation in C++.
+
+*/
+
 #pragma once
 
 #include <iostream>
