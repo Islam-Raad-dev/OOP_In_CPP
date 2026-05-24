@@ -1,6 +1,22 @@
+/*
+Screen Files:
+
+This is Deposit Screen of Bank System Project
+
+This screen is responsible for allowing the user to deposit money into a
+client's account. It prompts the user to enter the account number of
+the client they wish to deposit money into, verifies that the account
+number exists, and then displays the client's information. The user is
+then asked to enter the amount they wish to deposit. If confirmed, the
+amount is added to the client's account balance and a success message is
+displayed. If not confirmed, the transaction is canceled.
+
+*/
+
 #pragma once
 
 #include <iostream>
+
 #include "clsScreen.h"
 #include "clsBankClient.h"
 #include "clsInputValidate.h"
