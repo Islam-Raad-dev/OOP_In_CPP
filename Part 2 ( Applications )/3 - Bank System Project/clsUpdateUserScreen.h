@@ -1,5 +1,19 @@
+/*
+Screen Files:
+
+This is Update User Screen of Bank System Project
+
+This screen allows the user to update the information of an existing user.
+It prompts the user to enter the username and then allows them to modify
+the user's details such as first name, last name, email, phone, password,
+and permissions.
+
+*/
+
 #pragma once
+
 #include <iostream>
+
 #include "clsScreen.h"
 #include "clsPerson.h"
 #include "clsUser.h"
