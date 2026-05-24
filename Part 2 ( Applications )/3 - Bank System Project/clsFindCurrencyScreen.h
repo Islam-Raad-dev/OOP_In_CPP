@@ -1,3 +1,15 @@
+/*
+Screen Files:
+
+This is Find Currency Screen of Bank System Project
+
+This screen is responsible for allowing the user to find a currency in the
+bank system. It prompts the user to enter either the currency code or the
+country name, verifies that the currency exists, and then displays the
+currency's information.
+
+*/
+
 #pragma once
 
 #include <iostream>
