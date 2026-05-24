@@ -1,3 +1,14 @@
+/*
+Screen Files:
+
+This is Update Currency Rate Screen of Bank System Project
+
+This screen allows the user to update the exchange rate of a specific 
+currency.It prompts the user to enter the currency code and the new
+exchange rate, and then updates the currency's rate in the system.
+
+*/
+
 #pragma once
 
 #include <iostream>
