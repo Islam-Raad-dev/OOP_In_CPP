@@ -1,3 +1,17 @@
+/*
+Currency Class:
+
+This class represents a currency in the bank system. It contains
+information about the currency such as its country, code, name, and
+exchange rate against the US Dollar.
+
+The class provides methods to find a currency by its code or country,
+check if a currency exists, get a list of all currencies, and perform
+currency conversions. It also includes functionality to load and save
+currency data from/to a file.
+
+*/
+
 #pragma once
 
 #include <iostream>
@@ -239,6 +253,6 @@ public:
         }
 
         return (float)(AmountInUSD * Currency2.Rate());
-
+    
     }
 };
