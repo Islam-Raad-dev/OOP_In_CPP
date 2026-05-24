@@ -1,3 +1,20 @@
+/*
+Screen Files:
+
+This is Total Balances Screen of Bank System Project
+
+This screen is responsible for displaying the total balances of all 
+clients in the bank system. It retrieves the list of clients and their 
+account balances, calculates the total balance, and presents the 
+information in a formatted manner. The screen includes a header with the 
+title and subtitle, as well as a table that lists each client's account 
+number, full name, and balance. At the end of the table, it displays the 
+total balances along with its textual representation. This screen provides 
+users with an overview of the financial status of all clients in the 
+system.
+
+*/
+
 #pragma once
 
 #include <iostream>
