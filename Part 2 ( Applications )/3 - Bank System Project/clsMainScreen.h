@@ -1,3 +1,26 @@
+/*
+Core Files:
+
+This is the main screen of Bank System Project
+
+This file contains the implementation of the main screen of the
+application, which serves as the central hub for navigating to different
+features and functionalities of the banking system. The main screen
+provides options for users to view client lists, add new clients, delete
+clients, update client information, find clients, manage transactions,
+manage users, view login registers, and perform currency exchange
+operations. Each option is associated with a specific function that
+handles the corresponding feature. The main screen also includes access 
+control to ensure that only users with the appropriate permissions can 
+access certain features. The user interface is designed to be 
+user-friendly and intuitive, allowing users to easily navigate through the 
+various options and perform their desired actions efficiently. Overall, 
+the main screen serves as the central point of interaction for users of 
+the Bank System Project, providing a seamless and organized way to access 
+the different functionalities of the application.
+
+*/
+
 #pragma once
 
 #include <iostream>
