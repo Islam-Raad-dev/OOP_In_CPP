@@ -1,3 +1,18 @@
+/*
+Library Files:
+
+This is the Date Class of Bank System Project
+
+This class represents a date in the bank system. It containsinformation
+about the day, month, and year. The class provides methods to get and set
+the date, print the date, and perform various date-related operations such
+as checking if a date is valid, calculating the difference in days between
+two dates, and increasing or decreasing a date by a certain number of
+days, weeks, months, years, decades, or centuries. It also includes
+functionality to get the current system date and time.
+
+*/
+
 #pragma warning(disable : 4996)
 #pragma once
 
