@@ -1,5 +1,19 @@
+/*
+Screen Files:
+
+This is Find User Screen of Bank System Project
+
+This screen is responsible for allowing the user to find a user in the
+bank system. It prompts the user to enter the username of the
+user they wish to find, verifies that the username exists, and
+then displays the user's information.
+
+*/
+
 #pragma once
+
 #include <iostream>
+
 #include "clsScreen.h"
 #include "clsPerson.h"
 #include "clsUser.h"
