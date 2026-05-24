@@ -1,3 +1,15 @@
+/*
+Core Files:
+
+This is Bank Client Class of Bank System Project 
+
+This Class is responsible for managing the bank client data and operations
+such as finding clients, adding new clients, updating client information,
+deleting clients, and handling transactions. It also includes
+functionality for logging transfer transactions between clients.
+
+*/
+
 #pragma once
 
 #include <iostream>
