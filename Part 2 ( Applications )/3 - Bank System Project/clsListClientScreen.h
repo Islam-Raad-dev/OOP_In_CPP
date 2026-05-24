@@ -1,3 +1,18 @@
+/*
+Screen Files:
+
+This is Client List Screen of Bank System Project
+
+This screen is responsible for displaying a list of all clients in the
+bank system. It retrieves the client data from the system, formats it
+into a readable format, and presents it to the user. The screen also 
+includes a header with the title and subtitle, as well as a table with 
+columns for account number, client name, phone, email, pin code, and 
+balance. If there are no clients in the system, a message is displayed 
+indicating that there are no clients available.
+
+*/
+
 #pragma once
 
 #include <iostream>
