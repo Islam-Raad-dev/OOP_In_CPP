@@ -1,3 +1,19 @@
+/*
+Screen Files:
+
+This is Transactions Screen of Bank System Project
+
+This screen serves as a central hub for various banking transactions that 
+users can perform in the bank system. It provides a menu with options for 
+depositing funds, withdrawing funds, viewing total balances, transferring 
+funds between accounts, and viewing the transfer log. The screen checks 
+the user's access rights before allowing them to perform any transactions. 
+Each option in the menu leads to a specific screen that handles the 
+corresponding transaction type, ensuring a structured and organized flow 
+for users to manage their banking activities effectively.
+
+*/
+
 #pragma once
 
 #include <iostream>
