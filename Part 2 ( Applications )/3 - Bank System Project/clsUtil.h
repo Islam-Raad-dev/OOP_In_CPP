@@ -1,6 +1,20 @@
+/*
+Library Files:
+
+This is Utility Library in Bank System Project
+
+This library contains utility functions that are used across the 
+application, such as random number generation, string manipulation, and 
+other helper functions. It is designed to provide common functionalities 
+that can be reused in different parts of the project.
+
+*/
+
 #pragma once
+
 #include <iostream>
 #include <string>
+
 #include "clsDate.h"
 
 using namespace std;
