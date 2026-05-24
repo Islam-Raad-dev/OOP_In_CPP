@@ -1,6 +1,10 @@
 /*
+Screen Files:
 
 This is Add New User Screen of Bank System Project
+
+This Class is responsible for showing the Add New User Screen and handling
+the user input in this screen.
 
 */
 #pragma once
