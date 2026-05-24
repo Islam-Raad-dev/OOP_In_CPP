@@ -1,6 +1,25 @@
+/*
+Core Files:
+
+This is the Person Class of Bank System Project
+
+This class represents a person in the bank system, which can be a client 
+or a user. It contains properties such as first name, last name, email, 
+and phone number. The class provides getter and setter methods for each 
+property, as well as a method to return the full name of the person and a 
+method to print the person's information. This class serves as a base 
+class for other classes that represent specific types of people in the 
+bank system, such as clients and users. It encapsulates common attributes 
+and behaviors that are shared among different types of people in the 
+system, allowing for code reuse and better organization of the codebase.
+
+*/
+
 #pragma once
+
 #include <iostream>
 #include <string>
+
 using namespace std;
 
 class clsPerson  
