@@ -1,10 +1,27 @@
+/*
+Library Files:
+
+This is the Input Validate Class of Bank System Project
+
+This class provides various static methods for validating user input in
+thebank system. It includes methods for checking if a number is within
+a specified range, if a date is within a specified range, and for reading
+different types of input such as short numbers, integers, floating-point
+numbers, and strings. The class also includes error handling to ensure
+that the user enters valid input and provides appropriate error messages 
+when invalid input is detected.
+
+*/
+
 #pragma once
 
 #include <iostream>
 #include <string>
+#include <limits>
+
 #include "clsString.h"
 #include "clsDate.h"
-#include <limits>
+
 
 class clsInputValidate
 {
