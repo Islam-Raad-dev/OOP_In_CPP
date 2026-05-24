@@ -10,7 +10,10 @@ banking system. It allows users to log in, view their account details, and
 perform various banking operations such as deposits, withdrawals, and
 transfers. The project is designed to demonstrate the use of
 object-oriented programming concepts in C++.
-        
+
+This is the main entry point of the application, where the user is
+prompted to log in.
+
 */
 #include <iostream>   
 #include "clsLoginScreen.h"
