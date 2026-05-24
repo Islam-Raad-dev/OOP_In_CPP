@@ -1,3 +1,18 @@
+/*
+Screen Files:
+
+This is Delete Client Screen of Bank System Project
+
+This screen is responsible for allowing the user to delete a client from
+the bank system. It prompts the user to enter the account number of the
+client they wish to delete, verifies that the account number exists, and
+then displays the client's information. The user is then asked to confirm
+if they want to proceed with deleting the client. If confirmed, the client
+is deleted from the system and a success message is displayed. If not
+confirmed, the deletion process is canceled.
+
+*/
+
 #pragma once
 
 #include <iostream>
