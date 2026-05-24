@@ -1,3 +1,18 @@
+/*
+Screen Files:
+
+This is Currency Exchange Screen of Bank System Project
+
+This screen is responsible for providing the user with a menu to perform
+various currency-related operations, such as listing all available
+currencies,finding a specific currency, updating currency exchange rates
+and using currency calculator to convert amounts between different
+currencies. It serves as a central hub for all currency exchange
+functionalities in the application, allowing users to easily access and
+manage currency information and perform
+
+*/
+
 #pragma once
 
 #include <iostream>
