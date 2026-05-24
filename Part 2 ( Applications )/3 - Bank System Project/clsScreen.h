@@ -1,6 +1,25 @@
+/*
+Screen Files:
+
+This is the Base Screen of Bank System Project
+
+This class serves as a base class for all screens in the Bank System 
+Project. It provides common functionalities such as drawing the screen 
+header and checking access rights for different features. The 
+_DrawScreenHeader function is used to display the title and subtitle of 
+the screen, along with the current user's name and the current date. The 
+CheckAccessRights function checks if the current user has the necessary 
+permissions to access a specific feature or screen, and displays an access 
+denied message if they do not have the required permissions. This class 
+helps to maintain consistency across different screens and ensures that 
+access control is implemented effectively throughout the application.
+
+*/
+
 #pragma once
 
 #include <iostream>
+
 #include "clsDate.h"
 #include "Global.h"
 #include "clsUser.h"
