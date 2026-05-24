@@ -1,3 +1,15 @@
+/*
+Screen Files:
+
+This is Find Client Screen of Bank System Project
+
+This screen is responsible for allowing the user to find a client in the
+bank system. It prompts the user to enter the account number of the
+client they wish to find, verifies that the account number exists, and
+then displays the client's information.
+
+*/
+
 #pragma once
 
 #include <iostream>
