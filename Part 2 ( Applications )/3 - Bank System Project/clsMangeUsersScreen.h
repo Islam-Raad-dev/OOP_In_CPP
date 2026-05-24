@@ -1,3 +1,18 @@
+/*
+Screen Files:
+
+This is Manage Users Screen of Bank System Project
+
+This screen is responsible for managing the users of the bank system. It
+provides a menu with options to list all users, add a new user, delete an
+existing user, update user information, and find a specific user. The
+screen also includes access control to ensure that only users with the
+appropriate permissions can manage other users. Each option in the menu
+leads to a corresponding screen that handles the specific functionality
+related to user management.
+
+*/
+
 #pragma once
 
 #include <iostream>
