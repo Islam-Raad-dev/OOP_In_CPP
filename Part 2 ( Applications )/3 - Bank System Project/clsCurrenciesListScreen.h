@@ -1,3 +1,15 @@
+/*
+Screen Files:
+
+This is Currencies List Screen of Bank System Project
+
+This screen is responsible for displaying the list of all currencies
+available in the system, along with their details such as country,
+currency code, currency name, and exchange rate against the US Dollar. It
+retrieves the currency data from the clsCurrency class and presents it in
+a formatted manner for the user to view.
+
+*/
 #pragma once
 
 #include <iostream>
